@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bastide Immobilier | Agence immobilière à Fayence, Callian, Tourrettes</title>
+<meta name="description" content="Agence immobilière dans le Pays de Fayence. Vente, achat, location et estimation à Fayence, Callian, Tourrettes et Montauroux. Une seule personne vous suit jusqu’à la signature.">
+<meta name="robots" content="noindex">
+<style>
+:root{
+  --cypres:#1c3040; --cypres-2:#374957; --olive:#d4b25e; --lavande:#8a6a1c; --lavande-clair:#f1ede4;
+  --brume:#f2f1ec; --pierre:#dde0e2; --encre:#121f2a; --encre-2:#556470; --blanc:#faf9f7;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;font-family:var(--sans);color:var(--encre);background:var(--brume);line-height:1.6;font-size:1.0625rem;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lavande);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.25rem}
+.sr{position:absolute;left:-9999px}
+
+.demo{background:var(--cypres);color:#e4e6e8;font-size:.875rem;text-align:center;padding:.5rem 1rem}
+.demo a{color:#fff}
+
+header.top{background:#e8eef0}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;padding-bottom:1rem;gap:1rem}
+.marque{font-family:var(--serif);font-size:1.25rem;font-weight:700;letter-spacing:.01em;text-decoration:none;color:var(--cypres);line-height:1.1}
+.marque small{display:block;font-family:var(--sans);font-weight:500;font-size:.8rem;letter-spacing:0;color:var(--encre-2)}
+.btn{display:inline-flex;align-items:center;gap:.6rem;font-weight:700;text-decoration:none;border-radius:999px;padding:.85rem 1.4rem;border:2px solid transparent;font-size:1rem;transition:background .15s,color .15s,border-color .15s}
+.btn-plein{background:var(--cypres);color:#fff}
+.btn-plein:hover{background:var(--cypres-2)}
+.btn-ligne{border-color:var(--cypres);color:var(--cypres);background:transparent}
+.btn-ligne:hover{background:var(--cypres);color:#fff}
+.btn svg{width:1.1em;height:1.1em;flex:none}
+
+.hero{background:#d2e3ea;position:relative;overflow:hidden}
+.hero .wrap{padding-top:clamp(1.5rem,5vw,3.5rem);padding-bottom:1.5rem;position:relative;z-index:2}.hero-texte{background:linear-gradient(#e8eef0,#d2e3ea)}
+.hero h1{font-family:var(--serif);font-weight:700;color:var(--cypres);font-size:clamp(2.3rem,6.2vw,4.3rem);line-height:1.02;letter-spacing:-.015em;margin:0 0 1.1rem;max-width:16ch}
+.hero p.lead{font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:34rem;color:var(--encre-2);margin:0 0 1.6rem}
+.hero .actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1.25rem}
+.hero .garanties{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:.35rem 1.4rem;font-size:.95rem;color:var(--encre-2)}
+.hero .garanties li::before{content:"";display:inline-block;width:.5em;height:.5em;border-radius:50%;background:var(--olive);margin-right:.5em;vertical-align:.08em}
+.scene{display:block;width:100%;margin-top:0;position:relative;z-index:1}
+.paysage{display:block;width:100%;height:280px}
+@media(min-width:760px){.paysage{height:auto}}
+
+@keyframes monte{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}
+.hero h1,.hero .lead,.hero .actions{animation:monte .7s both}
+.hero .lead{animation-delay:.12s}.hero .actions{animation-delay:.24s}
+
+section{padding:clamp(3rem,7vw,5.5rem) 0}
+h2{font-family:var(--serif);font-size:clamp(1.8rem,4.2vw,2.8rem);line-height:1.1;color:var(--cypres);margin:0 0 .6rem;letter-spacing:-.01em}
+.intro{max-width:38rem;color:var(--encre-2);margin:0 0 2.2rem}
+
+/* prestations */
+.btn.tel-top{display:none}
+@media(min-width:720px){.btn.tel-top{display:inline-flex}}
+.presta{background:var(--blanc)}
+.presta ul{list-style:none;margin:0;padding:0;border-top:2px solid var(--cypres)}
+.presta li{display:grid;gap:.4rem 2rem;padding:1.5rem 0;border-bottom:1px solid var(--pierre);grid-template-columns:1fr}
+@media(min-width:760px){.presta li{grid-template-columns:minmax(0,5fr) minmax(0,7fr) auto;align-items:baseline}}
+.presta h3{font-family:var(--serif);font-size:1.55rem;margin:0;color:var(--cypres);line-height:1.15}
+.presta li p{margin:0;color:var(--encre-2);max-width:36rem}
+.presta .prix{font-weight:700;color:var(--lavande);white-space:nowrap}
+.presta .note{margin-top:1.4rem;background:var(--lavande-clair);border-radius:12px;padding:1rem 1.25rem;max-width:44rem}
+.presta .note strong{color:var(--cypres)}
+
+/* calendrier */
+.cal{background:var(--cypres);color:#e8eaec}
+.cal h2{color:#fff}.cal .intro{color:#bbc1c6}
+.mois{display:flex;gap:.4rem;overflow-x:auto;padding:0 0 .8rem;margin:0 0 1.6rem;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.mois button{flex:none;font:inherit;font-weight:600;background:transparent;color:#cdd1d5;border:1.5px solid #556470;border-radius:999px;padding:.5rem 1rem;cursor:pointer;transition:background .15s,color .15s}
+.mois button:hover{border-color:#8e98a0}
+.mois button[aria-selected="true"]{background:#f0eee2;color:var(--cypres);border-color:#f0eee2}
+.mois-panneau{display:grid;gap:1.5rem}
+@media(min-width:820px){.mois-panneau{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:3rem;align-items:start}}
+.mois-nom{font-family:var(--serif);font-size:clamp(2.6rem,7vw,4.6rem);line-height:1;color:#f0eee2;margin:0}
+.mois-saison{margin:.5rem 0 0;color:#bbc1c6}
+.taches{list-style:none;margin:0;padding:0;display:grid;gap:.9rem}
+.taches li{padding:1rem 1.2rem;background:#2e414f;border-radius:12px;border-left:5px solid #d4b25e}
+.taches b{display:block;color:#fff;font-size:1.08rem}
+.taches span{color:#bbc1c6;font-size:.98rem}
+.cal .appel{margin-top:1.8rem}
+.cal .appel a{color:#fff;font-weight:700}
+
+/* deroulement */
+.etapes{list-style:none;padding:0;margin:0;display:grid;gap:1.5rem;counter-reset:e}
+@media(min-width:800px){.etapes{grid-template-columns:repeat(3,1fr);gap:2.5rem}}
+.etapes li{counter-increment:e;position:relative;padding-top:1.1rem;border-top:2px solid var(--cypres)}
+.etapes li::before{content:counter(e);position:absolute;top:-1.15rem;left:0;background:var(--brume);padding-right:.7rem;font-family:var(--serif);font-size:1.6rem;font-weight:700;color:var(--lavande)}
+.etapes h3{font-family:var(--serif);font-size:1.4rem;margin:.5rem 0 .3rem;color:var(--cypres)}
+.etapes p{margin:0;color:var(--encre-2)}
+
+/* zone */
+.zone{background:var(--blanc)}
+.zone .grille{display:grid;gap:2rem}
+@media(min-width:820px){.zone .grille{grid-template-columns:1fr 1fr;align-items:center}}
+.communes{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+.communes li{border:1.5px solid var(--pierre);border-radius:999px;padding:.4rem 1rem;font-weight:600;color:var(--cypres);background:var(--brume)}
+.zone .grille p{color:var(--encre-2);margin:0 0 1.2rem;max-width:34rem}
+
+/* faq */
+details{border-bottom:1px solid var(--pierre);padding:1.05rem 0}
+details:first-of-type{border-top:2px solid var(--cypres)}
+summary{cursor:pointer;font-family:var(--serif);font-size:1.25rem;color:var(--cypres);font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--sans);font-weight:400;font-size:1.6rem;line-height:1;color:var(--lavande);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:.7rem 0 0;color:var(--encre-2);max-width:42rem}
+
+/* contact */
+.contact{background:var(--cypres);color:#e8eaec}
+.contact h2{color:#fff}
+.contact .grille{display:grid;gap:2.5rem}
+@media(min-width:860px){.contact .grille{grid-template-columns:5fr 6fr}}
+.gros-tel{font-family:var(--serif);font-size:clamp(2.2rem,6vw,3.4rem);font-weight:700;color:#fff;text-decoration:none;display:block;line-height:1.1;margin:.6rem 0 .8rem}
+.contact .infos{color:#bbc1c6;margin:0}
+form{display:grid;gap:1rem}
+label{display:grid;gap:.35rem;font-weight:600;color:#fff}
+input,textarea{font:inherit;padding:.85rem 1rem;border-radius:10px;border:1.5px solid #556470;background:#2e414f;color:#fff}
+input::placeholder,textarea::placeholder{color:#99a2a9}
+textarea{min-height:7rem;resize:vertical}
+.btn-clair{background:#f0eee2;color:var(--cypres);justify-content:center;cursor:pointer;font:inherit;font-weight:700;border:0;border-radius:999px;padding:.95rem 1.4rem}
+.btn-clair:hover{background:#fff}
+
+footer{background:#121f2a;color:#a4acb3;font-size:.9rem;padding:1.6rem 0 5.5rem}
+footer a{color:#cdd1d5}
+.barre-appel{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--blanc);border-top:1px solid var(--pierre);padding:.65rem 1rem;display:flex;gap:.6rem}
+.barre-appel a{flex:1;justify-content:center;padding:.8rem 1rem}
+@media(min-width:720px){.barre-appel{display:none}footer{padding-bottom:1.6rem}}
+
+.mois button{white-space:nowrap}</style>
+</head>
+<body>
+<div class="demo">Maquette d’exemple réalisée par <a href="https://www.atelierwebriviera.fr/">Atelier Web Riviera</a>. Entreprise, téléphone et textes fictifs.</div>
+<header class="top"><div class="wrap">
+<a class="marque" href="#haut">Bastide Immobilier<small>Agence immobilière</small></a>
+<a class="btn btn-plein tel-top" href="tel:+33600000000"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>06 00 00 00 00</a>
+</div></header>
+<main id="haut">
+<div class="hero"><div class="hero-texte"><div class="wrap">
+<h1>Votre bien mérite quelqu’un qui connaît le canton.</h1>
+<p class="lead">Vente, achat, location et estimation à Fayence, Callian, Tourrettes et Montauroux. Une seule personne vous suit jusqu’à la signature.</p>
+<div class="actions"><a class="btn btn-plein" href="tel:+33600000000">Appeler l’agence</a><a class="btn btn-ligne" href="#contact">Écrire un message</a></div>
+<ul class="garanties"><li>Estimation gratuite</li><li>Visite sous 48 h</li><li>Suivi jusqu’à la signature</li></ul>
+</div></div><div class="scene"><svg class="paysage" preserveAspectRatio="xMidYMax slice" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Agence immobilière"><defs><linearGradient id="ciel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d2e3ea"/><stop offset=".75" stop-color="#f0eee2"/></linearGradient></defs><rect x="0" y="0" width="1200" height="560" fill="url(#ciel)" /><circle cx="980" cy="110" r="64" fill="#f7efc8" opacity=".85"/><path d="M0 300 C140 240 300 275 450 232 S760 196 900 252 S1110 226 1200 262 L1200 560 L0 560Z" fill="#b9c9c8" /><path d="M0 330 C200 290 330 320 520 280 S900 270 1200 310 L1200 560 L0 560Z" fill="#a4b8ab" /><path d="M360 360 C440 270 540 196 640 192 C740 196 840 270 930 360 L930 560 L360 560Z" fill="#93a889" /><rect x="548" y="222" width="22" height="26" fill="#ddd4b8" /><polygon points="546,222 559.0,213 572,222" fill="#b4694a" /><rect x="572" y="214" width="26" height="26" fill="#d6cdb0" /><polygon points="570,214 585.0,205 600,214" fill="#b4694a" /><rect x="596" y="206" width="30" height="26" fill="#e9e2cd" /><polygon points="594,206 611.0,197 628,206" fill="#b4694a" /><rect x="668" y="206" width="30" height="18" fill="#d6cdb0" /><polygon points="666,206 683.0,197 700,206" fill="#b4694a" /><rect x="692" y="214" width="26" height="26" fill="#ddd4b8" /><polygon points="690,214 705.0,205 720,214" fill="#b4694a" /><rect x="716" y="222" width="22" height="26" fill="#d6cdb0" /><polygon points="714,222 727.0,213 740,222" fill="#b4694a" /><rect x="560" y="236" width="30" height="26" fill="#d6cdb0" /><polygon points="558,236 575.0,227 592,236" fill="#b4694a" /><rect x="586" y="228" width="26" height="26" fill="#ddd4b8" /><polygon points="584,228 599.0,219 614,228" fill="#b4694a" /><rect x="610" y="222" width="22" height="26" fill="#ddd4b8" /><polygon points="608,222 621.0,213 634,222" fill="#b4694a" /><rect x="654" y="222" width="30" height="22" fill="#e9e2cd" /><polygon points="652,222 669.0,213 686,222" fill="#b4694a" /><rect x="678" y="228" width="30" height="18" fill="#ddd4b8" /><polygon points="676,228 693.0,219 710,228" fill="#b4694a" /><rect x="704" y="236" width="30" height="18" fill="#efe9d8" /><polygon points="702,236 719.0,227 736,236" fill="#b4694a" /><rect x="540" y="248" width="22" height="22" fill="#d6cdb0" /><polygon points="538,248 551.0,239 564,248" fill="#b4694a" /><rect x="730" y="244" width="30" height="26" fill="#d6cdb0" /><polygon points="728,244 745.0,235 762,244" fill="#b4694a" /><rect x="570" y="252" width="30" height="22" fill="#d6cdb0" /><polygon points="568,252 585.0,243 602,252" fill="#b4694a" /><rect x="700" y="252" width="30" height="26" fill="#d6cdb0" /><polygon points="698,252 715.0,243 732,252" fill="#b4694a" /><rect x="626" y="158" width="16" height="56" fill="#ece5d0" /><polygon points="624,158 634,140 644,158" fill="#b4694a" /><rect x="630" y="170" width="8" height="12" fill="#8c8a76" /><rect x="0" y="380" width="1200" height="180" fill="#79914f" /><rect x="0" y="490" width="1200" height="70" fill="#6a8545" /><rect x="300" y="356" width="520" height="136" fill="#e8c48c" /><polygon points="280,358 840,358 780,310 340,310" fill="#b4694a" /><rect x="280" y="356" width="560" height="8" fill="#8f4a2c" /><rect x="470" y="284" width="40" height="40" fill="#d9ceb4" /><rect x="464" y="278" width="52" height="8" fill="#8b8f93" /><rect x="340" y="382" width="52" height="70" fill="#cfe0ea" stroke="#fff" stroke-width="4"/><rect x="318" y="382" width="20" height="70" fill="#8fb8d4" /><rect x="394" y="382" width="20" height="70" fill="#8fb8d4" /><rect x="430" y="382" width="52" height="70" fill="#cfe0ea" stroke="#fff" stroke-width="4"/><rect x="408" y="382" width="20" height="70" fill="#8fb8d4" /><rect x="484" y="382" width="20" height="70" fill="#8fb8d4" /><rect x="640" y="382" width="52" height="70" fill="#cfe0ea" stroke="#fff" stroke-width="4"/><rect x="618" y="382" width="20" height="70" fill="#8fb8d4" /><rect x="694" y="382" width="20" height="70" fill="#8fb8d4" /><rect x="730" y="382" width="52" height="70" fill="#cfe0ea" stroke="#fff" stroke-width="4"/><rect x="708" y="382" width="20" height="70" fill="#8fb8d4" /><rect x="784" y="382" width="20" height="70" fill="#8fb8d4" /><rect x="540" y="398" width="80" height="94" fill="#8a5a34" /><path d="M540 398 a40 40 0 0 1 80 0Z" fill="#8a5a34" /><circle cx="606" cy="448" r="4" fill="#e0c06a" /><rect x="860" y="490" width="280" height="40" fill="#3a9bc8" /><line x1="860" y1="500" x2="1140" y2="500" stroke="#8fd0ea" stroke-width="3" stroke-linecap="round"/><line x1="860" y1="512" x2="1140" y2="512" stroke="#8fd0ea" stroke-width="3" stroke-linecap="round"/><rect x="850" y="486" width="300" height="6" fill="#e6dfcf" /><rect x="150" y="430" width="8" height="64" fill="#6a4a32" /><rect x="100" y="430" width="110" height="48" fill="#fff" stroke="#8a6a1c" stroke-width="5"/><text x="115" y="452" font-family="system-ui,Arial,sans-serif" font-weight="700" font-size="17" fill="#14231d" >À vendre</text><rect x="112" y="460" width="86" height="5" fill="#8a6a1c" /><ellipse cx="250" cy="415.0" rx="22.1" ry="85.0" fill="#1c3a2c" /><ellipse cx="256.63" cy="415.0" rx="12.155000000000001" ry="80.75" fill="#27503b" opacity=".7"/><ellipse cx="1180" cy="425.0" rx="19.5" ry="75.0" fill="#1c3a2c" /><ellipse cx="1185.85" cy="425.0" rx="10.725000000000001" ry="71.25" fill="#27503b" opacity=".7"/><path d="M960 480 C955.8 459.0 950.2 449.2 947.4 438.0 C957.2 446.4 962.8 446.4 971.2 436.6 C967.0 449.2 965.6 460.4 965.6 480Z" fill="#5c5140" /><circle cx="939.0" cy="425.4" r="18.2" fill="#8da07a" opacity=".92"/><circle cx="960.0" cy="415.6" r="22.4" fill="#8da07a" opacity=".92"/><circle cx="981.0" cy="426.8" r="18.2" fill="#8da07a" opacity=".92"/><circle cx="951.6" cy="431.0" r="16.799999999999997" fill="#8da07a" opacity=".92"/><circle cx="971.2" cy="432.4" r="15.399999999999999" fill="#8da07a" opacity=".92"/><circle cx="946.0" cy="422.6" r="9.799999999999999" fill="#a9ba95" opacity=".8"/><circle cx="969.8" cy="412.8" r="11.2" fill="#a9ba95" opacity=".8"/><circle cx="976.8" cy="429.6" r="9.1" fill="#a9ba95" opacity=".8"/><circle cx="500" cy="500" r="16" fill="#4a6d33" /><circle cx="495.2" cy="495.2" r="8.8" fill="#78954f" opacity=".6"/><circle cx="660" cy="500" r="16" fill="#4a6d33" /><circle cx="655.2" cy="495.2" r="8.8" fill="#78954f" opacity=".6"/></svg></div></div>
+<section class="presta" id="prestations"><div class="wrap">
+<h2>Ce que nous faisons pour vous</h2><p class="intro">Vendre, acheter, louer, estimer : un seul interlocuteur.</p>
+<ul><li><h3>Vente</h3><p>Estimation, photos, annonce, visites, négociation, suivi jusqu’à l’acte. Vous restez informé à chaque étape.</p><span class="prix">Honoraires affichés</span></li><li><h3>Achat</h3><p>Recherche selon vos critères, visites, conseil sur le prix et accompagnement jusqu’à la signature.</p><span class="prix">Honoraires affichés</span></li><li><h3>Location</h3><p>Mise en location, sélection des dossiers, état des lieux.</p><span class="prix">Honoraires affichés</span></li><li><h3>Estimation</h3><p>Estimation gratuite basée sur les ventes récentes du quartier et la visite du bien.</p><span class="prix">Gratuite</span></li></ul><p class="note"><strong>Honoraires affichés en toute transparence</strong>, à la charge du vendeur ou de l’acquéreur selon le mandat.</p></div></section>
+<section class="cal" id="calendrier"><div class="wrap">
+<h2>Votre projet, étape par étape</h2><p class="intro">Ce qui se passe, de votre premier appel à la remise des clés.</p>
+<div class="mois" role="tablist" aria-label="Projets" id="mois"></div>
+<div class="mois-panneau" role="tabpanel" id="panneau" aria-live="polite">
+<div><p class="mois-nom" id="m-nom"></p><p class="mois-saison" id="m-sais"></p></div>
+<div><ul class="taches" id="m-taches"></ul><p class="appel">Un projet immobilier ? <a href="tel:+33600000000">Appelez-moi</a>.</p></div>
+</div></div></section>
+<section id="deroulement"><div class="wrap">
+<h2>Comment ça se passe</h2><p class="intro">Simple, sans engagement avant d’avoir vu le prix.</p>
+<ol class="etapes"><li><h3>Vous appelez</h3><p>Dites-moi si vous vendez, achetez ou louez. On fixe un rendez-vous.</p></li><li><h3>On se rencontre</h3><p>Visite du bien ou entretien sur vos critères. Vous recevez des propositions claires.</p></li><li><h3>Je m’occupe du reste</h3><p>Annonce, visites, négociation, démarches. Vous êtes tenu au courant.</p></li></ol></div></section>
+<section class="zone" id="zone"><div class="wrap grille">
+<div><h2>Du lac de Saint-Cassien aux villages du Haut-Var</h2>
+<p>Je me déplace dans tout le canton de Fayence. Au-delà, appelez-moi : selon le chantier, je viens aussi.</p>
+<a class="btn btn-ligne" href="tel:+33600000000">Vérifier pour votre commune</a></div>
+<ul class="communes"><li>Fayence</li><li>Tourrettes</li><li>Callian</li><li>Montauroux</li><li>Seillans</li><li>Mons</li><li>Saint-Paul-en-Forêt</li><li>Bagnols-en-Forêt</li><li>Tanneron</li></ul></div></section>
+<section id="questions"><div class="wrap">
+<h2>Les questions qu’on me pose</h2><p class="intro">La réponse n’y est pas ? Appelez, c’est plus rapide.</p><details><summary>L’estimation est-elle vraiment gratuite ?</summary><p>Oui, sans engagement. Vous gardez l’estimation même si vous ne vendez pas avec nous.</p></details><details><summary>Combien de temps pour vendre ?</summary><p>Cela dépend du prix et du bien. Je vous donne une fourchette dès l’estimation.</p></details><details><summary>Quels diagnostics faut-il pour vendre ?</summary><p>DPE, électricité, gaz, amiante, état des risques… selon l’âge et la situation du bien. On vous donne la liste exacte.</p></details><details><summary>Où sont affichés vos honoraires ?</summary><p>En vitrine, sur chaque annonce et sur notre site, comme la loi l’exige.</p></details></div></section>
+<section class="contact" id="contact"><div class="wrap grille">
+<div><h2>Parlons de votre projet</h2><a class="gros-tel" href="tel:+33600000000">06 00 00 00 00</a>
+<p class="infos">Du lundi au samedi, de 9 h à 18 h.<br>Je rappelle toujours dans la journée.</p></div>
+<form id="formulaire" aria-label="Demande de devis">
+<label>Votre nom<input name="nom" autocomplete="name" required></label>
+<label>Votre téléphone<input name="tel" type="tel" autocomplete="tel" required></label>
+<label>Votre commune et ce que vous souhaitez<textarea name="msg" placeholder="Ex. : je souhaite estimer ma maison à Callian" required></textarea></label>
+<button class="btn-clair" type="submit">Envoyer ma demande</button></form>
+</div></section>
+</main>
+<footer><div class="wrap">Bastide Immobilier · [Nom Prénom], entrepreneur individuel · SIRET [SIRET] · <a href="#">Mentions légales</a></div></footer>
+<div class="barre-appel"><a class="btn btn-plein" href="tel:+33600000000">Appeler</a><a class="btn btn-ligne" href="#contact">Devis</a></div>
+<script>
+const M=[["Je vends", "Je vends mon bien", "De l’estimation à l’acte", [["Estimation", "Visite du bien, comparaison avec les ventes récentes, prix de départ réaliste."], ["Diagnostics", "DPE et autres diagnostics obligatoires : on vous dit lesquels et on vous aide à les commander."], ["Visites et signature", "On filtre les acheteurs, on négocie, on suit le dossier chez le notaire."]]], ["J’achète", "J’achète", "Trouver le bon bien", [["Vos critères", "Budget, secteur, surface, jardin : on précise ensemble."], ["Visites", "Des visites ciblées, avec nos conseils sur l’état du bien."], ["Financement", "Je vous oriente vers un courtier si besoin."]]], ["Je loue", "Je mets en location", "Louer sereinement", [["Annonce", "Photos et description soignées."], ["Dossiers", "Sélection des candidats selon des critères clairs."], ["État des lieux", "Réalisé avec soin, pour éviter les litiges."]]], ["Estimation", "Je veux connaître la valeur", "Estimation gratuite", [["Visite", "On visite le bien et on note ses atouts et ses défauts."], ["Comparaison", "Les ventes récentes dans votre quartier."], ["Avis de valeur", "Vous repartez avec une fourchette de prix expliquée, sans engagement."]]]];
+const bar=document.getElementById('mois'),nom=document.getElementById('m-nom'),sais=document.getElementById('m-sais'),list=document.getElementById('m-taches');
+function show(i){
+  [...bar.children].forEach((b,k)=>{b.setAttribute('aria-selected',k===i)});
+  nom.textContent=M[i][1];sais.textContent=M[i][2];list.innerHTML='';
+  M[i][3].forEach(t=>{const li=document.createElement('li');li.innerHTML='<b></b><span></span>';li.firstChild.textContent=t[0];li.lastChild.textContent=t[1];list.appendChild(li)});
+}
+M.forEach((m,i)=>{const b=document.createElement('button');b.type='button';b.role='tab';b.textContent=m[0];b.onclick=()=>show(i);bar.appendChild(b)});
+const now=0;show(now);
+document.getElementById('formulaire').addEventListener('submit',e=>{
+  e.preventDefault();const f=new FormData(e.target);
+  const body=encodeURIComponent('Nom : '+f.get('nom')+'\nTéléphone : '+f.get('tel')+'\n\n'+f.get('msg'));
+  location.href='mailto:contact@exemple.fr?subject='+encodeURIComponent('Demande de devis')+'&body='+body;
+});
+</script>
+</body>
+</html>

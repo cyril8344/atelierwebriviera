@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carreaux &amp; Terrasses du Var | Carreleur, faïencier à Fayence, Callian, Tourrettes</title>
+<meta name="description" content="Carreleur, faïencier dans le Pays de Fayence. Carrelage, faïence, terrasses, salles de bain et douches à l’italienne. Pose soignée, joints propres, finitions nettes.">
+<meta name="robots" content="noindex">
+<style>
+:root{
+  --cypres:#17495c; --cypres-2:#335f70; --olive:#6fb1b5; --lavande:#b84a18; --lavande-clair:#f6e9e3;
+  --brume:#edf2f2; --pierre:#dce4e7; --encre:#0f2f3c; --encre-2:#517685; --blanc:#f8fafa;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;font-family:var(--sans);color:var(--encre);background:var(--brume);line-height:1.6;font-size:1.0625rem;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lavande);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.25rem}
+.sr{position:absolute;left:-9999px}
+
+.demo{background:var(--cypres);color:#e3e9eb;font-size:.875rem;text-align:center;padding:.5rem 1rem}
+.demo a{color:#fff}
+
+header.top{background:#e1eeee}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;padding-bottom:1rem;gap:1rem}
+.marque{font-family:var(--serif);font-size:1.25rem;font-weight:700;letter-spacing:.01em;text-decoration:none;color:var(--cypres);line-height:1.1}
+.marque small{display:block;font-family:var(--sans);font-weight:500;font-size:.8rem;letter-spacing:0;color:var(--encre-2)}
+.btn{display:inline-flex;align-items:center;gap:.6rem;font-weight:700;text-decoration:none;border-radius:999px;padding:.85rem 1.4rem;border:2px solid transparent;font-size:1rem;transition:background .15s,color .15s,border-color .15s}
+.btn-plein{background:var(--cypres);color:#fff}
+.btn-plein:hover{background:var(--cypres-2)}
+.btn-ligne{border-color:var(--cypres);color:var(--cypres);background:transparent}
+.btn-ligne:hover{background:var(--cypres);color:#fff}
+.btn svg{width:1.1em;height:1.1em;flex:none}
+
+.hero{background:#cde5e8;position:relative;overflow:hidden}
+.hero .wrap{padding-top:clamp(1.5rem,5vw,3.5rem);padding-bottom:1.5rem;position:relative;z-index:2}.hero-texte{background:linear-gradient(#e1eeee,#cde5e8)}
+.hero h1{font-family:var(--serif);font-weight:700;color:var(--cypres);font-size:clamp(2.3rem,6.2vw,4.3rem);line-height:1.02;letter-spacing:-.015em;margin:0 0 1.1rem;max-width:16ch}
+.hero p.lead{font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:34rem;color:var(--encre-2);margin:0 0 1.6rem}
+.hero .actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1.25rem}
+.hero .garanties{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:.35rem 1.4rem;font-size:.95rem;color:var(--encre-2)}
+.hero .garanties li::before{content:"";display:inline-block;width:.5em;height:.5em;border-radius:50%;background:var(--olive);margin-right:.5em;vertical-align:.08em}
+.scene{display:block;width:100%;margin-top:0;position:relative;z-index:1}
+.paysage{display:block;width:100%;height:280px}
+@media(min-width:760px){.paysage{height:auto}}
+
+@keyframes monte{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}
+.hero h1,.hero .lead,.hero .actions{animation:monte .7s both}
+.hero .lead{animation-delay:.12s}.hero .actions{animation-delay:.24s}
+
+section{padding:clamp(3rem,7vw,5.5rem) 0}
+h2{font-family:var(--serif);font-size:clamp(1.8rem,4.2vw,2.8rem);line-height:1.1;color:var(--cypres);margin:0 0 .6rem;letter-spacing:-.01em}
+.intro{max-width:38rem;color:var(--encre-2);margin:0 0 2.2rem}
+
+/* prestations */
+.btn.tel-top{display:none}
+@media(min-width:720px){.btn.tel-top{display:inline-flex}}
+.presta{background:var(--blanc)}
+.presta ul{list-style:none;margin:0;padding:0;border-top:2px solid var(--cypres)}
+.presta li{display:grid;gap:.4rem 2rem;padding:1.5rem 0;border-bottom:1px solid var(--pierre);grid-template-columns:1fr}
+@media(min-width:760px){.presta li{grid-template-columns:minmax(0,5fr) minmax(0,7fr) auto;align-items:baseline}}
+.presta h3{font-family:var(--serif);font-size:1.55rem;margin:0;color:var(--cypres);line-height:1.15}
+.presta li p{margin:0;color:var(--encre-2);max-width:36rem}
+.presta .prix{font-weight:700;color:var(--lavande);white-space:nowrap}
+.presta .note{margin-top:1.4rem;background:var(--lavande-clair);border-radius:12px;padding:1rem 1.25rem;max-width:44rem}
+.presta .note strong{color:var(--cypres)}
+
+/* calendrier */
+.cal{background:var(--cypres);color:#e8edef}
+.cal h2{color:#fff}.cal .intro{color:#b9c8ce}
+.mois{display:flex;gap:.4rem;overflow-x:auto;padding:0 0 .8rem;margin:0 0 1.6rem;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.mois button{flex:none;font:inherit;font-weight:600;background:transparent;color:#ccd7db;border:1.5px solid #517685;border-radius:999px;padding:.5rem 1rem;cursor:pointer;transition:background .15s,color .15s}
+.mois button:hover{border-color:#8ba4ae}
+.mois button[aria-selected="true"]{background:#eef0e6;color:var(--cypres);border-color:#eef0e6}
+.mois-panneau{display:grid;gap:1.5rem}
+@media(min-width:820px){.mois-panneau{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:3rem;align-items:start}}
+.mois-nom{font-family:var(--serif);font-size:clamp(2.6rem,7vw,4.6rem);line-height:1;color:#eef0e6;margin:0}
+.mois-saison{margin:.5rem 0 0;color:#b9c8ce}
+.taches{list-style:none;margin:0;padding:0;display:grid;gap:.9rem}
+.taches li{padding:1rem 1.2rem;background:#2a5869;border-radius:12px;border-left:5px solid #6fb1b5}
+.taches b{display:block;color:#fff;font-size:1.08rem}
+.taches span{color:#b9c8ce;font-size:.98rem}
+.cal .appel{margin-top:1.8rem}
+.cal .appel a{color:#fff;font-weight:700}
+
+/* deroulement */
+.etapes{list-style:none;padding:0;margin:0;display:grid;gap:1.5rem;counter-reset:e}
+@media(min-width:800px){.etapes{grid-template-columns:repeat(3,1fr);gap:2.5rem}}
+.etapes li{counter-increment:e;position:relative;padding-top:1.1rem;border-top:2px solid var(--cypres)}
+.etapes li::before{content:counter(e);position:absolute;top:-1.15rem;left:0;background:var(--brume);padding-right:.7rem;font-family:var(--serif);font-size:1.6rem;font-weight:700;color:var(--lavande)}
+.etapes h3{font-family:var(--serif);font-size:1.4rem;margin:.5rem 0 .3rem;color:var(--cypres)}
+.etapes p{margin:0;color:var(--encre-2)}
+
+/* zone */
+.zone{background:var(--blanc)}
+.zone .grille{display:grid;gap:2rem}
+@media(min-width:820px){.zone .grille{grid-template-columns:1fr 1fr;align-items:center}}
+.communes{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+.communes li{border:1.5px solid var(--pierre);border-radius:999px;padding:.4rem 1rem;font-weight:600;color:var(--cypres);background:var(--brume)}
+.zone .grille p{color:var(--encre-2);margin:0 0 1.2rem;max-width:34rem}
+
+/* faq */
+details{border-bottom:1px solid var(--pierre);padding:1.05rem 0}
+details:first-of-type{border-top:2px solid var(--cypres)}
+summary{cursor:pointer;font-family:var(--serif);font-size:1.25rem;color:var(--cypres);font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--sans);font-weight:400;font-size:1.6rem;line-height:1;color:var(--lavande);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:.7rem 0 0;color:var(--encre-2);max-width:42rem}
+
+/* contact */
+.contact{background:var(--cypres);color:#e8edef}
+.contact h2{color:#fff}
+.contact .grille{display:grid;gap:2.5rem}
+@media(min-width:860px){.contact .grille{grid-template-columns:5fr 6fr}}
+.gros-tel{font-family:var(--serif);font-size:clamp(2.2rem,6vw,3.4rem);font-weight:700;color:#fff;text-decoration:none;display:block;line-height:1.1;margin:.6rem 0 .8rem}
+.contact .infos{color:#b9c8ce;margin:0}
+form{display:grid;gap:1rem}
+label{display:grid;gap:.35rem;font-weight:600;color:#fff}
+input,textarea{font:inherit;padding:.85rem 1rem;border-radius:10px;border:1.5px solid #517685;background:#2a5869;color:#fff}
+input::placeholder,textarea::placeholder{color:#97adb6}
+textarea{min-height:7rem;resize:vertical}
+.btn-clair{background:#eef0e6;color:var(--cypres);justify-content:center;cursor:pointer;font:inherit;font-weight:700;border:0;border-radius:999px;padding:.95rem 1.4rem}
+.btn-clair:hover{background:#fff}
+
+footer{background:#0f2f3c;color:#a2b6be;font-size:.9rem;padding:1.6rem 0 5.5rem}
+footer a{color:#ccd7db}
+.barre-appel{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--blanc);border-top:1px solid var(--pierre);padding:.65rem 1rem;display:flex;gap:.6rem}
+.barre-appel a{flex:1;justify-content:center;padding:.8rem 1rem}
+@media(min-width:720px){.barre-appel{display:none}footer{padding-bottom:1.6rem}}
+
+.mois button{white-space:nowrap}</style>
+</head>
+<body>
+<div class="demo">Maquette d’exemple réalisée par <a href="https://www.atelierwebriviera.fr/">Atelier Web Riviera</a>. Entreprise, téléphone et textes fictifs.</div>
+<header class="top"><div class="wrap">
+<a class="marque" href="#haut">Carreaux &amp; Terrasses du Var<small>Carreleur, faïencier</small></a>
+<a class="btn btn-plein tel-top" href="tel:+33600000000"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>06 00 00 00 00</a>
+</div></header>
+<main id="haut">
+<div class="hero"><div class="hero-texte"><div class="wrap">
+<h1>Un sol qui dure, posé au millimètre.</h1>
+<p class="lead">Carrelage, faïence, terrasses, salles de bain et douches à l’italienne. Pose soignée, joints propres, finitions nettes.</p>
+<div class="actions"><a class="btn btn-plein" href="tel:+33600000000">Appeler pour un devis</a><a class="btn btn-ligne" href="#contact">Écrire un message</a></div>
+<ul class="garanties"><li>Devis gratuit</li><li>Pose soignée</li><li>Dépose de l’ancien sol</li></ul>
+</div></div><div class="scene"><svg class="paysage" preserveAspectRatio="xMidYMax slice" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Carreleur, faïencier"><defs><linearGradient id="ciel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cde5e8"/><stop offset=".75" stop-color="#eef0e6"/></linearGradient></defs><rect x="0" y="0" width="1200" height="560" fill="url(#ciel)" /><circle cx="980" cy="110" r="64" fill="#f7efc8" opacity=".85"/><path d="M0 300 C140 240 300 275 450 232 S760 196 900 252 S1110 226 1200 262 L1200 560 L0 560Z" fill="#b9c9c8" /><path d="M0 330 C200 290 330 320 520 280 S900 270 1200 310 L1200 560 L0 560Z" fill="#a4b8ab" /><path d="M360 360 C440 270 540 196 640 192 C740 196 840 270 930 360 L930 560 L360 560Z" fill="#93a889" /><rect x="548" y="222" width="22" height="26" fill="#ddd4b8" /><polygon points="546,222 559.0,213 572,222" fill="#b4694a" /><rect x="572" y="214" width="26" height="26" fill="#d6cdb0" /><polygon points="570,214 585.0,205 600,214" fill="#b4694a" /><rect x="596" y="206" width="30" height="26" fill="#e9e2cd" /><polygon points="594,206 611.0,197 628,206" fill="#b4694a" /><rect x="668" y="206" width="30" height="18" fill="#d6cdb0" /><polygon points="666,206 683.0,197 700,206" fill="#b4694a" /><rect x="692" y="214" width="26" height="26" fill="#ddd4b8" /><polygon points="690,214 705.0,205 720,214" fill="#b4694a" /><rect x="716" y="222" width="22" height="26" fill="#d6cdb0" /><polygon points="714,222 727.0,213 740,222" fill="#b4694a" /><rect x="560" y="236" width="30" height="26" fill="#d6cdb0" /><polygon points="558,236 575.0,227 592,236" fill="#b4694a" /><rect x="586" y="228" width="26" height="26" fill="#ddd4b8" /><polygon points="584,228 599.0,219 614,228" fill="#b4694a" /><rect x="610" y="222" width="22" height="26" fill="#ddd4b8" /><polygon points="608,222 621.0,213 634,222" fill="#b4694a" /><rect x="654" y="222" width="30" height="22" fill="#e9e2cd" /><polygon points="652,222 669.0,213 686,222" fill="#b4694a" /><rect x="678" y="228" width="30" height="18" fill="#ddd4b8" /><polygon points="676,228 693.0,219 710,228" fill="#b4694a" /><rect x="704" y="236" width="30" height="18" fill="#efe9d8" /><polygon points="702,236 719.0,227 736,236" fill="#b4694a" /><rect x="540" y="248" width="22" height="22" fill="#d6cdb0" /><polygon points="538,248 551.0,239 564,248" fill="#b4694a" /><rect x="730" y="244" width="30" height="26" fill="#d6cdb0" /><polygon points="728,244 745.0,235 762,244" fill="#b4694a" /><rect x="570" y="252" width="30" height="22" fill="#d6cdb0" /><polygon points="568,252 585.0,243 602,252" fill="#b4694a" /><rect x="700" y="252" width="30" height="26" fill="#d6cdb0" /><polygon points="698,252 715.0,243 732,252" fill="#b4694a" /><rect x="626" y="158" width="16" height="56" fill="#ece5d0" /><polygon points="624,158 634,140 644,158" fill="#b4694a" /><rect x="630" y="170" width="8" height="12" fill="#8c8a76" /><rect x="0" y="340" width="1200" height="50" fill="#d6cdb4" /><rect x="0" y="340" width="1200" height="46" fill="#d6cdb4" /><line x1="286" y1="365" x2="298" y2="365" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="725" y1="368" x2="733" y2="368" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="16" y1="376" x2="27" y2="376" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="281" y1="383" x2="295" y2="383" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="1004" y1="362" x2="1019" y2="362" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="181" y1="368" x2="199" y2="368" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="628" y1="373" x2="644" y2="373" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="77" y1="373" x2="92" y2="373" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="362" y1="344" x2="380" y2="344" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="567" y1="372" x2="586" y2="372" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="857" y1="380" x2="870" y2="380" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="961" y1="361" x2="980" y2="361" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="1055" y1="347" x2="1064" y2="347" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="260" y1="382" x2="274" y2="382" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="752" y1="355" x2="766" y2="355" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="463" y1="357" x2="478" y2="357" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="701" y1="379" x2="717" y2="379" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="1115" y1="377" x2="1135" y2="377" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="806" y1="350" x2="824" y2="350" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="1158" y1="379" x2="1172" y2="379" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="857" y1="351" x2="875" y2="351" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="688" y1="354" x2="697" y2="354" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="1025" y1="383" x2="1034" y2="383" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="961" y1="359" x2="971" y2="359" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="353" y1="374" x2="371" y2="374" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="53" y1="368" x2="62" y2="368" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="862" y1="356" x2="881" y2="356" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="1177" y1="363" x2="1197" y2="363" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="372" y1="346" x2="387" y2="346" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="38" y1="351" x2="51" y2="351" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="733" y1="349" x2="741" y2="349" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="1041" y1="356" x2="1061" y2="356" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="1076" y1="358" x2="1090" y2="358" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="624" y1="369" x2="639" y2="369" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="671" y1="368" x2="690" y2="368" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="608" y1="360" x2="625" y2="360" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="285" y1="355" x2="305" y2="355" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="625" y1="365" x2="633" y2="365" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="498" y1="366" x2="506" y2="366" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="739" y1="368" x2="748" y2="368" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="753" y1="362" x2="769" y2="362" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="423" y1="371" x2="440" y2="371" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="27" y1="345" x2="43" y2="345" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="1156" y1="353" x2="1169" y2="353" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="711" y1="356" x2="724" y2="356" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="375" y1="358" x2="390" y2="358" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="360" y1="358" x2="378" y2="358" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="32" y1="366" x2="49" y2="366" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="372" y1="352" x2="390" y2="352" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="286" y1="350" x2="300" y2="350" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="838" y1="347" x2="850" y2="347" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="401" y1="376" x2="414" y2="376" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="1027" y1="350" x2="1039" y2="350" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="780" y1="378" x2="794" y2="378" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="270" y1="348" x2="284" y2="348" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="229" y1="375" x2="247" y2="375" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="220" y1="354" x2="238" y2="354" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="770" y1="375" x2="782" y2="375" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="156" y1="355" x2="173" y2="355" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><line x1="325" y1="357" x2="338" y2="357" stroke="#b7af95" stroke-width="1.4" stroke-linecap="round"/><circle cx="150" cy="360" r="34" fill="#5d7a3d" /><circle cx="139.8" cy="349.8" r="18.700000000000003" fill="#78954f" opacity=".6"/><circle cx="110" cy="350" r="8" fill="#c43f86" opacity=".9"/><circle cx="119" cy="358" r="8" fill="#c43f86" opacity=".9"/><circle cx="128" cy="366" r="8" fill="#c43f86" opacity=".9"/><circle cx="137" cy="350" r="8" fill="#c43f86" opacity=".9"/><circle cx="146" cy="358" r="8" fill="#c43f86" opacity=".9"/><circle cx="155" cy="366" r="8" fill="#c43f86" opacity=".9"/><circle cx="164" cy="350" r="8" fill="#c43f86" opacity=".9"/><circle cx="173" cy="358" r="8" fill="#c43f86" opacity=".9"/><circle cx="182" cy="366" r="8" fill="#c43f86" opacity=".9"/><circle cx="191" cy="350" r="8" fill="#c43f86" opacity=".9"/><circle cx="200" cy="358" r="8" fill="#c43f86" opacity=".9"/><circle cx="209" cy="366" r="8" fill="#c43f86" opacity=".9"/><circle cx="218" cy="350" r="8" fill="#c43f86" opacity=".9"/><circle cx="227" cy="358" r="8" fill="#c43f86" opacity=".9"/><path d="M1000 392 C994.6 365.0 987.4 352.4 983.8 338.0 C996.4 348.8 1003.6 348.8 1014.4 336.2 C1009.0 352.4 1007.2 366.8 1007.2 392Z" fill="#5c5140" /><circle cx="973.0" cy="321.8" r="23.400000000000002" fill="#8da07a" opacity=".92"/><circle cx="1000.0" cy="309.2" r="28.8" fill="#8da07a" opacity=".92"/><circle cx="1027.0" cy="323.6" r="23.400000000000002" fill="#8da07a" opacity=".92"/><circle cx="989.2" cy="329.0" r="21.6" fill="#8da07a" opacity=".92"/><circle cx="1014.4" cy="330.8" r="19.8" fill="#8da07a" opacity=".92"/><circle cx="982.0" cy="318.2" r="12.6" fill="#a9ba95" opacity=".8"/><circle cx="1012.6" cy="305.6" r="14.4" fill="#a9ba95" opacity=".8"/><circle cx="1021.6" cy="327.2" r="11.700000000000001" fill="#a9ba95" opacity=".8"/><polygon points="330,390 379,390 366,395 314,395" fill="#3f8fa0" stroke="#f7efe0" stroke-width="2"/><polygon points="379,390 428,390 418,395 366,395" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="428,390 477,390 470,395 418,395" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="477,390 526,390 522,395 470,395" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="526,390 575,390 574,395 522,395" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="575,390 625,390 626,395 574,395" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="625,390 674,390 678,395 626,395" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="674,390 723,390 730,395 678,395" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="723,390 772,390 782,395 730,395" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="772,390 821,390 834,395 782,395" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="821,390 870,390 886,395 834,395" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="314,395 366,395 340,405 282,405" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="366,395 418,395 398,405 340,405" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="418,395 470,395 456,405 398,405" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="470,395 522,395 513,405 456,405" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="522,395 574,395 571,405 513,405" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="574,395 626,395 629,405 571,405" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="626,395 678,395 687,405 629,405" fill="#3f8fa0" stroke="#f7efe0" stroke-width="2"/><polygon points="678,395 730,395 744,405 687,405" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="730,395 782,395 802,405 744,405" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="782,395 834,395 860,405 802,405" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="834,395 886,395 918,405 860,405" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="282,405 340,405 304,419 239,419" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="340,405 398,405 370,419 304,419" fill="#3f8fa0" stroke="#f7efe0" stroke-width="2"/><polygon points="398,405 456,405 436,419 370,419" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="456,405 513,405 501,419 436,419" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="513,405 571,405 567,419 501,419" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="571,405 629,405 633,419 567,419" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="629,405 687,405 699,419 633,419" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="687,405 744,405 764,419 699,419" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="744,405 802,405 830,419 764,419" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="802,405 860,405 896,419 830,419" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="860,405 918,405 961,419 896,419" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="239,419 304,419 261,436 185,436" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="304,419 370,419 336,436 261,436" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="370,419 436,419 411,436 336,436" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="436,419 501,419 487,436 411,436" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="501,419 567,419 562,436 487,436" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="567,419 633,419 638,436 562,436" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="633,419 699,419 713,436 638,436" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="699,419 764,419 789,436 713,436" fill="#3f8fa0" stroke="#f7efe0" stroke-width="2"/><polygon points="764,419 830,419 864,436 789,436" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="830,419 896,419 939,436 864,436" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="896,419 961,419 1015,436 939,436" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="185,436 261,436 210,456 123,456" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="261,436 336,436 296,456 210,456" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="336,436 411,436 383,456 296,456" fill="#3f8fa0" stroke="#f7efe0" stroke-width="2"/><polygon points="411,436 487,436 470,456 383,456" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="487,436 562,436 557,456 470,456" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="562,436 638,436 643,456 557,456" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="638,436 713,436 730,456 643,456" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="713,436 789,436 817,456 730,456" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="789,436 864,436 904,456 817,456" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="864,436 939,436 990,456 904,456" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="939,436 1015,436 1077,456 990,456" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="123,456 210,456 152,479 53,479" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="210,456 296,456 252,479 152,479" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="296,456 383,456 351,479 252,479" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="383,456 470,456 451,479 351,479" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="470,456 557,456 550,479 451,479" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="557,456 643,456 650,479 550,479" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="643,456 730,456 749,479 650,479" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="730,456 817,456 849,479 749,479" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="817,456 904,456 948,479 849,479" fill="#3f8fa0" stroke="#f7efe0" stroke-width="2"/><polygon points="904,456 990,456 1048,479 948,479" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="990,456 1077,456 1147,479 1048,479" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="53,479 152,479 89,504 -25,504" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="152,479 252,479 203,504 89,504" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="252,479 351,479 316,504 203,504" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="351,479 451,479 430,504 316,504" fill="#3f8fa0" stroke="#f7efe0" stroke-width="2"/><polygon points="451,479 550,479 543,504 430,504" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="550,479 650,479 657,504 543,504" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="650,479 749,479 770,504 657,504" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="749,479 849,479 884,504 770,504" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="849,479 948,479 997,504 884,504" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="948,479 1048,479 1111,504 997,504" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="1048,479 1147,479 1225,504 1111,504" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="-25,504 89,504 20,531 -109,531" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="89,504 203,504 149,531 20,531" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="203,504 316,504 278,531 149,531" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="316,504 430,504 407,531 278,531" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="430,504 543,504 536,531 407,531" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="543,504 657,504 664,531 536,531" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="657,504 770,504 793,531 664,531" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="770,504 884,504 922,531 793,531" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="884,504 997,504 1051,531 922,531" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="997,504 1111,504 1180,531 1051,531" fill="#3f8fa0" stroke="#f7efe0" stroke-width="2"/><polygon points="1111,504 1225,504 1309,531 1180,531" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="-109,531 20,531 -55,560 -200,560" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="20,531 149,531 91,560 -55,560" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="149,531 278,531 236,560 91,560" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="278,531 407,531 382,560 236,560" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="407,531 536,531 527,560 382,560" fill="#3f8fa0" stroke="#f7efe0" stroke-width="2"/><polygon points="536,531 664,531 673,560 527,560" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="664,531 793,531 818,560 673,560" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="793,531 922,531 964,560 818,560" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="922,531 1051,531 1109,560 964,560" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><polygon points="1051,531 1180,531 1255,560 1109,560" fill="#ecdcc0" stroke="#f7efe0" stroke-width="2"/><polygon points="1180,531 1309,531 1400,560 1255,560" fill="#c9754d" stroke="#f7efe0" stroke-width="2"/><rect x="1020" y="500" width="120" height="26" fill="#e6dfcf" /><rect x="1030" y="486" width="100" height="18" fill="#d3cab4" /><rect x="560" y="480" width="0" height="0" fill="#000" /></svg></div></div>
+<section class="presta" id="prestations"><div class="wrap">
+<h2>Ce que je pose chez vous</h2><p class="intro">Intérieur, extérieur, petite surface ou grand séjour.</p>
+<ul><li><h3>Carrelage intérieur</h3><p>Séjour, cuisine, chambres. Grands formats, imitation parquet, carreaux de ciment.</p><span class="prix">Sur devis</span></li><li><h3>Terrasses et extérieurs</h3><p>Terrasses, plages de piscine, escaliers. Carreaux antidérapants et résistants à l’extérieur.</p><span class="prix">Sur devis</span></li><li><h3>Salle de bain et douche à l’italienne</h3><p>Faïence, receveurs à carreler, étanchéité soignée.</p><span class="prix">Sur devis</span></li><li><h3>Dépose et préparation</h3><p>Dépose de l’ancien carrelage, ragréage, mise à niveau du support.</p><span class="prix">Sur devis</span></li></ul><p class="note"><strong>Un doute sur le carreau ?</strong> Je vous conseille sur le format, la finition et l’entretien avant que vous achetiez.</p></div></section>
+<section class="cal" id="calendrier"><div class="wrap">
+<h2>Quel carrelage pour quelle pièce ?</h2><p class="intro">Le bon carreau dépend de la pièce et de l’usage. Voilà ce que je conseille.</p>
+<div class="mois" role="tablist" aria-label="Pièces" id="mois"></div>
+<div class="mois-panneau" role="tabpanel" id="panneau" aria-live="polite">
+<div><p class="mois-nom" id="m-nom"></p><p class="mois-saison" id="m-sais"></p></div>
+<div><ul class="taches" id="m-taches"></ul><p class="appel">Besoin d’un avis ? <a href="tel:+33600000000">Appelez-moi</a>.</p></div>
+</div></div></section>
+<section id="deroulement"><div class="wrap">
+<h2>Comment ça se passe</h2><p class="intro">Simple, sans engagement avant d’avoir vu le prix.</p>
+<ol class="etapes"><li><h3>Je viens voir</h3><p>Visite, mesures, état du support. On choisit ensemble le carreau et le calepinage.</p></li><li><h3>Je prépare</h3><p>Dépose si besoin, ragréage, mise à niveau. C’est ce qui évite les carreaux qui sonnent creux.</p></li><li><h3>Je pose</h3><p>Pose, joints, nettoyage. Vous validez le résultat avec moi.</p></li></ol></div></section>
+<section class="zone" id="zone"><div class="wrap grille">
+<div><h2>Du lac de Saint-Cassien aux villages du Haut-Var</h2>
+<p>Je me déplace dans tout le canton de Fayence. Au-delà, appelez-moi : selon le chantier, je viens aussi.</p>
+<a class="btn btn-ligne" href="tel:+33600000000">Vérifier pour votre commune</a></div>
+<ul class="communes"><li>Fayence</li><li>Tourrettes</li><li>Callian</li><li>Montauroux</li><li>Seillans</li><li>Mons</li><li>Saint-Paul-en-Forêt</li><li>Bagnols-en-Forêt</li><li>Tanneron</li></ul></div></section>
+<section id="questions"><div class="wrap">
+<h2>Les questions qu’on me pose</h2><p class="intro">La réponse n’y est pas ? Appelez, c’est plus rapide.</p><details><summary>Pouvez-vous poser sur l’ancien carrelage ?</summary><p>Parfois, si le support est sain et plan. Sinon, on dépose, c’est plus durable.</p></details><details><summary>Fournissez-vous les carreaux ?</summary><p>Je vous conseille et je peux fournir, ou poser ceux que vous choisissez en magasin.</p></details><details><summary>Combien de temps pour une salle de bain ?</summary><p>Quelques jours, avec le séchage de l’étanchéité et des colles.</p></details><details><summary>Faites-vous les douches à l’italienne ?</summary><p>Oui, avec une étanchéité sous le carrelage pour éviter les infiltrations.</p></details></div></section>
+<section class="contact" id="contact"><div class="wrap grille">
+<div><h2>Parlons de votre sol</h2><a class="gros-tel" href="tel:+33600000000">06 00 00 00 00</a>
+<p class="infos">Du lundi au vendredi, de 7 h 30 à 17 h.<br>Je rappelle toujours dans la journée.</p></div>
+<form id="formulaire" aria-label="Demande de devis">
+<label>Votre nom<input name="nom" autocomplete="name" required></label>
+<label>Votre téléphone<input name="tel" type="tel" autocomplete="tel" required></label>
+<label>Votre commune et ce que vous souhaitez<textarea name="msg" placeholder="Ex. : carrelage de la terrasse (35 m²), à Fayence" required></textarea></label>
+<button class="btn-clair" type="submit">Envoyer ma demande</button></form>
+</div></section>
+</main>
+<footer><div class="wrap">Carreaux &amp; Terrasses du Var · [Nom Prénom], entrepreneur individuel · SIRET [SIRET] · <a href="#">Mentions légales</a></div></footer>
+<div class="barre-appel"><a class="btn btn-plein" href="tel:+33600000000">Appeler</a><a class="btn btn-ligne" href="#contact">Devis</a></div>
+<script>
+const M=[["Séjour", "Le séjour", "Grand et lumineux", [["Format", "Les grands formats allongent la pièce et limitent les joints."], ["Finition", "Mate ou satinée, qui ne marque pas."], ["Support", "Je vérifie la planéité avant de poser."]]], ["Cuisine", "La cuisine", "Résistant", [["Finition", "Facile à nettoyer, résistant aux taches."], ["Joints", "Joints serrés, faciles à entretenir."], ["Crédence", "Faïence ou carreaux décoratifs au mur."]]], ["Salle de bain", "La salle de bain", "Étanche", [["Étanchéité", "Sous le carrelage de douche, c’est la partie la plus importante."], ["Sol", "Un carreau antidérapant, surtout dans la douche."], ["Faïence", "Des formats qui limitent les joints."]]], ["Terrasse", "La terrasse", "Pour l’extérieur", [["Carreau", "Résistant aux UV, aux écarts de température et antidérapant."], ["Pente", "Je donne la bonne pente pour l’évacuation de l’eau."], ["Pose", "Collée ou sur plots, selon le support."]]], ["Piscine", "La plage de piscine", "Pieds nus, sans glisser", [["Antidérapant", "Indispensable : carreau avec une classe d’adhérence adaptée."], ["Couleur", "Les teintes claires restent moins chaudes sous le soleil."], ["Margelles", "Pose soignée des margelles et des angles."]]]];
+const bar=document.getElementById('mois'),nom=document.getElementById('m-nom'),sais=document.getElementById('m-sais'),list=document.getElementById('m-taches');
+function show(i){
+  [...bar.children].forEach((b,k)=>{b.setAttribute('aria-selected',k===i)});
+  nom.textContent=M[i][1];sais.textContent=M[i][2];list.innerHTML='';
+  M[i][3].forEach(t=>{const li=document.createElement('li');li.innerHTML='<b></b><span></span>';li.firstChild.textContent=t[0];li.lastChild.textContent=t[1];list.appendChild(li)});
+}
+M.forEach((m,i)=>{const b=document.createElement('button');b.type='button';b.role='tab';b.textContent=m[0];b.onclick=()=>show(i);bar.appendChild(b)});
+const now=0;show(now);
+document.getElementById('formulaire').addEventListener('submit',e=>{
+  e.preventDefault();const f=new FormData(e.target);
+  const body=encodeURIComponent('Nom : '+f.get('nom')+'\nTéléphone : '+f.get('tel')+'\n\n'+f.get('msg'));
+  location.href='mailto:contact@exemple.fr?subject='+encodeURIComponent('Demande de devis')+'&body='+body;
+});
+</script>
+</body>
+</html>

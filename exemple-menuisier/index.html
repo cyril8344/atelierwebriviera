@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menuiserie du Haut-Var | Menuisier, agenceur à Fayence, Callian, Tourrettes</title>
+<meta name="description" content="Menuisier, agenceur dans le Pays de Fayence. Fabrication et pose sur mesure en bois et en aluminium : fenêtres, volets, portes, escaliers, placards. Je prends les mesures chez vous.">
+<meta name="robots" content="noindex">
+<style>
+:root{
+  --cypres:#3b2a1c; --cypres-2:#534437; --olive:#c89a5b; --lavande:#2c6a8a; --lavande-clair:#e6edf1;
+  --brume:#f1eee8; --pierre:#e2dfdd; --encre:#261b12; --encre-2:#6c5f55; --blanc:#f9f8f6;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;font-family:var(--sans);color:var(--encre);background:var(--brume);line-height:1.6;font-size:1.0625rem;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lavande);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.25rem}
+.sr{position:absolute;left:-9999px}
+
+.demo{background:var(--cypres);color:#e7e5e4;font-size:.875rem;text-align:center;padding:.5rem 1rem}
+.demo a{color:#fff}
+
+header.top{background:#ece6da}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;padding-bottom:1rem;gap:1rem}
+.marque{font-family:var(--serif);font-size:1.25rem;font-weight:700;letter-spacing:.01em;text-decoration:none;color:var(--cypres);line-height:1.1}
+.marque small{display:block;font-family:var(--sans);font-weight:500;font-size:.8rem;letter-spacing:0;color:var(--encre-2)}
+.btn{display:inline-flex;align-items:center;gap:.6rem;font-weight:700;text-decoration:none;border-radius:999px;padding:.85rem 1.4rem;border:2px solid transparent;font-size:1rem;transition:background .15s,color .15s,border-color .15s}
+.btn-plein{background:var(--cypres);color:#fff}
+.btn-plein:hover{background:var(--cypres-2)}
+.btn-ligne{border-color:var(--cypres);color:var(--cypres);background:transparent}
+.btn-ligne:hover{background:var(--cypres);color:#fff}
+.btn svg{width:1.1em;height:1.1em;flex:none}
+
+.hero{background:#d9e4e6;position:relative;overflow:hidden}
+.hero .wrap{padding-top:clamp(1.5rem,5vw,3.5rem);padding-bottom:1.5rem;position:relative;z-index:2}.hero-texte{background:linear-gradient(#ece6da,#d9e4e6)}
+.hero h1{font-family:var(--serif);font-weight:700;color:var(--cypres);font-size:clamp(2.3rem,6.2vw,4.3rem);line-height:1.02;letter-spacing:-.015em;margin:0 0 1.1rem;max-width:16ch}
+.hero p.lead{font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:34rem;color:var(--encre-2);margin:0 0 1.6rem}
+.hero .actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1.25rem}
+.hero .garanties{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:.35rem 1.4rem;font-size:.95rem;color:var(--encre-2)}
+.hero .garanties li::before{content:"";display:inline-block;width:.5em;height:.5em;border-radius:50%;background:var(--olive);margin-right:.5em;vertical-align:.08em}
+.scene{display:block;width:100%;margin-top:0;position:relative;z-index:1}
+.paysage{display:block;width:100%;height:280px}
+@media(min-width:760px){.paysage{height:auto}}
+
+@keyframes monte{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}
+.hero h1,.hero .lead,.hero .actions{animation:monte .7s both}
+.hero .lead{animation-delay:.12s}.hero .actions{animation-delay:.24s}
+
+section{padding:clamp(3rem,7vw,5.5rem) 0}
+h2{font-family:var(--serif);font-size:clamp(1.8rem,4.2vw,2.8rem);line-height:1.1;color:var(--cypres);margin:0 0 .6rem;letter-spacing:-.01em}
+.intro{max-width:38rem;color:var(--encre-2);margin:0 0 2.2rem}
+
+/* prestations */
+.btn.tel-top{display:none}
+@media(min-width:720px){.btn.tel-top{display:inline-flex}}
+.presta{background:var(--blanc)}
+.presta ul{list-style:none;margin:0;padding:0;border-top:2px solid var(--cypres)}
+.presta li{display:grid;gap:.4rem 2rem;padding:1.5rem 0;border-bottom:1px solid var(--pierre);grid-template-columns:1fr}
+@media(min-width:760px){.presta li{grid-template-columns:minmax(0,5fr) minmax(0,7fr) auto;align-items:baseline}}
+.presta h3{font-family:var(--serif);font-size:1.55rem;margin:0;color:var(--cypres);line-height:1.15}
+.presta li p{margin:0;color:var(--encre-2);max-width:36rem}
+.presta .prix{font-weight:700;color:var(--lavande);white-space:nowrap}
+.presta .note{margin-top:1.4rem;background:var(--lavande-clair);border-radius:12px;padding:1rem 1.25rem;max-width:44rem}
+.presta .note strong{color:var(--cypres)}
+
+/* calendrier */
+.cal{background:var(--cypres);color:#ebeae8}
+.cal h2{color:#fff}.cal .intro{color:#c4bfbb}
+.mois{display:flex;gap:.4rem;overflow-x:auto;padding:0 0 .8rem;margin:0 0 1.6rem;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.mois button{flex:none;font:inherit;font-weight:600;background:transparent;color:#d4d0cd;border:1.5px solid #6c5f55;border-radius:999px;padding:.5rem 1rem;cursor:pointer;transition:background .15s,color .15s}
+.mois button:hover{border-color:#9d948e}
+.mois button[aria-selected="true"]{background:#efe8d8;color:var(--cypres);border-color:#efe8d8}
+.mois-panneau{display:grid;gap:1.5rem}
+@media(min-width:820px){.mois-panneau{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:3rem;align-items:start}}
+.mois-nom{font-family:var(--serif);font-size:clamp(2.6rem,7vw,4.6rem);line-height:1;color:#efe8d8;margin:0}
+.mois-saison{margin:.5rem 0 0;color:#c4bfbb}
+.taches{list-style:none;margin:0;padding:0;display:grid;gap:.9rem}
+.taches li{padding:1rem 1.2rem;background:#4b3b2e;border-radius:12px;border-left:5px solid #c89a5b}
+.taches b{display:block;color:#fff;font-size:1.08rem}
+.taches span{color:#c4bfbb;font-size:.98rem}
+.cal .appel{margin-top:1.8rem}
+.cal .appel a{color:#fff;font-weight:700}
+
+/* deroulement */
+.etapes{list-style:none;padding:0;margin:0;display:grid;gap:1.5rem;counter-reset:e}
+@media(min-width:800px){.etapes{grid-template-columns:repeat(3,1fr);gap:2.5rem}}
+.etapes li{counter-increment:e;position:relative;padding-top:1.1rem;border-top:2px solid var(--cypres)}
+.etapes li::before{content:counter(e);position:absolute;top:-1.15rem;left:0;background:var(--brume);padding-right:.7rem;font-family:var(--serif);font-size:1.6rem;font-weight:700;color:var(--lavande)}
+.etapes h3{font-family:var(--serif);font-size:1.4rem;margin:.5rem 0 .3rem;color:var(--cypres)}
+.etapes p{margin:0;color:var(--encre-2)}
+
+/* zone */
+.zone{background:var(--blanc)}
+.zone .grille{display:grid;gap:2rem}
+@media(min-width:820px){.zone .grille{grid-template-columns:1fr 1fr;align-items:center}}
+.communes{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+.communes li{border:1.5px solid var(--pierre);border-radius:999px;padding:.4rem 1rem;font-weight:600;color:var(--cypres);background:var(--brume)}
+.zone .grille p{color:var(--encre-2);margin:0 0 1.2rem;max-width:34rem}
+
+/* faq */
+details{border-bottom:1px solid var(--pierre);padding:1.05rem 0}
+details:first-of-type{border-top:2px solid var(--cypres)}
+summary{cursor:pointer;font-family:var(--serif);font-size:1.25rem;color:var(--cypres);font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--sans);font-weight:400;font-size:1.6rem;line-height:1;color:var(--lavande);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:.7rem 0 0;color:var(--encre-2);max-width:42rem}
+
+/* contact */
+.contact{background:var(--cypres);color:#ebeae8}
+.contact h2{color:#fff}
+.contact .grille{display:grid;gap:2.5rem}
+@media(min-width:860px){.contact .grille{grid-template-columns:5fr 6fr}}
+.gros-tel{font-family:var(--serif);font-size:clamp(2.2rem,6vw,3.4rem);font-weight:700;color:#fff;text-decoration:none;display:block;line-height:1.1;margin:.6rem 0 .8rem}
+.contact .infos{color:#c4bfbb;margin:0}
+form{display:grid;gap:1rem}
+label{display:grid;gap:.35rem;font-weight:600;color:#fff}
+input,textarea{font:inherit;padding:.85rem 1rem;border-radius:10px;border:1.5px solid #6c5f55;background:#4b3b2e;color:#fff}
+input::placeholder,textarea::placeholder{color:#a79f99}
+textarea{min-height:7rem;resize:vertical}
+.btn-clair{background:#efe8d8;color:var(--cypres);justify-content:center;cursor:pointer;font:inherit;font-weight:700;border:0;border-radius:999px;padding:.95rem 1.4rem}
+.btn-clair:hover{background:#fff}
+
+footer{background:#261b12;color:#b1aaa4;font-size:.9rem;padding:1.6rem 0 5.5rem}
+footer a{color:#d4d0cd}
+.barre-appel{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--blanc);border-top:1px solid var(--pierre);padding:.65rem 1rem;display:flex;gap:.6rem}
+.barre-appel a{flex:1;justify-content:center;padding:.8rem 1rem}
+@media(min-width:720px){.barre-appel{display:none}footer{padding-bottom:1.6rem}}
+
+.mois button{white-space:nowrap}</style>
+</head>
+<body>
+<div class="demo">Maquette d’exemple réalisée par <a href="https://www.atelierwebriviera.fr/">Atelier Web Riviera</a>. Entreprise, téléphone et textes fictifs.</div>
+<header class="top"><div class="wrap">
+<a class="marque" href="#haut">Menuiserie du Haut-Var<small>Menuisier, agenceur</small></a>
+<a class="btn btn-plein tel-top" href="tel:+33600000000"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>06 00 00 00 00</a>
+</div></header>
+<main id="haut">
+<div class="hero"><div class="hero-texte"><div class="wrap">
+<h1>Des fenêtres, portes et placards faits à vos mesures.</h1>
+<p class="lead">Fabrication et pose sur mesure en bois et en aluminium : fenêtres, volets, portes, escaliers, placards. Je prends les mesures chez vous.</p>
+<div class="actions"><a class="btn btn-plein" href="tel:+33600000000">Appeler pour un devis</a><a class="btn btn-ligne" href="#contact">Écrire un message</a></div>
+<ul class="garanties"><li>Fabrication sur mesure</li><li>Pose comprise</li><li>Devis gratuit</li></ul>
+</div></div><div class="scene"><svg class="paysage" preserveAspectRatio="xMidYMax slice" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Menuisier, agenceur"><defs><linearGradient id="ciel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9e4e6"/><stop offset=".75" stop-color="#efe8d8"/></linearGradient></defs><rect x="0" y="0" width="1200" height="560" fill="url(#ciel)" /><circle cx="980" cy="110" r="64" fill="#f7efc8" opacity=".85"/><path d="M0 300 C140 240 300 275 450 232 S760 196 900 252 S1110 226 1200 262 L1200 560 L0 560Z" fill="#b9c9c8" /><path d="M0 330 C200 290 330 320 520 280 S900 270 1200 310 L1200 560 L0 560Z" fill="#a4b8ab" /><path d="M360 360 C440 270 540 196 640 192 C740 196 840 270 930 360 L930 560 L360 560Z" fill="#93a889" /><rect x="548" y="222" width="22" height="26" fill="#ddd4b8" /><polygon points="546,222 559.0,213 572,222" fill="#b4694a" /><rect x="572" y="214" width="26" height="26" fill="#d6cdb0" /><polygon points="570,214 585.0,205 600,214" fill="#b4694a" /><rect x="596" y="206" width="30" height="26" fill="#e9e2cd" /><polygon points="594,206 611.0,197 628,206" fill="#b4694a" /><rect x="668" y="206" width="30" height="18" fill="#d6cdb0" /><polygon points="666,206 683.0,197 700,206" fill="#b4694a" /><rect x="692" y="214" width="26" height="26" fill="#ddd4b8" /><polygon points="690,214 705.0,205 720,214" fill="#b4694a" /><rect x="716" y="222" width="22" height="26" fill="#d6cdb0" /><polygon points="714,222 727.0,213 740,222" fill="#b4694a" /><rect x="560" y="236" width="30" height="26" fill="#d6cdb0" /><polygon points="558,236 575.0,227 592,236" fill="#b4694a" /><rect x="586" y="228" width="26" height="26" fill="#ddd4b8" /><polygon points="584,228 599.0,219 614,228" fill="#b4694a" /><rect x="610" y="222" width="22" height="26" fill="#ddd4b8" /><polygon points="608,222 621.0,213 634,222" fill="#b4694a" /><rect x="654" y="222" width="30" height="22" fill="#e9e2cd" /><polygon points="652,222 669.0,213 686,222" fill="#b4694a" /><rect x="678" y="228" width="30" height="18" fill="#ddd4b8" /><polygon points="676,228 693.0,219 710,228" fill="#b4694a" /><rect x="704" y="236" width="30" height="18" fill="#efe9d8" /><polygon points="702,236 719.0,227 736,236" fill="#b4694a" /><rect x="540" y="248" width="22" height="22" fill="#d6cdb0" /><polygon points="538,248 551.0,239 564,248" fill="#b4694a" /><rect x="730" y="244" width="30" height="26" fill="#d6cdb0" /><polygon points="728,244 745.0,235 762,244" fill="#b4694a" /><rect x="570" y="252" width="30" height="22" fill="#d6cdb0" /><polygon points="568,252 585.0,243 602,252" fill="#b4694a" /><rect x="700" y="252" width="30" height="26" fill="#d6cdb0" /><polygon points="698,252 715.0,243 732,252" fill="#b4694a" /><rect x="626" y="158" width="16" height="56" fill="#ece5d0" /><polygon points="624,158 634,140 644,158" fill="#b4694a" /><rect x="630" y="170" width="8" height="12" fill="#8c8a76" /><rect x="0" y="490" width="1200" height="70" fill="#cdbb9a" /><rect x="110" y="330" width="660" height="160" fill="#e4c18a" /><polygon points="100,330 780,330 740,298 140,298" fill="#b4694a" /><rect x="170" y="362" width="74" height="96" fill="#cfe0ea" stroke="#fff" stroke-width="5"/><line x1="207" y1="362" x2="207" y2="458" stroke="#fff" stroke-width="4" stroke-linecap="round"/><rect x="134" y="362" width="34" height="96" fill="#2c6a8a" /><line x1="138" y1="370" x2="164" y2="370" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="138" y1="380" x2="164" y2="380" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="138" y1="390" x2="164" y2="390" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="138" y1="400" x2="164" y2="400" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="138" y1="410" x2="164" y2="410" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="138" y1="420" x2="164" y2="420" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="138" y1="430" x2="164" y2="430" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="138" y1="440" x2="164" y2="440" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="138" y1="450" x2="164" y2="450" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><rect x="244" y="362" width="34" height="96" fill="#2c6a8a" /><line x1="248" y1="370" x2="274" y2="370" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="248" y1="380" x2="274" y2="380" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="248" y1="390" x2="274" y2="390" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="248" y1="400" x2="274" y2="400" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="248" y1="410" x2="274" y2="410" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="248" y1="420" x2="274" y2="420" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="248" y1="430" x2="274" y2="430" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="248" y1="440" x2="274" y2="440" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="248" y1="450" x2="274" y2="450" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><rect x="540" y="362" width="74" height="96" fill="#cfe0ea" stroke="#fff" stroke-width="5"/><line x1="577" y1="362" x2="577" y2="458" stroke="#fff" stroke-width="4" stroke-linecap="round"/><rect x="504" y="362" width="34" height="96" fill="#2c6a8a" /><line x1="508" y1="370" x2="534" y2="370" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="508" y1="380" x2="534" y2="380" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="508" y1="390" x2="534" y2="390" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="508" y1="400" x2="534" y2="400" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="508" y1="410" x2="534" y2="410" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="508" y1="420" x2="534" y2="420" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="508" y1="430" x2="534" y2="430" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="508" y1="440" x2="534" y2="440" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="508" y1="450" x2="534" y2="450" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><rect x="614" y="362" width="34" height="96" fill="#2c6a8a" /><line x1="618" y1="370" x2="644" y2="370" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="618" y1="380" x2="644" y2="380" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="618" y1="390" x2="644" y2="390" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="618" y1="400" x2="644" y2="400" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="618" y1="410" x2="644" y2="410" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="618" y1="420" x2="644" y2="420" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="618" y1="430" x2="644" y2="430" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="618" y1="440" x2="644" y2="440" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><line x1="618" y1="450" x2="644" y2="450" stroke="#1f5470" stroke-width="2" stroke-linecap="round"/><rect x="344" y="384" width="100" height="106" fill="#8a5a34" stroke="#5a3a1e" stroke-width="5"/><rect x="354" y="394" width="35" height="42" fill="#a06a3c" stroke="#5a3a1e" stroke-width="2"/><rect x="398" y="394" width="35" height="42" fill="#a06a3c" stroke="#5a3a1e" stroke-width="2"/><rect x="354" y="444" width="35" height="38" fill="#a06a3c" stroke="#5a3a1e" stroke-width="2"/><rect x="398" y="444" width="35" height="38" fill="#a06a3c" stroke="#5a3a1e" stroke-width="2"/><circle cx="436" cy="440" r="4" fill="#e0c06a" /><rect x="840" y="520" width="230" height="18" fill="#c99a5e" /><line x1="850" y1="529" x2="1060" y2="529" stroke="#9a6e3a" stroke-width="1.5" stroke-linecap="round"/><rect x="840" y="498" width="216" height="18" fill="#b5834a" /><line x1="850" y1="507" x2="1046" y2="507" stroke="#9a6e3a" stroke-width="1.5" stroke-linecap="round"/><rect x="840" y="476" width="230" height="18" fill="#d4a86a" /><line x1="850" y1="485" x2="1060" y2="485" stroke="#9a6e3a" stroke-width="1.5" stroke-linecap="round"/><rect x="840" y="454" width="216" height="18" fill="#c99a5e" /><line x1="850" y1="463" x2="1046" y2="463" stroke="#9a6e3a" stroke-width="1.5" stroke-linecap="round"/><rect x="840" y="432" width="230" height="18" fill="#b5834a" /><line x1="850" y1="441" x2="1060" y2="441" stroke="#9a6e3a" stroke-width="1.5" stroke-linecap="round"/><rect x="840" y="410" width="216" height="18" fill="#d4a86a" /><line x1="850" y1="419" x2="1046" y2="419" stroke="#9a6e3a" stroke-width="1.5" stroke-linecap="round"/><rect x="840" y="388" width="230" height="18" fill="#c99a5e" /><line x1="850" y1="397" x2="1060" y2="397" stroke="#9a6e3a" stroke-width="1.5" stroke-linecap="round"/><rect x="850" y="500" width="14" height="20" fill="#6a4a32" /><rect x="1040" y="500" width="14" height="20" fill="#6a4a32" /><path d="M790 528 q10 -16 20 0 q-10 8 -20 0" fill="none" stroke="#d4a86a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M1080 532 q10 -16 20 0 q-10 8 -20 0" fill="none" stroke="#d4a86a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M805 540 q10 -16 20 0 q-10 8 -20 0" fill="none" stroke="#d4a86a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><ellipse cx="60" cy="435.0" rx="16.900000000000002" ry="65.0" fill="#1c3a2c" /><ellipse cx="65.07" cy="435.0" rx="9.295000000000002" ry="61.75" fill="#27503b" opacity=".7"/><path d="M1140 505 C1135.8 484.0 1130.2 474.2 1127.4 463.0 C1137.2 471.4 1142.8 471.4 1151.2 461.6 C1147.0 474.2 1145.6 485.4 1145.6 505Z" fill="#5c5140" /><circle cx="1119.0" cy="450.4" r="18.2" fill="#8da07a" opacity=".92"/><circle cx="1140.0" cy="440.6" r="22.4" fill="#8da07a" opacity=".92"/><circle cx="1161.0" cy="451.8" r="18.2" fill="#8da07a" opacity=".92"/><circle cx="1131.6" cy="456.0" r="16.799999999999997" fill="#8da07a" opacity=".92"/><circle cx="1151.2" cy="457.4" r="15.399999999999999" fill="#8da07a" opacity=".92"/><circle cx="1126.0" cy="447.6" r="9.799999999999999" fill="#a9ba95" opacity=".8"/><circle cx="1149.8" cy="437.8" r="11.2" fill="#a9ba95" opacity=".8"/><circle cx="1156.8" cy="454.6" r="9.1" fill="#a9ba95" opacity=".8"/></svg></div></div>
+<section class="presta" id="prestations"><div class="wrap">
+<h2>Ce que je fabrique pour vous</h2><p class="intro">Chaque pièce est dessinée pour votre maison, pas prise sur catalogue.</p>
+<ul><li><h3>Fenêtres et volets</h3><p>Remplacement ou création, volets battants à la provençale, isolation renforcée. Bois, aluminium ou mixte.</p><span class="prix">Sur devis</span></li><li><h3>Portes et portails</h3><p>Portes d’entrée, portes intérieures, portails et portillons en bois ou en aluminium.</p><span class="prix">Sur devis</span></li><li><h3>Escaliers, placards et dressings</h3><p>Aménagements intérieurs sur mesure, jusqu’aux combles et aux sous-pentes.</p><span class="prix">Sur devis</span></li><li><h3>Pergolas et terrasses bois</h3><p>Structures extérieures, brise-vue, terrasses. Essences adaptées à l’extérieur.</p><span class="prix">Sur devis</span></li></ul><p class="note"><strong>Une rénovation énergétique ?</strong> Selon votre situation, des aides existent. Je vous remets les justificatifs nécessaires pour votre dossier.</p></div></section>
+<section class="cal" id="calendrier"><div class="wrap">
+<h2>Bois, aluminium, PVC : lequel choisir ?</h2><p class="intro">Chaque matériau a ses forces. Voilà comment je conseille les clients du canton.</p>
+<div class="mois" role="tablist" aria-label="Matériaux" id="mois"></div>
+<div class="mois-panneau" role="tabpanel" id="panneau" aria-live="polite">
+<div><p class="mois-nom" id="m-nom"></p><p class="mois-saison" id="m-sais"></p></div>
+<div><ul class="taches" id="m-taches"></ul><p class="appel">Besoin d’un avis ? <a href="tel:+33600000000">Appelez-moi</a>.</p></div>
+</div></div></section>
+<section id="deroulement"><div class="wrap">
+<h2>Comment ça se passe</h2><p class="intro">Simple, sans engagement avant d’avoir vu le prix.</p>
+<ol class="etapes"><li><h3>Je viens mesurer</h3><p>Chez vous, avec un plan et des photos. Vous recevez un devis détaillé.</p></li><li><h3>Je fabrique</h3><p>À l’atelier, à vos dimensions. Je vous donne la date de pose.</p></li><li><h3>Je pose</h3><p>Pose soignée, finitions, nettoyage. Vous validez avant mon départ.</p></li></ol></div></section>
+<section class="zone" id="zone"><div class="wrap grille">
+<div><h2>Du lac de Saint-Cassien aux villages du Haut-Var</h2>
+<p>Je me déplace dans tout le canton de Fayence. Au-delà, appelez-moi : selon le chantier, je viens aussi.</p>
+<a class="btn btn-ligne" href="tel:+33600000000">Vérifier pour votre commune</a></div>
+<ul class="communes"><li>Fayence</li><li>Tourrettes</li><li>Callian</li><li>Montauroux</li><li>Seillans</li><li>Mons</li><li>Saint-Paul-en-Forêt</li><li>Bagnols-en-Forêt</li><li>Tanneron</li></ul></div></section>
+<section id="questions"><div class="wrap">
+<h2>Les questions qu’on me pose</h2><p class="intro">La réponse n’y est pas ? Appelez, c’est plus rapide.</p><details><summary>Combien de temps pour une fenêtre sur mesure ?</summary><p>Comptez quelques semaines entre la prise de mesures et la pose, selon la saison et les matériaux.</p></details><details><summary>Faut-il une autorisation pour changer ses fenêtres ?</summary><p>Parfois : en secteur protégé ou si l’aspect extérieur change, une déclaration en mairie est demandée. Je regarde avec vous.</p></details><details><summary>Posez-vous aussi ce que vous ne fabriquez pas ?</summary><p>Oui, je peux poser des produits que vous avez achetés ailleurs.</p></details><details><summary>Intervenez-vous sur du neuf ?</summary><p>Oui, en neuf comme en rénovation.</p></details></div></section>
+<section class="contact" id="contact"><div class="wrap grille">
+<div><h2>Parlons de votre projet</h2><a class="gros-tel" href="tel:+33600000000">06 00 00 00 00</a>
+<p class="infos">Du lundi au vendredi, de 8 h à 17 h 30.<br>Je rappelle toujours dans la journée.</p></div>
+<form id="formulaire" aria-label="Demande de devis">
+<label>Votre nom<input name="nom" autocomplete="name" required></label>
+<label>Votre téléphone<input name="tel" type="tel" autocomplete="tel" required></label>
+<label>Votre commune et ce que vous souhaitez<textarea name="msg" placeholder="Ex. : remplacement de 5 fenêtres et 2 volets, à Seillans" required></textarea></label>
+<button class="btn-clair" type="submit">Envoyer ma demande</button></form>
+</div></section>
+</main>
+<footer><div class="wrap">Menuiserie du Haut-Var · [Nom Prénom], entrepreneur individuel · SIRET [SIRET] · <a href="#">Mentions légales</a></div></footer>
+<div class="barre-appel"><a class="btn btn-plein" href="tel:+33600000000">Appeler</a><a class="btn btn-ligne" href="#contact">Devis</a></div>
+<script>
+const M=[["Bois", "Le bois", "Chaleureux et réparable", [["Pour quelle maison", "Maisons anciennes, bastides, villages : il respecte le style."], ["Entretien", "Une lasure ou une peinture tous les 5 à 8 ans, selon l’exposition."], ["Avantage", "Si la fenêtre est abîmée, on la répare au lieu de la remplacer."]]], ["Aluminium", "L’aluminium", "Fin, solide, sans entretien", [["Pour quelle maison", "Constructions récentes, grandes baies vitrées."], ["Entretien", "Un coup d’éponge, rien d’autre."], ["Avantage", "Des profils fins qui laissent entrer plus de lumière."]]], ["PVC", "Le PVC", "Économique et isolant", [["Pour quelle maison", "Résidences secondaires ou rénovations avec un budget serré."], ["Entretien", "Très peu."], ["À savoir", "Choix de formes et de couleurs plus limité sur les maisons anciennes."]]], ["Bois-alu", "Le mixte bois-alu", "Le meilleur des deux", [["Principe", "Bois à l’intérieur, aluminium à l’extérieur."], ["Entretien", "Celui de l’alu à l’extérieur, la chaleur du bois à l’intérieur."], ["À savoir", "Un budget plus élevé, pour une durée de vie plus longue."]]]];
+const bar=document.getElementById('mois'),nom=document.getElementById('m-nom'),sais=document.getElementById('m-sais'),list=document.getElementById('m-taches');
+function show(i){
+  [...bar.children].forEach((b,k)=>{b.setAttribute('aria-selected',k===i)});
+  nom.textContent=M[i][1];sais.textContent=M[i][2];list.innerHTML='';
+  M[i][3].forEach(t=>{const li=document.createElement('li');li.innerHTML='<b></b><span></span>';li.firstChild.textContent=t[0];li.lastChild.textContent=t[1];list.appendChild(li)});
+}
+M.forEach((m,i)=>{const b=document.createElement('button');b.type='button';b.role='tab';b.textContent=m[0];b.onclick=()=>show(i);bar.appendChild(b)});
+const now=0;show(now);
+document.getElementById('formulaire').addEventListener('submit',e=>{
+  e.preventDefault();const f=new FormData(e.target);
+  const body=encodeURIComponent('Nom : '+f.get('nom')+'\nTéléphone : '+f.get('tel')+'\n\n'+f.get('msg'));
+  location.href='mailto:contact@exemple.fr?subject='+encodeURIComponent('Demande de devis')+'&body='+body;
+});
+</script>
+</body>
+</html>
