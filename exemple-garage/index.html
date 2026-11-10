@@ -1,199 +1,64 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Garage de la Siagne | Garage et carrosserie à Fayence, Callian, Tourrettes</title>
-<meta name="description" content="Garage et carrosserie dans le Pays de Fayence. Entretien, réparation, carrosserie et préparation au contrôle technique, toutes marques. Vous recevez un devis écrit avant les travaux.">
-<meta name="robots" content="noindex">
-<style>
-:root{
-  --cypres:#14283f; --cypres-2:#304256; --olive:#e0a14a; --lavande:#c4531f; --lavande-clair:#f8eae4;
-  --brume:#eef1f4; --pierre:#dcdfe2; --encre:#0d1a29; --encre-2:#4f5e6f; --blanc:#f8f9fb;
-  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
-  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-body{margin:0;font-family:var(--sans);color:var(--encre);background:var(--brume);line-height:1.6;font-size:1.0625rem;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--lavande);outline-offset:3px;border-radius:4px}
-.wrap{max-width:1120px;margin:0 auto;padding:0 1.25rem}
-.sr{position:absolute;left:-9999px}
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Garage de la Siagne | Garage et carrosserie à Fayence</title><meta name="description" content="Garage toutes marques dans le Pays de Fayence : entretien, réparation, carrosserie, pneus."><meta name="robots" content="noindex">
+<style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;-webkit-font-smoothing:antialiased;line-height:1.55}
+.wrap *{min-width:0}a{color:inherit}.wrap{max-width:1120px;margin:0 auto;padding:0 1.25rem}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.demo{background:#111;color:#ddd;font:.85rem system-ui,sans-serif;text-align:center;padding:.5rem 1rem}.demo a{color:#fff}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:.5rem;padding:.6rem 1rem;background:#fff;border-top:1px solid #ddd}
+.bar a{flex:1;text-align:center;text-decoration:none;font:700 1rem system-ui,sans-serif;padding:.8rem;border-radius:999px}
+@media(min-width:720px){.bar{display:none}}
+button{font:inherit;cursor:pointer}
 
-.demo{background:var(--cypres);color:#e3e5e8;font-size:.875rem;text-align:center;padding:.5rem 1rem}
-.demo a{color:#fff}
-
-header.top{background:#e1eaf2}
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;padding-bottom:1rem;gap:1rem}
-.marque{font-family:var(--serif);font-size:1.25rem;font-weight:700;letter-spacing:.01em;text-decoration:none;color:var(--cypres);line-height:1.1}
-.marque small{display:block;font-family:var(--sans);font-weight:500;font-size:.8rem;letter-spacing:0;color:var(--encre-2)}
-.btn{display:inline-flex;align-items:center;gap:.6rem;font-weight:700;text-decoration:none;border-radius:999px;padding:.85rem 1.4rem;border:2px solid transparent;font-size:1rem;transition:background .15s,color .15s,border-color .15s}
-.btn-plein{background:var(--cypres);color:#fff}
-.btn-plein:hover{background:var(--cypres-2)}
-.btn-ligne{border-color:var(--cypres);color:var(--cypres);background:transparent}
-.btn-ligne:hover{background:var(--cypres);color:#fff}
-.btn svg{width:1.1em;height:1.1em;flex:none}
-
-.hero{background:#c9dcea;position:relative;overflow:hidden}
-.hero .wrap{padding-top:clamp(1.5rem,5vw,3.5rem);padding-bottom:1.5rem;position:relative;z-index:2}.hero-texte{background:linear-gradient(#e1eaf2,#c9dcea)}
-.hero h1{font-family:var(--serif);font-weight:700;color:var(--cypres);font-size:clamp(2.3rem,6.2vw,4.3rem);line-height:1.02;letter-spacing:-.015em;margin:0 0 1.1rem;max-width:16ch}
-.hero p.lead{font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:34rem;color:var(--encre-2);margin:0 0 1.6rem}
-.hero .actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1.25rem}
-.hero .garanties{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:.35rem 1.4rem;font-size:.95rem;color:var(--encre-2)}
-.hero .garanties li::before{content:"";display:inline-block;width:.5em;height:.5em;border-radius:50%;background:var(--olive);margin-right:.5em;vertical-align:.08em}
-.scene{display:block;width:100%;margin-top:0;position:relative;z-index:1}
-.paysage{display:block;width:100%;height:280px}
-@media(min-width:760px){.paysage{height:auto}}
-
-@keyframes monte{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}
-.hero h1,.hero .lead,.hero .actions{animation:monte .7s both}
-.hero .lead{animation-delay:.12s}.hero .actions{animation-delay:.24s}
-
-section{padding:clamp(3rem,7vw,5.5rem) 0}
-h2{font-family:var(--serif);font-size:clamp(1.8rem,4.2vw,2.8rem);line-height:1.1;color:var(--cypres);margin:0 0 .6rem;letter-spacing:-.01em}
-.intro{max-width:38rem;color:var(--encre-2);margin:0 0 2.2rem}
-
-/* prestations */
-.btn.tel-top{display:none}
-@media(min-width:720px){.btn.tel-top{display:inline-flex}}
-.presta{background:var(--blanc)}
-.presta ul{list-style:none;margin:0;padding:0;border-top:2px solid var(--cypres)}
-.presta li{display:grid;gap:.4rem 2rem;padding:1.5rem 0;border-bottom:1px solid var(--pierre);grid-template-columns:1fr}
-@media(min-width:760px){.presta li{grid-template-columns:minmax(0,5fr) minmax(0,7fr) auto;align-items:baseline}}
-.presta h3{font-family:var(--serif);font-size:1.55rem;margin:0;color:var(--cypres);line-height:1.15}
-.presta li p{margin:0;color:var(--encre-2);max-width:36rem}
-.presta .prix{font-weight:700;color:var(--lavande);white-space:nowrap}
-.presta .note{margin-top:1.4rem;background:var(--lavande-clair);border-radius:12px;padding:1rem 1.25rem;max-width:44rem}
-.presta .note strong{color:var(--cypres)}
-
-/* calendrier */
-.cal{background:var(--cypres);color:#e8eaec}
-.cal h2{color:#fff}.cal .intro{color:#b8bec5}
-.mois{display:flex;gap:.4rem;overflow-x:auto;padding:0 0 .8rem;margin:0 0 1.6rem;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
-.mois button{flex:none;font:inherit;font-weight:600;background:transparent;color:#cbd0d5;border:1.5px solid #4f5e6f;border-radius:999px;padding:.5rem 1rem;cursor:pointer;transition:background .15s,color .15s}
-.mois button:hover{border-color:#8a949f}
-.mois button[aria-selected="true"]{background:#eef0ee;color:var(--cypres);border-color:#eef0ee}
-.mois-panneau{display:grid;gap:1.5rem}
-@media(min-width:820px){.mois-panneau{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:3rem;align-items:start}}
-.mois-nom{font-family:var(--serif);font-size:clamp(2.6rem,7vw,4.6rem);line-height:1;color:#eef0ee;margin:0}
-.mois-saison{margin:.5rem 0 0;color:#b8bec5}
-.taches{list-style:none;margin:0;padding:0;display:grid;gap:.9rem}
-.taches li{padding:1rem 1.2rem;background:#27394e;border-radius:12px;border-left:5px solid #e0a14a}
-.taches b{display:block;color:#fff;font-size:1.08rem}
-.taches span{color:#b8bec5;font-size:.98rem}
-.cal .appel{margin-top:1.8rem}
-.cal .appel a{color:#fff;font-weight:700}
-
-/* deroulement */
-.etapes{list-style:none;padding:0;margin:0;display:grid;gap:1.5rem;counter-reset:e}
-@media(min-width:800px){.etapes{grid-template-columns:repeat(3,1fr);gap:2.5rem}}
-.etapes li{counter-increment:e;position:relative;padding-top:1.1rem;border-top:2px solid var(--cypres)}
-.etapes li::before{content:counter(e);position:absolute;top:-1.15rem;left:0;background:var(--brume);padding-right:.7rem;font-family:var(--serif);font-size:1.6rem;font-weight:700;color:var(--lavande)}
-.etapes h3{font-family:var(--serif);font-size:1.4rem;margin:.5rem 0 .3rem;color:var(--cypres)}
-.etapes p{margin:0;color:var(--encre-2)}
-
-/* zone */
-.zone{background:var(--blanc)}
-.zone .grille{display:grid;gap:2rem}
-@media(min-width:820px){.zone .grille{grid-template-columns:1fr 1fr;align-items:center}}
-.communes{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
-.communes li{border:1.5px solid var(--pierre);border-radius:999px;padding:.4rem 1rem;font-weight:600;color:var(--cypres);background:var(--brume)}
-.zone .grille p{color:var(--encre-2);margin:0 0 1.2rem;max-width:34rem}
-
-/* faq */
-details{border-bottom:1px solid var(--pierre);padding:1.05rem 0}
-details:first-of-type{border-top:2px solid var(--cypres)}
-summary{cursor:pointer;font-family:var(--serif);font-size:1.25rem;color:var(--cypres);font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:1rem}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-family:var(--sans);font-weight:400;font-size:1.6rem;line-height:1;color:var(--lavande);transition:transform .2s}
-details[open] summary::after{transform:rotate(45deg)}
-details p{margin:.7rem 0 0;color:var(--encre-2);max-width:42rem}
-
-/* contact */
-.contact{background:var(--cypres);color:#e8eaec}
-.contact h2{color:#fff}
-.contact .grille{display:grid;gap:2.5rem}
-@media(min-width:860px){.contact .grille{grid-template-columns:5fr 6fr}}
-.gros-tel{font-family:var(--serif);font-size:clamp(2.2rem,6vw,3.4rem);font-weight:700;color:#fff;text-decoration:none;display:block;line-height:1.1;margin:.6rem 0 .8rem}
-.contact .infos{color:#b8bec5;margin:0}
-form{display:grid;gap:1rem}
-label{display:grid;gap:.35rem;font-weight:600;color:#fff}
-input,textarea{font:inherit;padding:.85rem 1rem;border-radius:10px;border:1.5px solid #4f5e6f;background:#27394e;color:#fff}
-input::placeholder,textarea::placeholder{color:#959ea9}
-textarea{min-height:7rem;resize:vertical}
-.btn-clair{background:#eef0ee;color:var(--cypres);justify-content:center;cursor:pointer;font:inherit;font-weight:700;border:0;border-radius:999px;padding:.95rem 1.4rem}
-.btn-clair:hover{background:#fff}
-
-footer{background:#0d1a29;color:#a1a9b2;font-size:.9rem;padding:1.6rem 0 5.5rem}
-footer a{color:#cbd0d5}
-.barre-appel{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--blanc);border-top:1px solid var(--pierre);padding:.65rem 1rem;display:flex;gap:.6rem}
-.barre-appel a{flex:1;justify-content:center;padding:.8rem 1rem}
-@media(min-width:720px){.barre-appel{display:none}footer{padding-bottom:1.6rem}}
-
-.mois button{white-space:nowrap}</style>
-</head>
-<body>
-<div class="demo">Maquette d’exemple réalisée par <a href="https://www.atelierwebriviera.fr/">Atelier Web Riviera</a>. Entreprise, téléphone et textes fictifs.</div>
-<header class="top"><div class="wrap">
-<a class="marque" href="#haut">Garage de la Siagne<small>Garage et carrosserie</small></a>
-<a class="btn btn-plein tel-top" href="tel:+33600000000"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>06 00 00 00 00</a>
-</div></header>
-<main id="haut">
-<div class="hero"><div class="hero-texte"><div class="wrap">
-<h1>Votre voiture entre de bonnes mains, près de chez vous.</h1>
-<p class="lead">Entretien, réparation, carrosserie et préparation au contrôle technique, toutes marques. Vous recevez un devis écrit avant les travaux.</p>
-<div class="actions"><a class="btn btn-plein" href="tel:+33600000000">Appeler le garage</a><a class="btn btn-ligne" href="#contact">Écrire un message</a></div>
-<ul class="garanties"><li>Devis avant réparation</li><li>Toutes marques</li><li>Véhicule de courtoisie</li></ul>
-</div></div><div class="scene"><svg class="paysage" preserveAspectRatio="xMidYMax slice" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Garage et carrosserie"><defs><linearGradient id="ciel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9dcea"/><stop offset=".75" stop-color="#eef0ee"/></linearGradient></defs><rect x="0" y="0" width="1200" height="560" fill="url(#ciel)" /><circle cx="980" cy="110" r="64" fill="#f7efc8" opacity=".85"/><path d="M0 300 C140 240 300 275 450 232 S760 196 900 252 S1110 226 1200 262 L1200 560 L0 560Z" fill="#b9c9c8" /><path d="M0 330 C200 290 330 320 520 280 S900 270 1200 310 L1200 560 L0 560Z" fill="#a4b8ab" /><path d="M360 360 C440 270 540 196 640 192 C740 196 840 270 930 360 L930 560 L360 560Z" fill="#93a889" /><rect x="548" y="222" width="22" height="26" fill="#ddd4b8" /><polygon points="546,222 559.0,213 572,222" fill="#b4694a" /><rect x="572" y="214" width="26" height="26" fill="#d6cdb0" /><polygon points="570,214 585.0,205 600,214" fill="#b4694a" /><rect x="596" y="206" width="30" height="26" fill="#e9e2cd" /><polygon points="594,206 611.0,197 628,206" fill="#b4694a" /><rect x="668" y="206" width="30" height="18" fill="#d6cdb0" /><polygon points="666,206 683.0,197 700,206" fill="#b4694a" /><rect x="692" y="214" width="26" height="26" fill="#ddd4b8" /><polygon points="690,214 705.0,205 720,214" fill="#b4694a" /><rect x="716" y="222" width="22" height="26" fill="#d6cdb0" /><polygon points="714,222 727.0,213 740,222" fill="#b4694a" /><rect x="560" y="236" width="30" height="26" fill="#d6cdb0" /><polygon points="558,236 575.0,227 592,236" fill="#b4694a" /><rect x="586" y="228" width="26" height="26" fill="#ddd4b8" /><polygon points="584,228 599.0,219 614,228" fill="#b4694a" /><rect x="610" y="222" width="22" height="26" fill="#ddd4b8" /><polygon points="608,222 621.0,213 634,222" fill="#b4694a" /><rect x="654" y="222" width="30" height="22" fill="#e9e2cd" /><polygon points="652,222 669.0,213 686,222" fill="#b4694a" /><rect x="678" y="228" width="30" height="18" fill="#ddd4b8" /><polygon points="676,228 693.0,219 710,228" fill="#b4694a" /><rect x="704" y="236" width="30" height="18" fill="#efe9d8" /><polygon points="702,236 719.0,227 736,236" fill="#b4694a" /><rect x="540" y="248" width="22" height="22" fill="#d6cdb0" /><polygon points="538,248 551.0,239 564,248" fill="#b4694a" /><rect x="730" y="244" width="30" height="26" fill="#d6cdb0" /><polygon points="728,244 745.0,235 762,244" fill="#b4694a" /><rect x="570" y="252" width="30" height="22" fill="#d6cdb0" /><polygon points="568,252 585.0,243 602,252" fill="#b4694a" /><rect x="700" y="252" width="30" height="26" fill="#d6cdb0" /><polygon points="698,252 715.0,243 732,252" fill="#b4694a" /><rect x="626" y="158" width="16" height="56" fill="#ece5d0" /><polygon points="624,158 634,140 644,158" fill="#b4694a" /><rect x="630" y="170" width="8" height="12" fill="#8c8a76" /><rect x="0" y="470" width="1200" height="90" fill="#8e949a" /><rect x="0" y="468" width="1200" height="6" fill="#b9bec2" /><rect x="40" y="520" width="80" height="8" fill="#e8e4d0" /><rect x="200" y="520" width="80" height="8" fill="#e8e4d0" /><rect x="360" y="520" width="80" height="8" fill="#e8e4d0" /><rect x="520" y="520" width="80" height="8" fill="#e8e4d0" /><rect x="680" y="520" width="80" height="8" fill="#e8e4d0" /><rect x="840" y="520" width="80" height="8" fill="#e8e4d0" /><rect x="1000" y="520" width="80" height="8" fill="#e8e4d0" /><rect x="1160" y="520" width="80" height="8" fill="#e8e4d0" /><rect x="140" y="330" width="600" height="140" fill="#e3bf86" /><rect x="130" y="316" width="620" height="16" fill="#b4694a" /><rect x="140" y="330" width="600" height="6" fill="#c9a06a" opacity=".6"/><rect x="230" y="352" width="200" height="118" fill="#9ba9b4" /><line x1="230" y1="358" x2="430" y2="358" stroke="#7d8c98" stroke-width="2" stroke-linecap="round"/><line x1="230" y1="370" x2="430" y2="370" stroke="#7d8c98" stroke-width="2" stroke-linecap="round"/><line x1="230" y1="382" x2="430" y2="382" stroke="#7d8c98" stroke-width="2" stroke-linecap="round"/><line x1="230" y1="394" x2="430" y2="394" stroke="#7d8c98" stroke-width="2" stroke-linecap="round"/><line x1="230" y1="406" x2="430" y2="406" stroke="#7d8c98" stroke-width="2" stroke-linecap="round"/><line x1="230" y1="418" x2="430" y2="418" stroke="#7d8c98" stroke-width="2" stroke-linecap="round"/><line x1="230" y1="430" x2="430" y2="430" stroke="#7d8c98" stroke-width="2" stroke-linecap="round"/><line x1="230" y1="442" x2="430" y2="442" stroke="#7d8c98" stroke-width="2" stroke-linecap="round"/><line x1="230" y1="454" x2="430" y2="454" stroke="#7d8c98" stroke-width="2" stroke-linecap="round"/><line x1="230" y1="466" x2="430" y2="466" stroke="#7d8c98" stroke-width="2" stroke-linecap="round"/><rect x="470" y="378" width="60" height="92" fill="#3f5d77" /><rect x="480" y="388" width="40" height="40" fill="#bfd6e4" /><rect x="570" y="372" width="140" height="58" fill="#bfd6e4" stroke="#8a6d45" stroke-width="5"/><line x1="640" y1="372" x2="640" y2="430" stroke="#8a6d45" stroke-width="4" stroke-linecap="round"/><rect x="230" y="326" width="200" height="22" fill="#14283f" /><text x="250" y="343" font-family="system-ui,Arial,sans-serif" font-weight="700" font-size="15" fill="#fff" >Garage &amp; carrosserie</text><path d="M790 474 L790 452 Q790 438 812 434 L858 428 L884 404 Q892 396 906 396 L972 396 Q986 396 994 408 L1014 432 Q1042 436 1044 452 L1044 474Z" fill="#c4531f" /><path d="M890 430 L902 406 L930 406 L930 430Z M940 430 L940 406 L972 406 L990 430Z" fill="#cfe3ee" /><circle cx="842" cy="474" r="22" fill="#1d1d1d" /><circle cx="842" cy="474" r="10" fill="#b9bec2" /><circle cx="996" cy="474" r="22" fill="#1d1d1d" /><circle cx="996" cy="474" r="10" fill="#b9bec2" /><rect x="1036" y="448" width="10" height="10" fill="#f4d27a" /><path d="M1130 500 C1138 440.0 1124 395.0 1132 350" fill="none" stroke="#7a6244" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" /><path d="M1132 350 Q1099.110758272493 316 1066 360" fill="none" stroke="#3f7a4a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /><path d="M1132 350 Q1109.502433660971 316 1087 343" fill="none" stroke="#3f7a4a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /><path d="M1132 350 Q1125.9223137816575 316 1120 335" fill="none" stroke="#3f7a4a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /><path d="M1132 350 Q1149.5 316 1167 339" fill="none" stroke="#3f7a4a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /><path d="M1132 350 Q1162.3108891324555 316 1193 354" fill="none" stroke="#3f7a4a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /><path d="M1132 350 Q1167.0 316 1202 374" fill="none" stroke="#3f7a4a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /><path d="M1132 350 Q1164.889241727507 316 1198 388" fill="none" stroke="#3f7a4a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /><path d="M1132 350 Q1097.133185566789 316 1062 371" fill="none" stroke="#3f7a4a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /><path d="M80 500 C88 452.0 74 416.0 82 380" fill="none" stroke="#7a6244" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" /><path d="M82 380 Q49.11075827249321 346 16 390" fill="none" stroke="#3f7a4a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /><path d="M82 380 Q59.50243366097112 346 37 373" fill="none" stroke="#3f7a4a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /><path d="M82 380 Q75.92231378165744 346 70 365" fill="none" stroke="#3f7a4a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /><path d="M82 380 Q99.5 346 117 369" fill="none" stroke="#3f7a4a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /><path d="M82 380 Q112.31088913245536 346 143 384" fill="none" stroke="#3f7a4a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /><path d="M82 380 Q117.0 346 152 404" fill="none" stroke="#3f7a4a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /><path d="M82 380 Q114.8892417275068 346 148 418" fill="none" stroke="#3f7a4a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /><path d="M82 380 Q47.1331855667889 346 12 401" fill="none" stroke="#3f7a4a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /><circle cx="540" cy="478" r="12" fill="#5d7a3d" /><circle cx="536.4" cy="474.4" r="6.6000000000000005" fill="#78954f" opacity=".6"/></svg></div></div>
-<section class="presta" id="prestations"><div class="wrap">
-<h2>Ce qu’on fait pour votre voiture</h2><p class="intro">Mécanique et carrosserie au même endroit.</p>
-<ul><li><h3>Entretien et révision</h3><p>Vidange, filtres, freins, distribution. On suit le carnet du constructeur, vos garanties sont préservées.</p><span class="prix">Sur devis</span></li><li><h3>Réparation mécanique</h3><p>Diagnostic électronique, embrayage, amortisseurs, échappement, démarreur. On vous explique la panne avant d’y toucher.</p><span class="prix">Sur devis</span></li><li><h3>Carrosserie et peinture</h3><p>Débosselage, remplacement de pièces, peinture au ton. On s’occupe du dossier avec votre assurance et l’expert.</p><span class="prix">Sur devis</span></li><li><h3>Pneus et climatisation</h3><p>Montage, équilibrage, géométrie. Recharge et contrôle de la clim avant l’été.</p><span class="prix">Sur devis</span></li></ul><p class="note"><strong>Votre assurance vous laisse choisir votre garage.</strong> Vous pouvez nous confier la réparation de votre véhicule, on gère les échanges avec l’expert.</p></div></section>
-<section class="cal" id="calendrier"><div class="wrap">
-<h2>Votre voiture, selon le kilométrage</h2><p class="intro">Ce qu’il faut regarder à chaque étape, en plus des recommandations de votre carnet d’entretien.</p>
-<div class="mois" role="tablist" aria-label="Étapes d’entretien" id="mois"></div>
-<div class="mois-panneau" role="tabpanel" id="panneau" aria-live="polite">
-<div><p class="mois-nom" id="m-nom"></p><p class="mois-saison" id="m-sais"></p></div>
-<div><ul class="taches" id="m-taches"></ul><p class="appel">Un doute sur votre voiture ? <a href="tel:+33600000000">Appelez-moi</a>.</p></div>
-</div></div></section>
-<section id="deroulement"><div class="wrap">
-<h2>Comment ça se passe</h2><p class="intro">Simple, sans engagement avant d’avoir vu le prix.</p>
-<ol class="etapes"><li><h3>Vous appelez ou passez</h3><p>Décrivez le problème. On vous donne un créneau, souvent dans la semaine.</p></li><li><h3>On diagnostique</h3><p>On regarde la voiture, on vous explique la panne et on vous remet un devis écrit.</p></li><li><h3>On répare</h3><p>Vous récupérez la voiture propre, avec les pièces remplacées si vous le souhaitez.</p></li></ol></div></section>
-<section class="zone" id="zone"><div class="wrap grille">
-<div><h2>Du lac de Saint-Cassien aux villages du Haut-Var</h2>
-<p>Je me déplace dans tout le canton de Fayence. Au-delà, appelez-moi : selon le chantier, je viens aussi.</p>
-<a class="btn btn-ligne" href="tel:+33600000000">Vérifier pour votre commune</a></div>
-<ul class="communes"><li>Fayence</li><li>Tourrettes</li><li>Callian</li><li>Montauroux</li><li>Seillans</li><li>Mons</li><li>Saint-Paul-en-Forêt</li><li>Bagnols-en-Forêt</li><li>Tanneron</li></ul></div></section>
-<section id="questions"><div class="wrap">
-<h2>Les questions qu’on me pose</h2><p class="intro">La réponse n’y est pas ? Appelez, c’est plus rapide.</p><details><summary>Mes garanties sont-elles conservées si je viens chez vous ?</summary><p>Oui, si l’entretien suit les préconisations du constructeur et que les pièces sont de qualité équivalente. On garde les factures à votre disposition.</p></details><details><summary>Faites-vous les dossiers d’assurance ?</summary><p>Oui. Pour un sinistre, on prépare le devis, on échange avec l’expert et on vous fait signer les documents.</p></details><details><summary>Puis-je avoir un véhicule de remplacement ?</summary><p>On vous prête un véhicule de courtoisie selon les disponibilités. Prévenez-nous au moment de prendre rendez-vous.</p></details><details><summary>Combien de temps dure une révision ?</summary><p>Une demi-journée en général. Si on doit commander une pièce, on vous le dit tout de suite.</p></details></div></section>
-<section class="contact" id="contact"><div class="wrap grille">
-<div><h2>Parlons de votre voiture</h2><a class="gros-tel" href="tel:+33600000000">06 00 00 00 00</a>
-<p class="infos">Du lundi au vendredi, 8 h à 12 h et 14 h à 18 h.<br>Je rappelle toujours dans la journée.</p></div>
-<form id="formulaire" aria-label="Demande de devis">
-<label>Votre nom<input name="nom" autocomplete="name" required></label>
-<label>Votre téléphone<input name="tel" type="tel" autocomplete="tel" required></label>
-<label>Votre commune et ce que vous souhaitez<textarea name="msg" placeholder="Ex. : bruit au freinage sur ma Clio 2016, à Callian" required></textarea></label>
-<button class="btn-clair" type="submit">Envoyer ma demande</button></form>
-</div></section>
-</main>
-<footer><div class="wrap">Garage de la Siagne · [Nom Prénom], entrepreneur individuel · SIRET [SIRET] · <a href="#">Mentions légales</a></div></footer>
-<div class="barre-appel"><a class="btn btn-plein" href="tel:+33600000000">Appeler</a><a class="btn btn-ligne" href="#contact">Devis</a></div>
-<script>
-const M=[["15 000 km", "Tous les ans ou 15 000 km", "Le minimum à ne pas manquer", [["Vidange", "Huile moteur et filtre à huile."], ["Freins", "Contrôle des plaquettes et du niveau de liquide."], ["Pneus", "Pression, usure, état des flancs."]]], ["30 000 km", "Vers 30 000 km", "Les filtres", [["Filtre à air et à habitacle", "Moteur qui respire, air plus sain dans la voiture."], ["Filtre à carburant", "Selon le moteur, pour éviter l’encrassement."], ["Liquide de refroidissement", "Niveau et état."]]], ["60 000 km", "Vers 60 000 km", "Les pièces d’usure", [["Plaquettes et disques", "On change quand l’usure l’impose, pas avant."], ["Bougies", "Pour les moteurs essence, selon le constructeur."], ["Distribution", "À surveiller selon l’âge et le kilométrage du modèle."]]], ["100 000 km", "Après 100 000 km", "Le point complet", [["Amortisseurs", "Une voiture qui tangue allonge les distances de freinage."], ["Embrayage", "On le regarde avant la panne."], ["Courroies et durites", "Remplacement préventif quand c’est conseillé."]]], ["Contrôle technique", "Avant le contrôle technique", "Éviter la contre-visite", [["Feux et essuie-glaces", "Les défauts les plus courants, les plus simples à régler."], ["Freins et pneus", "Contrôle sur banc."], ["Pollution", "Vérification des émissions, pour ne pas être surpris."]]], ["Avant l’été", "Avant les vacances", "Partir tranquille", [["Climatisation", "Contrôle et recharge."], ["Pneus et niveaux", "Surtout si vous chargez la voiture."], ["Batterie et freins", "Un départ en famille ne se joue pas sur une panne."]]]];
-const bar=document.getElementById('mois'),nom=document.getElementById('m-nom'),sais=document.getElementById('m-sais'),list=document.getElementById('m-taches');
-function show(i){
-  [...bar.children].forEach((b,k)=>{b.setAttribute('aria-selected',k===i)});
-  nom.textContent=M[i][1];sais.textContent=M[i][2];list.innerHTML='';
-  M[i][3].forEach(t=>{const li=document.createElement('li');li.innerHTML='<b></b><span></span>';li.firstChild.textContent=t[0];li.lastChild.textContent=t[1];list.appendChild(li)});
-}
-M.forEach((m,i)=>{const b=document.createElement('button');b.type='button';b.role='tab';b.textContent=m[0];b.onclick=()=>show(i);bar.appendChild(b)});
-const now=0;show(now);
-document.getElementById('formulaire').addEventListener('submit',e=>{
-  e.preventDefault();const f=new FormData(e.target);
-  const body=encodeURIComponent('Nom : '+f.get('nom')+'\nTéléphone : '+f.get('tel')+'\n\n'+f.get('msg'));
-  location.href='mailto:contact@exemple.fr?subject='+encodeURIComponent('Demande de devis')+'&body='+body;
-});
-</script>
-</body>
-</html>
+:root{--n:#101c2c;--o:#ff6a1a;--s:#f2f4f7;--i:#101c2c}
+body{font-family:"Arial Narrow","Helvetica Neue",Arial,sans-serif;background:var(--s);color:var(--i);padding-bottom:4.5rem}
+header{background:var(--n);color:#fff}header .wrap{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.25rem}
+.logo{font-weight:900;font-size:1.4rem;text-transform:uppercase;letter-spacing:.04em}.logo span{color:var(--o)}.logo small{display:block;font-weight:500;font-size:.75rem;letter-spacing:.08em;opacity:.7}
+.tel{display:none;background:var(--o);color:#fff;text-decoration:none;font-weight:800;padding:.7rem 1.3rem;gap:.5rem;align-items:center;border-radius:4px}@media(min-width:720px){.tel{display:inline-flex}}
+.hero{background:var(--n);color:#fff;padding:1.5rem 0 3rem;position:relative;overflow:hidden}
+.hero .wrap{display:grid;gap:2rem}@media(min-width:960px){.hero .wrap{grid-template-columns:6fr 6fr;align-items:center}}
+h1{font-size:clamp(2.4rem,6.4vw,4.4rem);line-height:.98;margin:0 0 1rem;text-transform:uppercase;font-weight:900;letter-spacing:-.01em}
+.lead{font-family:system-ui,sans-serif;font-size:1.1rem;color:#b8c5d8;max-width:30rem;margin:0 0 1.3rem}
+.cta{display:inline-block;background:var(--o);color:#fff;font-weight:900;text-decoration:none;text-transform:uppercase;letter-spacing:.04em;padding:1rem 1.6rem;border-radius:4px}
+.tab{background:#0a131f;border:2px solid #2a3a52;border-radius:18px;padding:1.2rem;box-shadow:inset 0 0 40px #0008}
+.tab h2{margin:0 0 .2rem;font-size:1.1rem;text-transform:uppercase;letter-spacing:.06em;color:#8fa4c2}
+.tab p.k{font-family:system-ui,sans-serif;font-size:.85rem;color:#6f84a3;margin:0 0 .8rem}
+.voy{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem}
+.voy button{aspect-ratio:1;background:#111c2c;border:2px solid #2a3a52;border-radius:12px;display:grid;place-items:center;font-size:1.7rem;color:#fff}
+.voy button.on{border-color:var(--o);background:#1c2a40;box-shadow:0 0 0 3px #ff6a1a44}
+.voy .rouge{filter:none}
+.ans{margin-top:1rem;background:#16233a;border-radius:12px;padding:1rem 1.1rem;font-family:system-ui,sans-serif;font-size:.97rem;min-height:7.5rem}
+.ans h3{margin:0 0 .3rem;font-size:1.1rem;color:#fff}.ans p{margin:.2rem 0;color:#c4d1e4}
+.niv{display:inline-block;font-weight:800;font-size:.78rem;padding:.2rem .6rem;border-radius:99px;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.04em}
+.niv.r{background:#e03131;color:#fff}.niv.o{background:#f59f00;color:#1b1200}.niv.v{background:#2f9e44;color:#fff}
+.ans a{display:inline-block;margin-top:.5rem;background:var(--o);color:#fff;font-weight:800;text-decoration:none;padding:.55rem 1rem;border-radius:4px}
+section{padding:3.5rem 0}h2.t{font-size:clamp(1.8rem,4vw,2.6rem);text-transform:uppercase;margin:0 0 .4rem;font-weight:900}.sub{font-family:system-ui,sans-serif;color:#4a5a73;max-width:38rem;margin:0 0 1.8rem}
+.km{display:flex;gap:.4rem;overflow-x:auto;padding-bottom:.6rem}.km button{flex:none;background:#fff;border:2px solid #cdd6e3;border-radius:4px;padding:.6rem 1.1rem;font-weight:800;font-size:1rem}.km button[aria-pressed=true]{background:var(--n);color:#fff;border-color:var(--n)}
+.cl{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:.6rem;font-family:system-ui,sans-serif}@media(min-width:800px){.cl{grid-template-columns:repeat(3,1fr)}}
+.cl li{background:#fff;border-radius:8px;padding:.9rem 1.1rem;border-left:5px solid var(--o)}.cl b{display:block;margin-bottom:.15rem}
+.sv{display:grid;gap:1rem}@media(min-width:800px){.sv{grid-template-columns:repeat(4,1fr)}}
+.sv div{background:var(--n);color:#fff;border-radius:8px;padding:1.3rem}.sv h3{margin:0 0 .5rem;text-transform:uppercase;color:var(--o)}.sv p{margin:0;font-family:system-ui,sans-serif;color:#c4d1e4}
+.ass{background:#fff;border-radius:8px;padding:1.1rem 1.3rem;font-family:system-ui,sans-serif;margin-top:1.4rem;border:2px solid var(--n)}
+form{display:grid;gap:.8rem;max-width:34rem;font-family:system-ui,sans-serif}label{display:grid;gap:.3rem;font-weight:700}input,textarea,select{font:inherit;padding:.8rem 1rem;border-radius:4px;border:1.5px solid #b6c3d6;background:#fff}
+.go{background:var(--o);color:#fff;border:0;border-radius:4px;padding:.95rem 1.4rem;font-weight:900;font-size:1rem;text-transform:uppercase}
+footer{background:#0a131f;color:#8fa4c2;font-family:system-ui,sans-serif;font-size:.9rem;padding:1.5rem 0 5rem}
+</style></head><body>
+<div class="demo">Maquette d’exemple réalisée par <a href="https://www.atelierwebriviera.fr/">Atelier Web Riviera</a>. Entreprise, téléphone, prix et textes fictifs.</div>
+<header><div class="wrap"><div class="logo">Garage de la <span>Siagne</span><small>Mécanique · Carrosserie · Pneus</small></div><a class="tel" href="tel:+33600000000"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="18" height="18"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>06 00 00 00 00</a></div></header>
+<div class="hero"><div class="wrap"><div><h1>Votre voiture entre de bonnes mains.</h1><p class="lead">Entretien, réparation, carrosserie, toutes marques. Un devis écrit avant toute réparation, et on vous explique la panne avant d’y toucher.</p><a class="cta" href="#contact">Prendre rendez-vous</a></div>
+<div class="tab"><h2>Un voyant s’allume ?</h2><p class="k">Touchez-le, je vous dis si vous pouvez rouler.</p><div class="voy"><button type="button" data-i="0" aria-label="Pression d’huile" title="Pression d’huile">🛢️</button><button type="button" data-i="1" aria-label="Température moteur" title="Température moteur">🌡️</button><button type="button" data-i="2" aria-label="Batterie / charge" title="Batterie / charge">🔋</button><button type="button" data-i="3" aria-label="Défaut moteur" title="Défaut moteur">⚠️</button><button type="button" data-i="4" aria-label="Pression des pneus" title="Pression des pneus">🛞</button><button type="button" data-i="5" aria-label="Freins / ABS" title="Freins / ABS">🅱️</button><button type="button" data-i="6" aria-label="Filtre à particules" title="Filtre à particules">💨</button><button type="button" data-i="7" aria-label="Réserve carburant" title="Réserve carburant">⛽</button></div><div class="ans" id="ans" aria-live="polite"><p>Choisissez un voyant du tableau de bord.</p></div></div></div></div>
+<section><div class="wrap"><h2 class="t">Que faire à chaque étape ?</h2><p class="sub">En plus des préconisations de votre carnet. Choisissez le kilométrage de votre voiture.</p><div class="km" id="km"><button type="button" data-i="0" aria-pressed="false">15 000 km</button><button type="button" data-i="1" aria-pressed="false">30 000 km</button><button type="button" data-i="2" aria-pressed="false">60 000 km</button><button type="button" data-i="3" aria-pressed="false">100 000 km</button><button type="button" data-i="4" aria-pressed="false">Avant contrôle technique</button><button type="button" data-i="5" aria-pressed="false">Avant les vacances</button></div><ul class="cl" id="cl"></ul></div></section>
+<section style="background:#fff"><div class="wrap"><h2 class="t">Ce qu’on fait</h2><p class="sub">Mécanique et carrosserie au même endroit.</p>
+<div class="sv"><div><h3>Entretien</h3><p>Vidange, filtres, freins, distribution, selon le carnet du constructeur. Vos garanties restent valables.</p></div><div><h3>Mécanique</h3><p>Diagnostic électronique, embrayage, amortisseurs, échappement.</p></div><div><h3>Carrosserie</h3><p>Débosselage, pièces, peinture au ton. Dossier d’assurance et expert gérés pour vous.</p></div><div><h3>Pneus et clim</h3><p>Montage, équilibrage, géométrie. Contrôle de la clim avant l’été.</p></div></div>
+<div class="ass"><b>Votre assurance vous laisse choisir votre garage.</b> Vous pouvez nous confier la réparation, on s’occupe des échanges avec l’expert. Véhicule de courtoisie selon disponibilités.</div></div></section>
+<section id="contact"><div class="wrap"><h2 class="t">Prendre rendez-vous</h2><p class="sub">Du lundi au vendredi, 8 h à 12 h et 14 h à 18 h. On rappelle dans la journée.</p>
+<form id="f"><label>Votre nom<input name="n" required></label><label>Téléphone<input name="t" type="tel" required></label><label>Véhicule et problème<textarea name="m" rows="3" placeholder="Ex. : Clio 2016, bruit au freinage, à Callian" required></textarea></label><button class="go">Envoyer</button></form></div></section>
+<footer><div class="wrap">Garage de la Siagne · [Raison sociale] · SIRET [SIRET] · RC Pro [assureur]</div></footer>
+<div class="bar"><a href="tel:+33600000000" style="background:#ff6a1a;color:#fff">Appeler</a><a href="#contact" style="border:2px solid #ff6a1a;color:#ff6a1a">Message</a></div>
+<script>const V=[["🛢️", "Pression d’huile", "r", "Arrêtez-vous tout de suite.", "Coupez le moteur dès que possible. Rouler avec ce voyant peut détruire le moteur en quelques minutes.", "Ne continuez pas à rouler. Appelez le garage, on organise le remorquage."], ["🌡️", "Température moteur", "r", "Arrêtez-vous et laissez refroidir.", "Le moteur surchauffe. Ne rouvrez pas le bouchon du radiateur à chaud.", "Après refroidissement, vérifiez le niveau, puis faites contrôler le circuit."], ["🔋", "Batterie / charge", "o", "Pas de panique, mais ne tardez pas.", "L’alternateur ne charge plus. Il reste quelques kilomètres d’autonomie, coupez les accessoires.", "Rejoignez le garage ou un point sûr. On teste batterie et alternateur."], ["⚠️", "Défaut moteur", "o", "À faire vérifier cette semaine.", "Voyant orange fixe : un capteur ou l’injection signale une anomalie. Clignotant : arrêtez-vous.", "Lecture des codes défauts au diagnostic électronique."], ["🛞", "Pression des pneus", "o", "Contrôlez la pression à la station.", "Un pneu sous-gonflé use plus vite et allonge le freinage.", "On contrôle pression, usure et valves."], ["🅱️", "Freins / ABS", "r", "Contrôle des freins à ne pas repousser.", "Niveau de liquide bas ou plaquettes usées. Roulez doucement.", "Contrôle immédiat des freins, remplacement si besoin."], ["💨", "Filtre à particules", "o", "Roulez sur route 20 minutes.", "Le filtre s’encrasse en ville. Un trajet continu à régime soutenu aide à le régénérer.", "Si le voyant reste, nettoyage ou diagnostic."], ["⛽", "Réserve carburant", "v", "Faites le plein bientôt.", "Ce n’est pas une panne. Évitez de rouler sur la réserve, ça fatigue la pompe.", "Rien à faire chez nous."]];const K=[["15 000 km", "Chaque année", "Vidange et filtre à huile|Contrôle des freins et du liquide|Pression, usure et état des pneus"], ["30 000 km", "Les filtres", "Filtre à air et d’habitacle|Filtre à carburant selon le moteur|Liquide de refroidissement"], ["60 000 km", "Pièces d’usure", "Plaquettes et disques, si l’usure l’impose|Bougies (essence)|Distribution à surveiller selon le modèle"], ["100 000 km", "Point complet", "Amortisseurs|Embrayage regardé avant la panne|Courroies et durites, préventif"], ["Avant contrôle technique", "Éviter la contre-visite", "Feux et essuie-glaces|Freins et pneus|Émissions polluantes"], ["Avant les vacances", "Partir tranquille", "Climatisation, contrôle et recharge|Pneus et niveaux|Batterie et freins"]];
+const L={r:'Urgent',o:'À surveiller',v:'Sans gravité'};
+document.querySelectorAll('.voy button').forEach(b=>b.onclick=()=>{const v=V[b.dataset.i];document.querySelectorAll('.voy button').forEach(x=>x.classList.toggle('on',x==b));
+document.getElementById('ans').innerHTML='<span class="niv '+v[2]+'">'+L[v[2]]+'</span><h3>'+v[1]+' : '+v[3]+'</h3><p>'+v[4]+'</p><p><b>Chez nous :</b> '+v[5]+'</p><a href="tel:+33600000000">Appeler le garage</a>'});
+document.querySelectorAll('#km button').forEach(b=>b.onclick=()=>{const k=K[b.dataset.i];document.querySelectorAll('#km button').forEach(x=>x.setAttribute('aria-pressed',x==b));
+document.getElementById('cl').innerHTML=k[2].split('|').map((t,i)=>'<li><b>'+(i==0?k[1]:'À regarder')+'</b>'+t+'</li>').join('')});
+document.querySelector('#km button').click();
+document.getElementById('f').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);location.href='mailto:contact@exemple.fr?subject='+encodeURIComponent('Demande de rendez-vous garage')+'&body='+encodeURIComponent('Nom : '+f.get('n')+'\nTéléphone : '+f.get('t')+'\n\n'+f.get('m'))};</script></body></html>
