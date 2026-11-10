@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Atelier Web Riviera, création de sites internet</title>
 <meta name="theme-color" content="#0a2a43">
-<meta name="description" content="Création de sites internet pour artisans, commerces et professions libérales des Alpes-Maritimes et du Var. Maquette gratuite en 48 h, mise en ligne en 7 jours, dès 790 € HT, sans abonnement.">
+<meta name="description" content="Création de sites internet pour artisans, commerces et professions libérales des Alpes-Maritimes et du Var. Maquette gratuite en 48 h, mise en ligne en 7 jours, dès 790 € HT (948 € TTC), sans abonnement.">
 <!--
   À REMPLACER AVANT LA MISE EN LIGNE (rechercher ces textes dans le fichier) :
   Téléphone et e-mail : déjà remplacés (06 63 59 07 93 / atelierwebriviera@gmail.com)
@@ -14,7 +14,7 @@
 -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Atelier Web Riviera, création de sites internet">
-<meta property="og:description" content="Sites vitrines pour artisans, commerces et professions libérales du 06 et du 83. Maquette gratuite en 48 h, dès 790 € HT, sans abonnement.">
+<meta property="og:description" content="Sites vitrines pour artisans, commerces et professions libérales du 06 et du 83. Maquette gratuite en 48 h, dès 790 € HT (948 € TTC), sans abonnement.">
 <meta property="og:url" content="https://www.atelierwebriviera.fr/">
 <meta property="og:locale" content="fr_FR">
 <link rel="canonical" href="https://www.atelierwebriviera.fr/">
@@ -30,7 +30,7 @@
   "url": "https://www.atelierwebriviera.fr/",
   "telephone": "+33663590793",
   "email": "atelierwebriviera@gmail.com",
-  "priceRange": "790 € - 2790 €",
+  "priceRange": "790 € HT - 2790 € HT",
   "areaServed": ["Nice", "Cannes", "Antibes", "Grasse", "Draguignan", "Fayence", "Montauroux", "Saint-Raphaël"],
   "address": { "@type": "PostalAddress", "addressRegion": "Provence-Alpes-Côte d'Azur", "addressCountry": "FR" }
 }
@@ -167,6 +167,7 @@ nav a:hover { color: var(--or-texte); }
 .tag { position: absolute; top: -12px; left: 32px; background: var(--or-clair); color: #1a1405; font: 500 0.7rem var(--mono); text-transform: uppercase; letter-spacing: 0.12em; padding: 6px 12px; border-radius: 2px; }
 .price { font: 500 3.2rem/1 var(--serif); letter-spacing: -0.01em; font-variant-numeric: lining-nums tabular-nums; }
 .price small { font: 400 0.95rem var(--font); color: var(--muted); letter-spacing: 0; }
+.price small.ttc { display: block; margin-top: 8px; font-weight: 500; font-size: 0.9rem; }
 .pack .meta { color: var(--muted); font-size: 0.93rem; margin-top: -8px; }
 .pack ul { list-style: none; margin: 0; padding: 18px 0 0; border-top: 1px solid var(--line); display: grid; gap: 11px; flex: 1; font-size: 0.98rem; }
 .pack li { padding-left: 26px; position: relative; }
@@ -485,7 +486,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
     <div>
       <p class="eyebrow">Alpes-Maritimes et Var</p>
       <h1>Un site qui fait <em>sonner le téléphone</em>.</h1>
-      <p class="lead">Sites vitrines pour artisans, commerces et professions libérales. Maquette gratuite en 48 h, en ligne en 7 jours, prix affichés dès 790 € HT, sans abonnement.</p>
+      <p class="lead">Sites vitrines pour artisans, commerces et professions libérales. Maquette gratuite en 48 h, en ligne en 7 jours, prix affichés dès 790 € HT (948 € TTC), sans abonnement.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="#contact">Recevoir ma maquette gratuite</a>
         <a class="btn btn-ghost" href="#offres">Voir les tarifs</a>
@@ -561,13 +562,13 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
     <div class="sec-head">
       <p class="eyebrow">Offres</p>
       <h2>Trois formules, un prix annoncé d'avance</h2>
-      <p class="lead">Tous les prix sont hors taxes. Paiement en trois fois : 40 % à la commande, 30 % à la validation de la maquette, 30 % à la livraison. Aucun frais ensuite.</p>
+      <p class="lead">Prix hors taxes, avec le prix TTC (TVA 20 %) indiqué sous chaque formule. Paiement en trois fois : 40 % à la commande, 30 % à la validation de la maquette, 30 % à la livraison. Aucun frais ensuite.</p>
     </div>
 
     <div class="grid3">
       <article class="card pack">
         <h3>Présence</h3>
-        <p class="price">790 €<small> HT</small></p>
+        <p class="price">790 €<small> HT</small><small class="ttc">soit 948 € TTC</small></p>
         <p class="meta">En ligne en 5 à 7 jours ouvrés</p>
         <ul>
           <li>Site d'une page, adapté au mobile</li>
@@ -581,7 +582,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
       <article class="card pack featured">
         <span class="tag">Le plus choisi</span>
         <h3>Pro</h3>
-        <p class="price">1 490 €<small> HT</small></p>
+        <p class="price">1 490 €<small> HT</small><small class="ttc">soit 1 788 € TTC</small></p>
         <p class="meta">En ligne en 2 semaines</p>
         <ul>
           <li>Jusqu'à 5 pages : accueil, services, réalisations, à propos, contact</li>
@@ -595,7 +596,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
 
       <article class="card pack">
         <h3>Croissance</h3>
-        <p class="price">2 790 €<small> HT</small></p>
+        <p class="price">2 790 €<small> HT</small><small class="ttc">soit 3 348 € TTC</small></p>
         <p class="meta">En ligne en 3 à 4 semaines</p>
         <ul>
           <li>8 à 10 pages, dont une par service et par ville</li>
@@ -619,7 +620,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
         <li>Une modification plus tard ? Elle se fait à l'heure, sans engagement.</li>
       </ul>
     </div>
-    <p class="note-line">Besoin de réservation en ligne, d'un espace client ou d'une boutique ? Devis sur mesure à partir de 4 500 € HT.</p>
+    <p class="note-line">Besoin de réservation en ligne, d'un espace client ou d'une boutique ? Devis sur mesure à partir de 4 500 € HT (5 400 € TTC).</p>
   </div>
 </section>
 
@@ -869,7 +870,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
     </div>
     <div class="faq">
       <details><summary>Pourquoi pas un site Wix ou un site fait par un proche ?</summary><p>Un site seul ne suffit pas : il doit apparaître sur Google, s'afficher vite sur mobile et pousser à appeler. C'est ce que je règle, et vous gardez votre temps pour votre métier.</p></details>
-      <details><summary>Qui fournit les textes et les photos ?</summary><p>Vous m'envoyez vos photos et vos infos, je rédige les textes. Si vous n'avez pas de photos, l'option rédaction et photos est à 190 € HT.</p></details>
+      <details><summary>Qui fournit les textes et les photos ?</summary><p>Vous m'envoyez vos photos et vos infos, je rédige les textes. Si vous n'avez pas de photos, l'option rédaction et photos est à 190 € HT (228 € TTC).</p></details>
       <details><summary>Le site m'appartient-il ?</summary><p>Oui. Le nom de domaine et l'hébergement sont ouverts à votre nom, et le code vous est remis après règlement complet. Je ne garde aucun accès.</p></details>
       <details><summary>Y a-t-il un abonnement à payer ?</summary><p>Non. Le site est livré fini et vous appartient. Vous ne payez que votre nom de domaine, environ 10 à 15 € par an, et l'hébergement reste gratuit tant que le site est simple.</p></details>
       <details><summary>Intervenez-vous près de chez moi ?</summary><p>Je travaille dans les Alpes-Maritimes et le Var : Nice, Cannes, Antibes, Grasse, Draguignan, Fayence, Montauroux, Saint-Raphaël et alentours. Rendez-vous sur place possible.</p></details>
@@ -902,9 +903,9 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
       <label for="f-offre">Formule envisagée
         <select id="f-offre" name="offre">
           <option>Je ne sais pas encore</option>
-          <option>Présence, 790 € HT</option>
-          <option>Pro, 1 490 € HT</option>
-          <option>Croissance, 2 790 € HT</option>
+          <option>Présence, 790 € HT (948 € TTC)</option>
+          <option>Pro, 1 490 € HT (1 788 € TTC)</option>
+          <option>Croissance, 2 790 € HT (3 348 € TTC)</option>
           <option>Sur mesure</option>
         </select>
       </label>
