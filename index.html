@@ -630,6 +630,15 @@ form { border-radius: 0; }
   .mobile img { border-radius: 8px; }
   .hero-photo figcaption { font-size: 0.56rem; bottom: 8px; }
 }
+
+/* Lisibilité : chiffres et prix en Geist, titres un peu plus épais */
+h1, h2 { font-weight: 500; }
+.price, .metrics strong, .why .num, .direct a { font-family: var(--font); font-weight: 300; letter-spacing: -0.03em; text-transform: none; }
+.price { font-size: 2.9rem; }
+.metrics strong { font-size: 2.4rem; }
+.why .num { font-size: 2rem; }
+.direct a { font-size: 1.9rem; }
+@media (max-width: 759px) { .metrics strong { font-size: 2rem; } .price { font-size: 2.5rem; } }
 </style>
 </head>
 <body>
