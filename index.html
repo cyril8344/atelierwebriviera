@@ -630,13 +630,21 @@ form { border-radius: 0; }
   .mobile img { border-radius: 8px; }
   .hero-photo figcaption { font-size: 0.56rem; bottom: 8px; }
 }
+
+/* Bodoni gardé partout, rendu amélioré : optique « texte » (déliés plus épais), graisse 500, chiffres alignés */
+body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+h1, h2, h3, .tagline, .price, .metrics strong, .why .num, .direct a { font-optical-sizing: none; font-variation-settings: "opsz" 20; }
+h1, h2 { font-weight: 500; letter-spacing: 0.01em; }
+.why h3, .sub-block h3, .timeline h3, .zone h3 { font-weight: 500; }
+.price, .metrics strong, .why .num, .direct a { font-family: var(--serif); font-weight: 600; letter-spacing: 0.01em; font-variant-numeric: lining-nums proportional-nums; text-transform: none; }
+.price small { font-weight: 400; }
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap bar">
-    <a class="logo" href="#haut"><img src="img/logo-entete.webp" alt="Atelier Web Riviera, création de sites internet" width="514" height="120"></a>
+    <a class="logo" href="#haut"><img src="img/logo-entete.webp" alt="Atelier Web Riviera, création de sites internet" width="1051" height="240"></a>
     <nav aria-label="Navigation principale">
       <ul>
         <li><a href="#pourquoi">Pourquoi un site</a></li>
@@ -1116,7 +1124,7 @@ form { border-radius: 0; }
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="logo" href="#haut"><img src="img/logo-pied.webp" alt="Atelier Web Riviera" width="514" height="120" loading="lazy"></a>
+        <a class="logo" href="#haut"><img src="img/logo-pied.webp" alt="Atelier Web Riviera" width="1047" height="240" loading="lazy"></a>
         <p style="margin-top:16px;max-width:36ch">Sites vitrines clés en main pour les professionnels du Var et des Alpes-Maritimes. Basé à Montauroux (83440).</p>
       </div>
       <div>
