@@ -610,6 +610,26 @@ form { border-radius: 0; }
   .hero .cta-row .btn { width: 100%; }
   .eyebrow { justify-content: center; }
 }
+
+/* Mise en scène : côte en fond, ordinateur et téléphone */
+.hero-photo { position: relative; display: grid; place-items: center; }
+.hero-photo .hero-bg { position: absolute; inset: 0; }
+.hero-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.28)); }
+.devices { position: relative; z-index: 1; width: min(880px, 74%); margin-top: 2%; }
+.laptop .screen { background: #0c0c0c; border-radius: 14px 14px 0 0; padding: 1.6% 1.6% 2%; box-shadow: 0 40px 80px -30px rgba(0,0,0,.7); }
+.laptop .screen img { display: block; width: 100%; height: auto; border-radius: 3px; }
+.laptop .base { height: 14px; margin: 0 -7%; background: linear-gradient(#d9d9d9, #a9a9a9); border-radius: 0 0 14px 14px; box-shadow: 0 24px 40px -18px rgba(0,0,0,.7); }
+.mobile { position: absolute; right: -9%; bottom: -6%; width: 21%; background: #0c0c0c; border-radius: 22px; padding: 2.2% 1.1%; box-shadow: 0 30px 50px -18px rgba(0,0,0,.75); }
+.mobile img { display: block; width: 100%; height: auto; border-radius: 14px; }
+.hero-photo figcaption { position: absolute; z-index: 1; left: 50%; bottom: 14px; transform: translateX(-50%); font: 500 0.66rem var(--font); letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,.85); white-space: nowrap; }
+@media (max-width: 759px) {
+  .devices { width: 80%; margin-top: 0; }
+  .laptop .screen { border-radius: 8px 8px 0 0; }
+  .laptop .base { height: 8px; }
+  .mobile { right: -8%; width: 26%; border-radius: 12px; }
+  .mobile img { border-radius: 8px; }
+  .hero-photo figcaption { font-size: 0.56rem; bottom: 8px; }
+}
 </style>
 </head>
 <body>
@@ -636,7 +656,12 @@ form { border-radius: 0; }
 
 <div class="hero">
   <figure class="hero-photo">
-    <img src="https://images.unsplash.com/photo-1631528858266-5ebeb8bfc6f5?auto=format&q=80&w=1800" srcset="https://images.unsplash.com/photo-1631528858266-5ebeb8bfc6f5?auto=format&q=80&w=1000 1000w, https://images.unsplash.com/photo-1631528858266-5ebeb8bfc6f5?auto=format&q=80&w=1800 1800w, https://images.unsplash.com/photo-1631528858266-5ebeb8bfc6f5?auto=format&q=80&w=2600 2600w" sizes="100vw" alt="Villa et palmier face à la mer sur la Côte d'Azur" width="1800" height="1087" fetchpriority="high" decoding="async">
+    <img class="hero-bg" src="https://images.unsplash.com/photo-1703152792682-a1fe5f3dedb4?auto=format&q=80&w=1800" srcset="https://images.unsplash.com/photo-1703152792682-a1fe5f3dedb4?auto=format&q=80&w=1000 1000w, https://images.unsplash.com/photo-1703152792682-a1fe5f3dedb4?auto=format&q=80&w=1800 1800w, https://images.unsplash.com/photo-1703152792682-a1fe5f3dedb4?auto=format&q=80&w=2600 2600w" sizes="100vw" alt="" width="1800" height="1200" fetchpriority="high" decoding="async">
+    <div class="devices" aria-hidden="true">
+      <div class="laptop"><div class="screen"><img src="img/hero-ordi.webp" alt="" width="1280" height="800" decoding="async"></div><div class="base"></div></div>
+      <div class="mobile"><img src="img/hero-tel.webp" alt="" width="390" height="844" decoding="async"></div>
+    </div>
+    <figcaption>Sites réalisés par l'atelier · entreprises fictives</figcaption>
   </figure>
   <div class="wrap hero-text">
     <p class="eyebrow">Montauroux · Var et Alpes-Maritimes</p>
