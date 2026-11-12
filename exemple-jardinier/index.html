@@ -131,7 +131,7 @@ footer a{color:#cfdcd2}
 .barre-appel{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--blanc);border-top:1px solid var(--pierre);padding:.65rem 1rem;display:flex;gap:.6rem}
 .barre-appel a{flex:1;justify-content:center;padding:.8rem 1rem}
 @media(min-width:720px){.barre-appel{display:none}footer{padding-bottom:1.6rem}}
-</style>
+.ph{display:grid;gap:.75rem;grid-template-columns:1fr 1fr}.ph figure{margin:0;border-radius:12px;overflow:hidden;aspect-ratio:4/5;background:rgba(0,0,0,.06)}.ph figure:first-child{grid-column:1/-1;aspect-ratio:3/2}@media(min-width:800px){.ph{grid-template-columns:1.5fr 1fr 1fr}.ph figure:first-child{grid-column:auto;aspect-ratio:auto;position:relative}.ph figure:first-child img{position:absolute;inset:0}}.ph img{width:100%;height:100%;object-fit:cover;display:block}.ph-cr{font:.8rem system-ui,sans-serif;opacity:.65;margin:.7rem 0 0}</style>
 </head>
 <body>
 <div class="demo">Maquette d’exemple réalisée par <a href="https://www.atelierwebriviera.fr/">Atelier Web Riviera</a>. Entreprise, téléphone et textes fictifs.</div>
@@ -1009,6 +1009,7 @@ footer a{color:#cfdcd2}
   </div>
 </section>
 
+<section class="photos" id="photos"><div class="wrap"><h2>Au jardin</h2><p class="intro">Restanques, plantations et entretien, au rythme des saisons du Var.</p><div class="ph"><figure><img src="photos/jar-2.jpg" alt="Jardin en terrasses de pierre" width="1000" height="1250" loading="lazy" decoding="async"></figure><figure><img src="photos/jar-7.jpg" alt="Plantation de jeunes plants" width="833" height="1250" loading="lazy" decoding="async"></figure><figure><img src="photos/jar-9.jpg" alt="Jardinier en tenue de travail" width="833" height="1250" loading="lazy" decoding="async"></figure></div><p class="ph-cr">Photos : Pavel Gromov, Jonathan Kemper, Lara John sur Unsplash.</p></div></section>
 <section class="contact" id="contact">
   <div class="wrap grille">
     <div>
