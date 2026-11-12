@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Atelier Web Riviera, création de sites internet</title>
+<title>Création de site internet à Montauroux, Var et Alpes-Maritimes | Atelier Web Riviera</title>
 <meta name="theme-color" content="#0a2a43">
 <meta name="google-site-verification" content="h_6-41cOStaTu9hjYwZ9dHNzinUAOK1H6Knm1SWPqUo">
-<meta name="description" content="Création de sites internet pour artisans, commerces et professions libérales des Alpes-Maritimes et du Var. Maquette gratuite en 48 h, mise en ligne en 7 jours, dès 790 €, sans abonnement.">
+<meta name="description" content="Création de sites internet à Montauroux pour artisans, commerces et professions libérales du Var et des Alpes-Maritimes : Fayence, Grasse, Cannes, Draguignan, Saint-Raphaël. Maquette gratuite en 48 h, dès 790 €, sans abonnement.">
 <!--
   À REMPLACER AVANT LA MISE EN LIGNE (rechercher ces textes dans le fichier) :
   Téléphone et e-mail : déjà remplacés (06 63 59 07 93 / atelierwebriviera@gmail.com)
@@ -14,8 +14,8 @@
   Mentions légales               -> nom, SIRET, hébergeur en bas de page
 -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Atelier Web Riviera, création de sites internet">
-<meta property="og:description" content="Sites vitrines pour artisans, commerces et professions libérales du 06 et du 83. Maquette gratuite en 48 h, dès 790 €, sans abonnement.">
+<meta property="og:title" content="Atelier Web Riviera, création de sites internet dans le Var et les Alpes-Maritimes">
+<meta property="og:description" content="Sites vitrines pour artisans, commerces et professions libérales du Var et des Alpes-Maritimes, depuis Montauroux. Maquette gratuite en 48 h, dès 790 €, sans abonnement.">
 <meta property="og:url" content="https://www.atelierwebriviera.fr/">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:image" content="https://www.atelierwebriviera.fr/og-image.jpg">
@@ -27,7 +27,7 @@
 <link rel="canonical" href="https://www.atelierwebriviera.fr/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Geist:wght@300..700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -40,8 +40,13 @@
   "telephone": "+33663590793",
   "email": "atelierwebriviera@gmail.com",
   "priceRange": "790 € - 2790 €",
-  "areaServed": ["Nice", "Cannes", "Antibes", "Grasse", "Draguignan", "Fayence", "Montauroux", "Saint-Raphaël"],
-  "address": { "@type": "PostalAddress", "addressRegion": "Provence-Alpes-Côte d'Azur", "addressCountry": "FR" }
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Var" },
+    { "@type": "AdministrativeArea", "name": "Alpes-Maritimes" },
+    "Montauroux", "Fayence", "Callian", "Tourrettes", "Seillans", "Draguignan", "Fréjus", "Saint-Raphaël",
+    "Grasse", "Cannes", "Mandelieu-la-Napoule", "Mougins", "Le Cannet", "Antibes", "Valbonne", "Nice"
+  ],
+  "address": { "@type": "PostalAddress", "addressLocality": "Montauroux", "postalCode": "83440", "addressRegion": "Var", "addressCountry": "FR" }
 }
 </script>
 <style>
@@ -60,7 +65,7 @@
   --or-clair: #e6c98f;
   --serif: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
   --font: "Geist", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --mono: var(--font);
   color-scheme: light;
 }
 * { box-sizing: border-box; }
@@ -89,10 +94,12 @@ section { padding: 96px 0; }
 .btn-ghost:hover { background: var(--marine); color: #fff; }
 
 header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--sable) 90%, transparent); backdrop-filter: saturate(1.3) blur(10px); border-bottom: 1px solid var(--line); }
-.bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 70px; }
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 78px; }
 .logo { font: 500 1.35rem/1.05 var(--serif); letter-spacing: 0.01em; color: var(--marine); text-decoration: none; }
 .logo span { color: var(--or-texte); font-style: italic; }
 .logo small { display: block; font: 400 0.62rem/1.2 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+.logo img { display: block; height: 56px; width: auto; }
+.foot .logo img { height: 56px; }
 nav ul { display: none; list-style: none; margin: 0; padding: 0; gap: 32px; }
 nav a { color: var(--ink); text-decoration: none; font-weight: 400; font-size: 0.93rem; letter-spacing: 0.02em; }
 nav a:hover { color: var(--or-texte); }
@@ -121,21 +128,21 @@ nav a:hover { color: var(--or-texte); }
 .b-top i { width: 9px; height: 9px; border-radius: 50%; background: #ccd3da; }
 .b-top span { margin-left: 10px; flex: 1; height: 18px; border-radius: 9px; background: #fff; border: 1px solid #dde2e8; font: 400 0.66rem/16px var(--mono); color: #7b8896; padding: 0 10px; }
 .b-nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; border-bottom: 1px solid #edf0f3; }
-.b-nav b { font: 600 0.95rem "Outfit", var(--font); color: #06404a; }
+.b-nav b { font: 600 0.95rem var(--font); color: #06404a; }
 .b-nav div { display: flex; gap: 8px; }
 .b-nav i { width: 34px; height: 6px; border-radius: 3px; background: #d6dde4; }
-.b-hero { position: relative; padding: 34px 20px 36px; color: #fff; overflow: hidden; min-height: 150px; font-family: "Outfit", var(--font); }
-.b-hero p { position: relative; font: 300 1.65rem/1.1 "Outfit", var(--font); max-width: 13ch; }
+.b-hero { position: relative; padding: 34px 20px 36px; color: #fff; overflow: hidden; min-height: 150px; font-family: var(--font); }
+.b-hero p { position: relative; font: 300 1.65rem/1.1 var(--font); max-width: 13ch; }
 .b-hero p em { font-style: normal; font-weight: 600; }
-.b-hero span { position: relative; display: inline-block; margin-top: 16px; padding: 8px 16px; background: #fff; color: #06404a; font: 600 0.72rem "Outfit", var(--font); border-radius: 99px; }
+.b-hero span { position: relative; display: inline-block; margin-top: 16px; padding: 8px 16px; background: #fff; color: #06404a; font: 600 0.72rem var(--font); border-radius: 99px; }
 .b-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 16px 20px 20px; }
-.b-tiles i { display: grid; place-items: center; height: 54px; border-radius: 8px; background: #eaf8fa; color: #0a8fa0; font: 600 0.72rem "Outfit", var(--font); font-style: normal; text-align: center; }
+.b-tiles i { display: grid; place-items: center; height: 54px; border-radius: 8px; background: #eaf8fa; color: #0a8fa0; font: 600 0.72rem var(--font); font-style: normal; text-align: center; }
 .phone { position: absolute; right: -6px; bottom: 0; width: 128px; background: #fff; border: 6px solid #0a1a2b; border-radius: 26px; box-shadow: 0 30px 50px -18px rgba(0,0,0,.7); overflow: hidden; color: var(--ink); }
 .phone .p-top { height: 14px; background: #0a1a2b; }
 .phone .p-body { padding: 12px 10px 14px; display: grid; gap: 8px; }
-.phone b { font: 600 0.74rem "Outfit", var(--font); color: #06404a; }
+.phone b { font: 600 0.74rem var(--font); color: #06404a; }
 .phone .p-hero { position: relative; height: 58px; border-radius: 6px; overflow: hidden; }
-.phone .p-call { text-align: center; padding: 8px 0; background: #0fb5c4; color: #032a30; font: 600 0.7rem "Outfit", var(--font); border-radius: 99px; }
+.phone .p-call { text-align: center; padding: 8px 0; background: #0fb5c4; color: #032a30; font: 600 0.7rem var(--font); border-radius: 99px; }
 .phone .p-line { height: 5px; border-radius: 3px; background: #dfe4e9; }
 .stage-cap { position: absolute; left: 0; bottom: 8px; font: 400 0.66rem var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: #8ea4b6; max-width: 56%; }
 
@@ -206,8 +213,8 @@ nav a:hover { color: var(--or-texte); }
 .site .kick { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; }
 .site .pill { display: inline-block; white-space: nowrap; }
 
-/* A. Pisciniste : aqua, blanc, sable. Outfit */
-.sa { font-family: "Outfit", var(--font); color: #06303a; background: #fff; }
+/* A. Pisciniste : aqua, blanc, sable */
+.sa { font-family: var(--font); color: #06303a; background: #fff; }
 .sa .top { background: #06404a; color: #bfeaf0; font-size: 11px; text-align: center; padding: 7px 10px; letter-spacing: .04em; }
 .sa .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; }
 .sa .logo { display: flex; align-items: center; gap: 9px; font-weight: 600; font-size: 18px; color: #06404a; }
@@ -248,12 +255,12 @@ nav a:hover { color: var(--or-texte); }
 .sa .band span.btn1 { justify-self: start; }
 .sa .foot2 { padding: 16px 20px; font-size: 11px; color: #4d7a84; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
 
-/* B. Restaurant : ivoire, olive, terracotta. Playfair Display */
-.sb { font-family: "Playfair Display", Georgia, serif; color: #2b2118; background: #f7f1e6; }
+/* B. Restaurant : ivoire, olive, terracotta */
+.sb { font-family: var(--serif); color: #2b2118; background: #f7f1e6; }
 .sb .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 16px 18px; border-bottom: 1px solid #e6dbc6; font-family: var(--font); }
 .sb .links { display: none; gap: 22px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #55604a; }
 .sb .logo { text-align: center; grid-column: 2; }
-.sb .logo b { display: block; font: 600 22px/1 "Playfair Display", Georgia, serif; color: #8c3b24; }
+.sb .logo b { display: block; font: 600 22px/1 var(--serif); color: #8c3b24; }
 .sb .logo small { display: block; margin-top: 4px; font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: #55604a; }
 .sb .cta { justify-self: end; grid-column: 3; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; border: 1px solid #8c3b24; color: #8c3b24; padding: 9px 14px; }
 .sb .hh { position: relative; min-height: 460px; display: grid; place-items: start center; text-align: center; color: #fff; overflow: hidden; }
@@ -268,14 +275,14 @@ nav a:hover { color: var(--or-texte); }
 .sb .esprit p { margin: 12px 0 0; font-family: var(--font); font-size: 13.5px; line-height: 1.65; color: #4a3d30; }
 .sb .facts { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-top: 18px; font-family: var(--font); }
 .sb .facts div { border-top: 1px solid #c9b79c; padding-top: 10px; font-size: 11px; color: #55604a; }
-.sb .facts b { display: block; font: 500 22px "Playfair Display", serif; color: #2b2118; }
+.sb .facts b { display: block; font: 500 22px var(--serif); color: #2b2118; }
 .sb .plate { background: #55604a; border-radius: 4px; overflow: hidden; }
 .sb .plate svg { width: 100%; height: auto; }
 .sb .carte { background: #fffaf0; border-block: 1px solid #e6dbc6; padding: 46px 22px; }
 .sb .carte .h { text-align: center; font-size: 28px; font-weight: 500; color: #8c3b24; }
 .sb .carte .sub { text-align: center; font-family: var(--font); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #55604a; margin: 6px 0 26px; }
 .sb .cols { display: grid; gap: 28px; }
-.sb .cols h5 { margin: 0 0 12px; font: 500 italic 19px "Playfair Display", serif; color: #55604a; border-bottom: 1px solid #d9c9ae; padding-bottom: 8px; }
+.sb .cols h5 { margin: 0 0 12px; font: 500 italic 19px var(--serif); color: #55604a; border-bottom: 1px solid #d9c9ae; padding-bottom: 8px; }
 .sb .dish { margin-bottom: 14px; font-family: var(--font); }
 .sb .dish .l { display: flex; gap: 6px; align-items: baseline; font-size: 13.5px; font-weight: 500; }
 .sb .dish .l i { flex: 1; border-bottom: 1px dotted #c9b79c; transform: translateY(-3px); }
@@ -287,10 +294,10 @@ nav a:hover { color: var(--or-texte); }
 .sb .fields b { display: block; font-size: 9px; letter-spacing: .16em; text-transform: uppercase; opacity: .7; font-weight: 500; }
 .sb .resa .btnb { background: #f7f1e6; color: #8c3b24; justify-self: start; }
 .sb .info { padding: 28px 22px 22px; display: grid; gap: 16px; font-family: var(--font); font-size: 12.5px; color: #4a3d30; }
-.sb .info b { display: block; font: 500 italic 16px "Playfair Display", serif; color: #8c3b24; margin-bottom: 4px; }
+.sb .info b { display: block; font: 500 italic 16px var(--serif); color: #8c3b24; margin-bottom: 4px; }
 
-/* C. Cabinet de santé : blanc, sauge, pêche. Manrope */
-.sc { font-family: "Manrope", var(--font); color: #143d31; background: #f4f8f6; }
+/* C. Cabinet de santé : blanc, sauge, pêche */
+.sc { font-family: var(--font); color: #143d31; background: #f4f8f6; }
 .sc .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; background: #fff; border-bottom: 1px solid #dbe8e1; }
 .sc .logo { display: flex; align-items: center; gap: 9px; font-weight: 700; font-size: 15px; }
 .sc .logo i { width: 26px; height: 26px; border-radius: 8px; background: #1c6b52; position: relative; }
@@ -477,19 +484,80 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
 .sa .stats{position:relative;z-index:3}
 .ph-t{display:block;width:100%;height:auto;aspect-ratio:200/110;object-fit:cover}
 .sb .plate .ph-t{aspect-ratio:360/240}
+
+/* Démos par métier */
+.metiers { margin-top: 64px; }
+.metiers h3 { font: 500 1.9rem/1.1 var(--serif); }
+.metiers > p { color: var(--muted); margin-top: 8px; }
+.metiers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 24px; }
+.metiers-grid a { display: block; background: var(--sable); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; text-decoration: none; color: var(--ink); transition: border-color .2s; }
+.metiers-grid a:hover { border-color: var(--or); }
+.metiers-grid img { display: block; width: 100%; height: auto; aspect-ratio: 22/15; object-fit: cover; }
+.metiers-grid span { display: block; padding: 10px 12px; font-weight: 500; font-size: 0.93rem; }
+.more { display: none; }
+
+/* Zone d'intervention */
+.zone { background: var(--carte); border-block: 1px solid var(--line); }
+.zone-grid { display: grid; gap: 32px; margin-top: 44px; }
+.zone h3 { font: 500 1.6rem/1.1 var(--serif); padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.zone ul { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.zone li { padding: 7px 14px; border: 1px solid var(--line); background: var(--sable); border-radius: 99px; font-size: 0.93rem; }
+
+/* Mobile : page plus courte */
+@media (max-width: 759px) {
+  section { padding: 64px 0; }
+  .logo img { height: 42px; }
+  .bar { min-height: 62px; }
+  .hero { padding: 44px 0 80px; }
+  .hero .stage { display: none; }
+  .eyebrow { letter-spacing: 0.1em; gap: 10px; font-size: 0.72rem; }
+  .eyebrow::before { width: 22px; }
+  .lead, .hero .lead { font-size: 1.04rem; margin-top: 14px; }
+  .why { margin-top: 32px; }
+  .why article { padding: 24px 0; gap: 8px; }
+  .inc-grid { margin-top: 32px; grid-template-columns: 1fr 1fr; }
+  .inc-grid div { padding: 18px 16px; }
+  .inc-grid h3 { font-size: 1rem; gap: 8px; }
+  .inc-grid p { font-size: 0.9rem; line-height: 1.5; }
+  .grid3 { margin-top: 36px; grid-auto-flow: column; grid-auto-columns: 86%; overflow-x: auto; scroll-snap-type: x mandatory; padding: 14px 20px 8px; margin-inline: -20px; scroll-padding-inline: 20px; }
+  .grid3 > .pack { scroll-snap-align: start; padding: 26px 22px; }
+  .sub-block { margin-top: 36px; padding: 26px 22px; }
+  .demos.js .frame { max-height: 620px; position: relative; }
+  .demos.js .frame::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 160px; background: linear-gradient(180deg, rgba(255,255,255,0), #fff); pointer-events: none; }
+  .demos.js .demo.open .frame { max-height: none; }
+  .demos.js .demo.open .frame::after { display: none; }
+  .demos.js .more { display: flex; width: 100%; margin-top: 14px; }
+  .metiers { margin-top: 48px; }
+  .metiers-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .metiers-grid span { padding: 7px 8px; font-size: 0.8rem; line-height: 1.3; }
+  .metiers h3 { font-size: 1.6rem; }
+  .timeline { margin-top: 36px; }
+  .timeline li { padding-bottom: 26px; }
+  .pills, .faq, .zone-grid { margin-top: 28px; }
+  .pills li { padding: 9px 15px; font-size: 0.93rem; }
+  summary { padding: 18px 4px; }
+}
+@media (min-width: 760px) {
+  .metiers-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .zone-grid { grid-template-columns: 1fr 1fr; gap: 56px; }
+}
+@media (min-width: 1000px) {
+  .metiers-grid { grid-template-columns: repeat(6, 1fr); }
+}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap bar">
-    <a class="logo" href="#haut">Atelier Web <span>Riviera</span><small>Création de sites internet</small></a>
+    <a class="logo" href="#haut"><img src="img/logo-entete.webp" alt="Atelier Web Riviera, création de sites internet" width="514" height="120"></a>
     <nav aria-label="Navigation principale">
       <ul>
         <li><a href="#pourquoi">Pourquoi un site</a></li>
         <li><a href="#offres">Offres</a></li>
         <li><a href="#exemples">Exemples</a></li>
         <li><a href="#methode">Méthode</a></li>
+        <li><a href="#zone">Zone</a></li>
         <li><a href="#faq">Questions</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -503,9 +571,9 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
 <div class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow">Alpes-Maritimes et Var</p>
+      <p class="eyebrow">Montauroux · Var et Alpes-Maritimes</p>
       <h1>Un site qui fait <em>sonner le téléphone</em>.</h1>
-      <p class="lead">Sites vitrines pour artisans, commerces et professions libérales. Maquette gratuite en 48 h, en ligne en 7 jours, prix affichés dès 790 €, sans abonnement.</p>
+      <p class="lead">Création de sites internet pour artisans, commerces et professions libérales du Var et des Alpes-Maritimes. Maquette gratuite en 48&nbsp;h, en ligne en 7&nbsp;jours, prix affichés dès 790 €, sans abonnement.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="#contact">Recevoir ma maquette gratuite</a>
         <a class="btn btn-ghost" href="#offres">Voir les tarifs</a>
@@ -703,6 +771,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
             <div class="foot2"><span>Piscines Azur · Pays de Fayence</span><span>Mentions légales</span></div>
           </div>
         </div>
+        <button class="btn btn-ghost more" type="button" aria-expanded="false">Voir l'exemple en entier</button>
         <p class="demo-cap"><strong>Pisciniste, plombier, électricien.</strong> Un site pensé pour être appelé : zone d'intervention, prestations avec prix d'appel, réalisations et avis clients.</p>
       </div>
 
@@ -757,6 +826,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
             <div class="info"><div><b>Horaires</b>Midi 12 h à 14 h 30<br>Soir 19 h à 22 h 30</div><div><b>Adresse</b>12 quai Saint-Pierre, Cannes<br>Parking Vieux-Port à 100 m</div><div><b>Contact</b>04 93 00 00 00<br>contact@chez-marcelle.fr</div></div>
           </div>
         </div>
+        <button class="btn btn-ghost more" type="button" aria-expanded="false">Voir l'exemple en entier</button>
         <p class="demo-cap"><strong>Restaurant, bar, commerce.</strong> Une ambiance, une carte lisible et une réservation à portée de pouce : c'est ce qui remplit la salle.</p>
       </div>
 
@@ -822,9 +892,27 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
             </div>
           </div>
         </div>
+        <button class="btn btn-ghost more" type="button" aria-expanded="false">Voir l'exemple en entier</button>
         <p class="demo-cap"><strong>Profession de santé ou libérale.</strong> Un site rassurant : le praticien, les soins, les tarifs et la prise de rendez-vous en ligne.</p>
       </div>
 
+    </div>
+    <div class="metiers">
+      <h3>Voir un exemple pour votre métier</h3>
+      <p>Onze sites complets, à ouvrir sur votre téléphone. Entreprises fictives du Pays de Fayence.</p>
+      <div class="metiers-grid">
+      <a href="/exemple-plombier/"><img src="img/demos/plombier.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Plombier</span></a>
+      <a href="/exemple-elagueur/"><img src="img/demos/elagueur.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Élagueur</span></a>
+      <a href="/exemple-jardinier/"><img src="img/demos/jardinier.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Jardinier paysagiste</span></a>
+      <a href="/exemple-macon/"><img src="img/demos/macon.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Maçon</span></a>
+      <a href="/exemple-couvreur/"><img src="img/demos/couvreur.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Couvreur</span></a>
+      <a href="/exemple-carreleur/"><img src="img/demos/carreleur.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Carreleur</span></a>
+      <a href="/exemple-peintre/"><img src="img/demos/peintre.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Peintre en bâtiment</span></a>
+      <a href="/exemple-menuisier/"><img src="img/demos/menuisier.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Menuisier</span></a>
+      <a href="/exemple-garage/"><img src="img/demos/garage.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Garage</span></a>
+      <a href="/exemple-coiffure/"><img src="img/demos/coiffure.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Coiffeur</span></a>
+      <a href="/exemple-immo/"><img src="img/demos/immo.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Agence immobilière</span></a>
+      </div>
     </div>
   </div>
 </section>
@@ -843,6 +931,15 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
   }
   for (var k = 0; k < tabs.length; k++) {
     (function (i) { tabs[i].addEventListener('click', function () { show(i); }); })(k);
+  }
+  var mores = document.querySelectorAll('.demo .more');
+  for (var m = 0; m < mores.length; m++) {
+    mores[m].addEventListener('click', function () {
+      var d = this.parentNode, open = d.classList.toggle('open');
+      this.setAttribute('aria-expanded', open ? 'true' : 'false');
+      this.textContent = open ? "Réduire l'exemple" : "Voir l'exemple en entier";
+      if (!open) d.scrollIntoView({ block: 'start' });
+    });
   }
 })();
 </script>
@@ -881,6 +978,25 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
   </div>
 </section>
 
+<section id="zone" class="zone">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Zone d'intervention</p>
+      <h2>Création de sites internet dans le Var et les Alpes-Maritimes</h2>
+      <p class="lead">Basé à Montauroux, au cœur du Pays de Fayence, je travaille avec les professionnels de tout l'Est-Var et de l'ouest des Alpes-Maritimes. Rendez-vous chez vous ou en visio, comme vous préférez.</p>
+    </div>
+    <div class="zone-grid">
+      <div>
+        <h3>Var (83)</h3>
+        <ul><li>Montauroux</li><li>Fayence</li><li>Callian</li><li>Tourrettes</li><li>Seillans</li><li>Saint-Paul-en-Forêt</li><li>Bagnols-en-Forêt</li><li>Draguignan</li><li>Fréjus</li><li>Saint-Raphaël</li></ul>
+      </div>
+      <div>
+        <h3>Alpes-Maritimes (06)</h3>
+        <ul><li>Grasse</li><li>Peymeinade</li><li>Saint-Cézaire-sur-Siagne</li><li>Cannes</li><li>Le Cannet</li><li>Mandelieu-la-Napoule</li><li>Mougins</li><li>Valbonne</li><li>Antibes</li><li>Nice</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="faq">
   <div class="wrap">
     <div class="sec-head">
@@ -892,7 +1008,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
       <details><summary>Qui fournit les textes et les photos ?</summary><p>Vous m'envoyez vos photos et vos infos, je rédige les textes. Si vous n'avez pas de photos, l'option rédaction et photos est à 190 €.</p></details>
       <details><summary>Le site m'appartient-il ?</summary><p>Oui. Le nom de domaine et l'hébergement sont ouverts à votre nom, et le code vous est remis après règlement complet. Je ne garde aucun accès.</p></details>
       <details><summary>Y a-t-il un abonnement à payer ?</summary><p>Non. Le site est livré fini et vous appartient. Vous ne payez que votre nom de domaine, environ 10 à 15 € par an, et l'hébergement reste gratuit tant que le site est simple.</p></details>
-      <details><summary>Intervenez-vous près de chez moi ?</summary><p>Je travaille dans les Alpes-Maritimes et le Var : Nice, Cannes, Antibes, Grasse, Draguignan, Fayence, Montauroux, Saint-Raphaël et alentours. Rendez-vous sur place possible.</p></details>
+      <details><summary>Intervenez-vous près de chez moi ?</summary><p>Je suis basé à Montauroux et je travaille dans tout le Var et les Alpes-Maritimes : Fayence, Callian, Draguignan, Saint-Raphaël, Grasse, Cannes, Antibes, Nice et alentours. Rendez-vous sur place possible.</p></details>
       <details><summary>Et si la maquette ne me plaît pas ?</summary><p>Vous ne payez rien et vous gardez la maquette. Aucune obligation.</p></details>
     </div>
   </div>
@@ -943,8 +1059,8 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="logo" href="#haut">Atelier Web <span>Riviera</span><small>Création de sites internet</small></a>
-        <p style="margin-top:16px;max-width:36ch">Sites vitrines clés en main pour les professionnels des Alpes-Maritimes et du Var.</p>
+        <a class="logo" href="#haut"><img src="img/logo-pied.webp" alt="Atelier Web Riviera" width="514" height="120" loading="lazy"></a>
+        <p style="margin-top:16px;max-width:36ch">Sites vitrines clés en main pour les professionnels du Var et des Alpes-Maritimes. Basé à Montauroux (83440).</p>
       </div>
       <div>
         <h4>Navigation</h4>
@@ -961,7 +1077,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
         <ul>
           <li><a href="tel:+33663590793">06 63 59 07 93</a></li>
           <li><a href="mailto:atelierwebriviera@gmail.com">atelierwebriviera@gmail.com</a></li>
-          <li>Alpes-Maritimes et Var</li>
+          <li>Montauroux, Var et Alpes-Maritimes</li>
         </ul>
       </div>
     </div>
