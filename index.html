@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Création de site internet à Montauroux, Var et Alpes-Maritimes | Atelier Web Riviera</title>
-<meta name="theme-color" content="#0a2a43">
+<meta name="theme-color" content="#ffffff">
 <meta name="google-site-verification" content="h_6-41cOStaTu9hjYwZ9dHNzinUAOK1H6Knm1SWPqUo">
 <meta name="description" content="Création de sites internet à Montauroux pour artisans, commerces et professions libérales du Var et des Alpes-Maritimes : Fayence, Grasse, Cannes, Draguignan, Saint-Raphaël. Maquette gratuite en 48 h, dès 790 €, sans abonnement.">
 <!--
@@ -27,7 +27,7 @@
 <link rel="canonical" href="https://www.atelierwebriviera.fr/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Geist:wght@300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&family=Geist:wght@300..700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -52,18 +52,18 @@
 <style>
 /* Direction : Côte d'Azur de luxe. Marine profond, azur, sable clair, or champagne en filets. Titres serif, texte sans serif, beaucoup d'air. */
 :root {
-  --marine: #0a2a43;
-  --marine-2: #0d3a5a;
-  --azur: #2f89b5;
-  --sable: #f6f3ec;
-  --carte: #fffdf9;
-  --ink: #0a2236;
-  --muted: #4d5f70;
-  --line: #e0dacb;
-  --or: #b08a45;
-  --or-texte: #7f5a1f;
+  --marine: #111111;
+  --marine-2: #2a2a2a;
+  --azur: #111111;
+  --sable: #ffffff;
+  --carte: #ffffff;
+  --ink: #111111;
+  --muted: #5c5c5c;
+  --line: #e5e5e5;
+  --or: #a8874c;
+  --or-texte: #7a5f2c;
   --or-clair: #e6c98f;
-  --serif: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --serif: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
   --font: "Geist", "Segoe UI", system-ui, -apple-system, sans-serif;
   --mono: var(--font);
   color-scheme: light;
@@ -527,6 +527,88 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
 @media (min-width: 760px) {
   .zone-grid { grid-template-columns: 1fr 1fr; gap: 56px; }
 }
+
+/* ===== Thème « Riviera » : blanc, noir, photo plein écran ===== */
+body { background: #fff; }
+header { background: rgba(255,255,255,.94); border-bottom: 1px solid var(--line); }
+nav a { text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.14em; font-weight: 500; }
+nav ul { gap: 24px; }
+nav a { white-space: nowrap; }
+.pack.featured .btn-primary { background: #fff; color: #111; }
+.pack.featured .btn-primary:hover { background: #eee; }
+.btn { border-radius: 0; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.82rem; font-weight: 500; }
+.btn-primary { background: #111; color: #fff; }
+.btn-primary:hover { background: #333; }
+.btn-ghost { border-color: #111; color: #111; }
+.btn-ghost:hover { background: #111; color: #fff; }
+h1, h2 { font-family: var(--serif); font-weight: 400; text-transform: uppercase; letter-spacing: -0.01em; line-height: 1.02; }
+h2 { font-size: clamp(2rem, 5vw, 3.4rem); }
+.eyebrow { color: #111; font-size: 0.74rem; letter-spacing: 0.22em; justify-content: center; }
+.eyebrow::before { display: none; }
+.sec-head { max-width: 860px; margin-inline: auto; text-align: center; }
+.sec-head .lead { margin-inline: auto; }
+
+.hero { padding: 0; color: #111; background: #fff; }
+.hero-photo { margin: 0; height: min(78vh, 760px); min-height: 380px; overflow: hidden; background: #dfe7ea; }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-text { text-align: center; padding-top: 72px; padding-bottom: 88px; max-width: 980px; }
+.hero h1 { color: #111; font-size: clamp(2.5rem, 6.4vw, 5.2rem); }
+.hero .tagline { margin-top: 22px; font: 400 clamp(1.3rem, 2.6vw, 1.9rem)/1.2 var(--serif); }
+.hero .tagline em { color: var(--or-texte); }
+.hero .eyebrow { color: #111; margin-bottom: 26px; }
+.hero .lead { color: var(--muted); margin: 22px auto 0; font-size: 1.08rem; }
+.hero .cta-row { justify-content: center; }
+.hero .btn-primary { background: #111; color: #fff; }
+.hero .btn-primary:hover { background: #333; }
+.hero .btn-ghost { border-color: #111; color: #111; }
+.hero .btn-ghost:hover { background: #111; color: #fff; }
+.hero .note { color: var(--muted); }
+
+.metrics { background: #fff; border-top: 1px solid var(--line); }
+.metrics li { text-align: center; }
+.metrics strong { font: 400 2.6rem/1 var(--serif); color: #111; }
+.why h3, .sub-block h3, .timeline h3 { font-family: var(--serif); font-weight: 400; text-transform: uppercase; font-size: 1.35rem; letter-spacing: 0.02em; }
+.why .num { color: var(--or); font-weight: 400; }
+.included, .who, .zone, #exemples { background: #f7f7f5 !important; }
+.inc-grid div { background: #fff; }
+.inc-grid h3::before, .timeline li::after { background: #111; }
+.timeline li::before { background: #cfcfcf; }
+.timeline .when { color: var(--or-texte); }
+.card, .sub-block { border-radius: 0; }
+.pack.featured { background: #111; border-color: #111; }
+.tag { border-radius: 0; }
+.price { font-weight: 400; }
+.pills li, .zone li, .tab { border-radius: 0; background: #fff; }
+.tab[aria-selected="true"] { background: #111; border-color: #111; }
+.tabs { justify-content: center; }
+.frame { border-radius: 0; }
+.faq { margin-inline: auto; }
+summary { font-weight: 400; }
+summary::after { color: #111; }
+.zone h3 { text-transform: uppercase; font-size: 1.3rem; }
+
+.contact { background: #0d0d0d; border-top: 0; }
+.contact .eyebrow { color: var(--or-clair); justify-content: flex-start; }
+.contact .sec-head, .contact h2 { text-align: left; }
+.contact .btn-primary { background: #111; }
+form { border-radius: 0; }
+.foot { background: #000; }
+
+.wa { position: fixed; right: 18px; bottom: 92px; z-index: 31; display: inline-flex; align-items: center; gap: 10px; background: #25d366; color: #fff; text-decoration: none; border-radius: 99px; padding: 12px; box-shadow: 0 10px 24px -8px rgba(0,0,0,.45); font: 500 0.9rem var(--font); }
+.wa span { display: none; }
+.wa:hover { background: #1ebe5b; }
+@media (min-width: 760px) {
+  .wa { bottom: 24px; right: 24px; padding: 12px 20px 12px 14px; }
+  .wa span { display: inline; }
+  .hero-text { padding-top: 96px; padding-bottom: 112px; }
+}
+@media (max-width: 759px) {
+  .hero-photo { height: 46vh; min-height: 300px; }
+  .metrics strong { font-size: 2.1rem; }
+  .hero-text { padding-top: 44px; padding-bottom: 56px; }
+  .hero .cta-row .btn { width: 100%; }
+  .eyebrow { justify-content: center; }
+}
 </style>
 </head>
 <body>
@@ -552,36 +634,20 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
 <main id="haut">
 
 <div class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <p class="eyebrow">Montauroux · Var et Alpes-Maritimes</p>
-      <h1>Un site qui fait <em>sonner le téléphone</em>.</h1>
-      <p class="lead">Création de sites internet pour artisans, commerces et professions libérales du Var et des Alpes-Maritimes. Maquette gratuite en 48&nbsp;h, en ligne en 7&nbsp;jours, prix affichés dès 790 €, sans abonnement.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#contact">Recevoir ma maquette gratuite</a>
-        <a class="btn btn-ghost" href="#offres">Voir les tarifs</a>
-      </div>
-      <p class="note">Sans engagement : vous ne payez rien tant que la maquette ne vous plaît pas.</p>
+  <figure class="hero-photo">
+    <img src="https://images.unsplash.com/photo-1631528858266-5ebeb8bfc6f5?auto=format&q=80&w=1800" srcset="https://images.unsplash.com/photo-1631528858266-5ebeb8bfc6f5?auto=format&q=80&w=1000 1000w, https://images.unsplash.com/photo-1631528858266-5ebeb8bfc6f5?auto=format&q=80&w=1800 1800w, https://images.unsplash.com/photo-1631528858266-5ebeb8bfc6f5?auto=format&q=80&w=2600 2600w" sizes="100vw" alt="Villa et palmier face à la mer sur la Côte d'Azur" width="1800" height="1087" fetchpriority="high" decoding="async">
+  </figure>
+  <div class="wrap hero-text">
+    <p class="eyebrow">Montauroux · Var et Alpes-Maritimes</p>
+    <h1>Création de sites internet sur la Côte d'Azur</h1>
+    <p class="tagline">Un site qui fait <em>sonner le téléphone</em>.</p>
+    <p class="lead">Sites vitrines pour artisans, commerces et professions libérales du Var et des Alpes-Maritimes. Maquette gratuite en 48&nbsp;h, en ligne en 7&nbsp;jours, dès 790&nbsp;€, sans abonnement.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#contact">Recevoir ma maquette gratuite</a>
+      <a class="btn btn-ghost" href="#offres">Voir les tarifs</a>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="browser">
-        <div class="b-top"><i></i><i></i><i></i><span>piscines-azur.fr</span></div>
-        <div class="b-nav"><b>Piscines Azur</b><div><i></i><i></i><i></i></div></div>
-        <div class="b-hero"><img class="ph-bg" src="img/pool-stage.jpg" alt="" width="800" height="533" decoding="async"><p>Une eau limpide, <em>toute l'année.</em></p><span>Demander un devis</span></div>
-        <div class="b-tiles"><i>15 ans</i><i>400+ bassins</i><i>Devis gratuit</i></div>
-      </div>
-      <div class="phone">
-        <div class="p-top"></div>
-        <div class="p-body"><b>Piscines Azur</b><div class="p-hero"><img class="ph-bg" src="img/pool-stage.jpg" alt="" width="800" height="533" decoding="async"></div><div class="p-line"></div><div class="p-line" style="width:70%"></div><div class="p-call">Devis gratuit</div></div>
-      </div>
-      <p class="stage-cap">Exemple de site · entreprise fictive</p>
-    </div>
+    <p class="note">Sans engagement : vous ne payez rien tant que la maquette ne vous plaît pas.</p>
   </div>
-  <svg class="waves" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0 60 C 240 20, 480 100, 720 60 S 1200 20, 1440 60" stroke="rgba(230,201,143,.35)"/>
-    <path d="M0 72 C 260 36, 500 108, 760 72 S 1220 36, 1440 72" stroke="rgba(120,190,225,.28)"/>
-    <path d="M0 84 C 280 52, 520 114, 800 84 S 1240 52, 1440 84" stroke="rgba(120,190,225,.18)"/>
-  </svg>
 </div>
 
 <div class="metrics">
@@ -1050,6 +1116,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
   </div>
 </footer>
 
+<a class="wa" href="https://wa.me/33663590793?text=Bonjour%2C%20je%20souhaite%20une%20maquette%20gratuite%20pour%20mon%20site." target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp"><svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.2c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 23.1c-2 0-3.9-.6-5.6-1.6l-.4-.2-4.1 1.3 1.3-4-.3-.4a10.4 10.4 0 1 1 9.1 4.9zm5.7-7.8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.5 8.5 0 0 1-4.2-3.7c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.8 1.2 3.2 1.4 3.5 2.4 3.6 5.8 5c2.1.9 3 1 4 .8.7-.1 1.9-.8 2.2-1.5s.3-1.3.2-1.5-.3-.2-.6-.4z"/></svg><span>WhatsApp</span></a>
 <div class="callbar">
   <a class="btn btn-primary" href="tel:+33663590793">Appeler</a>
   <a class="btn btn-ghost" href="#contact">Devis gratuit</a>
