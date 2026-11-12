@@ -458,6 +458,17 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
   .stage-cap { max-width: 50%; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+
+/* Photos réelles dans les aperçus */
+.ph-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0}
+.b-hero::after,.phone .p-hero::after,.sa .hh::after,.sb .hh::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none}
+.b-hero::after,.sa .hh::after{background:linear-gradient(100deg,rgba(4,40,52,.78) 0%,rgba(4,40,52,.45) 45%,rgba(4,40,52,.05) 80%)}
+.phone .p-hero::after{background:linear-gradient(180deg,rgba(4,40,52,0),rgba(4,40,52,.25))}
+.sb .hh::after{background:linear-gradient(180deg,rgba(18,22,40,.62) 0%,rgba(18,22,40,.35) 55%,rgba(18,22,40,.6) 100%)}
+.b-hero p,.b-hero span,.sa .hh .hero-in,.sb .hh .hero-in{position:relative;z-index:2}
+.sa .stats{position:relative;z-index:3}
+.ph-t{display:block;width:100%;height:auto;aspect-ratio:200/110;object-fit:cover}
+.sb .plate .ph-t{aspect-ratio:360/240}
 </style>
 </head>
 <body>
@@ -497,12 +508,12 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
       <div class="browser">
         <div class="b-top"><i></i><i></i><i></i><span>piscines-azur.fr</span></div>
         <div class="b-nav"><b>Piscines Azur</b><div><i></i><i></i><i></i></div></div>
-        <div class="b-hero"><svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMax slice" style="position:absolute;inset:0;width:100%;height:100%"><defs><linearGradient id="hs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a86a6"/><stop offset=".75" stop-color="#9fd8e4"/><stop offset="1" stop-color="#f3ead6"/></linearGradient><linearGradient id="hw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22cbd9"/><stop offset="1" stop-color="#0a7f95"/></linearGradient></defs><rect width="400" height="200" fill="url(#hs)"/><path d="M0 100C70 78 130 96 190 84S320 74 400 96V130H0Z" fill="#7dbba8"/><rect x="250" y="88" width="90" height="42" fill="#fff"/><path d="M244 88H346L336 76H254Z" fill="#e6d7b8"/><rect y="130" width="400" height="12" fill="#efe3c9"/><rect y="142" width="400" height="58" fill="url(#hw)"/><path d="M0 160C50 152 100 168 150 160S300 152 400 160M0 178C60 170 110 186 170 178S320 170 400 178" stroke="#fff" stroke-opacity=".35" fill="none" stroke-width="1.5"/></svg><p>Une eau limpide, <em>toute l'année.</em></p><span>Demander un devis</span></div>
+        <div class="b-hero"><img class="ph-bg" src="img/pool-stage.jpg" alt="" width="800" height="533" decoding="async"><p>Une eau limpide, <em>toute l'année.</em></p><span>Demander un devis</span></div>
         <div class="b-tiles"><i>15 ans</i><i>400+ bassins</i><i>Devis gratuit</i></div>
       </div>
       <div class="phone">
         <div class="p-top"></div>
-        <div class="p-body"><b>Piscines Azur</b><div class="p-hero"><svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMax slice" style="position:absolute;inset:0;width:100%;height:100%"><defs><linearGradient id="hs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a86a6"/><stop offset=".75" stop-color="#9fd8e4"/><stop offset="1" stop-color="#f3ead6"/></linearGradient><linearGradient id="hw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22cbd9"/><stop offset="1" stop-color="#0a7f95"/></linearGradient></defs><rect width="400" height="200" fill="url(#hs)"/><path d="M0 100C70 78 130 96 190 84S320 74 400 96V130H0Z" fill="#7dbba8"/><rect x="250" y="88" width="90" height="42" fill="#fff"/><path d="M244 88H346L336 76H254Z" fill="#e6d7b8"/><rect y="130" width="400" height="12" fill="#efe3c9"/><rect y="142" width="400" height="58" fill="url(#hw)"/><path d="M0 160C50 152 100 168 150 160S300 152 400 160M0 178C60 170 110 186 170 178S320 170 400 178" stroke="#fff" stroke-opacity=".35" fill="none" stroke-width="1.5"/></svg></div><div class="p-line"></div><div class="p-line" style="width:70%"></div><div class="p-call">Devis gratuit</div></div>
+        <div class="p-body"><b>Piscines Azur</b><div class="p-hero"><img class="ph-bg" src="img/pool-stage.jpg" alt="" width="800" height="533" decoding="async"></div><div class="p-line"></div><div class="p-line" style="width:70%"></div><div class="p-call">Devis gratuit</div></div>
       </div>
       <p class="stage-cap">Exemple de site · entreprise fictive</p>
     </div>
@@ -651,7 +662,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
               <span class="cta">Devis gratuit</span>
             </div>
             <div class="hh">
-              <svg viewBox="0 0 1200 460" preserveAspectRatio="xMidYMax slice"><defs><linearGradient id="pa-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a86a6"/><stop offset=".7" stop-color="#9fd8e4"/><stop offset="1" stop-color="#f3ead6"/></linearGradient><linearGradient id="pa-w" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22cbd9"/><stop offset="1" stop-color="#0a7f95"/></linearGradient></defs><rect width="1200" height="460" fill="url(#pa-sky)"/><path d="M0 250C200 190 380 230 560 200S900 170 1200 230V310H0Z" fill="#7dbba8" opacity=".8"/><path d="M0 275C260 235 520 275 760 245S1040 235 1200 268V325H0Z" fill="#4f9482"/><rect x="760" y="218" width="260" height="92" fill="#fff"/><path d="M745 218H1035L1010 192H770Z" fill="#e6d7b8"/><rect x="800" y="240" width="52" height="40" fill="#9fd8e4"/><rect x="880" y="240" width="52" height="40" fill="#9fd8e4"/><rect x="960" y="240" width="32" height="70" fill="#d6c6a2"/><rect y="310" width="1200" height="28" fill="#efe3c9"/><path d="M0 338H1200V460H0Z" fill="url(#pa-w)"/><g fill="none" stroke="#fff" stroke-width="2" stroke-opacity=".34"><path d="M0 366C150 350 300 382 450 366S750 350 900 368S1100 356 1200 366"/><path d="M0 396C170 380 320 410 480 396S800 382 960 398S1120 388 1200 396"/><path d="M0 426C140 414 300 436 460 426S780 414 940 428S1120 420 1200 426"/></g><path d="M1100 312C1096 258 1104 214 1112 172" stroke="#4d3b2a" stroke-width="6" fill="none"/><path d="M1112 172C1072 150 1042 160 1020 188C1056 168 1086 172 1112 172ZM1112 172C1152 146 1182 156 1198 188C1162 168 1136 170 1112 172ZM1112 172C1100 130 1110 104 1136 94C1122 120 1116 146 1112 172Z" fill="#2c6b52"/></svg>
+              <img class="ph-bg" src="img/pool-hero.jpg" alt="" width="1200" height="800" loading="lazy" decoding="async">
               <div class="hero-in">
                 <span class="kick">Pisciniste · Fayence et alentours</span>
                 <div class="big">Une eau limpide, <b>toute l'année.</b></div>
@@ -674,9 +685,9 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
               <span class="kick">Réalisations</span>
               <div class="h">Des bassins que l'on a plaisir à regarder</div>
               <div class="tiles">
-                <div class="tile"><svg viewBox="0 0 200 110"><rect width="200" height="110" fill="#efe3c9"/><rect x="22" y="16" width="156" height="78" rx="12" fill="#fff"/><rect x="28" y="22" width="144" height="66" rx="9" fill="#17bccb"/><path d="M28 44C60 36 90 54 120 44S160 40 172 44M28 62C60 54 90 72 120 62S160 58 172 62" stroke="#fff" stroke-opacity=".4" fill="none" stroke-width="2"/></svg><div><b>Rénovation liner</b>Montauroux</div></div>
-                <div class="tile"><svg viewBox="0 0 200 110"><rect width="200" height="110" fill="#e7ddc6"/><path d="M30 20h110a30 30 0 0 1 30 30v10a30 30 0 0 1-30 30H30z" fill="#fff"/><path d="M36 26h104a24 24 0 0 1 24 24v10a24 24 0 0 1-24 24H36z" fill="#1fa9bf"/><path d="M36 48C70 40 100 58 130 48S155 46 164 48" stroke="#fff" stroke-opacity=".4" fill="none" stroke-width="2"/></svg><div><b>Bassin avec plage</b>Fayence</div></div>
-                <div class="tile"><svg viewBox="0 0 200 110"><rect width="200" height="110" fill="#dfe8df"/><rect x="40" y="14" width="120" height="82" rx="6" fill="#fff"/><rect x="46" y="20" width="108" height="70" rx="3" fill="#0f9fb5"/><path d="M46 44C74 36 96 52 122 44S142 42 154 44M46 64C74 56 96 72 122 64S142 62 154 64" stroke="#fff" stroke-opacity=".4" fill="none" stroke-width="2"/></svg><div><b>Mise aux normes</b>Seillans</div></div>
+                <div class="tile"><img class="ph-t" src="img/pool-t1.jpg" alt="" width="480" height="318" loading="lazy" decoding="async"><div><b>Rénovation liner</b>Montauroux</div></div>
+                <div class="tile"><img class="ph-t" src="img/pool-t2.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"><div><b>Bassin avec plage</b>Fayence</div></div>
+                <div class="tile"><img class="ph-t" src="img/pool-t3.jpg" alt="" width="480" height="320" loading="lazy" decoding="async"><div><b>Mise aux normes</b>Seillans</div></div>
               </div>
             </div>
             <div class="quote"><span class="st">★★★★★</span><p>« Bassin remis en route en deux jours, eau cristalline et prix conforme au devis. Je recommande sans hésiter. »</p><span>Isabelle R., Callian · avis Google</span></div>
@@ -697,7 +708,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
               <span class="cta">Réserver</span>
             </div>
             <div class="hh">
-              <svg viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="pb-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d2748"/><stop offset=".5" stop-color="#b9564e"/><stop offset="1" stop-color="#f1a56c"/></linearGradient><linearGradient id="pb-sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a3f5f"/><stop offset="1" stop-color="#0d1a2b"/></linearGradient></defs><rect width="1200" height="460" fill="url(#pb-sky)"/><circle cx="600" cy="262" r="54" fill="#ffd9a3"/><rect y="262" width="1200" height="198" fill="url(#pb-sea)"/><g stroke="#ffd9a3" stroke-opacity=".5" stroke-width="3"><path d="M560 280H640M545 300H655M530 322H670M520 346H680"/></g><path d="M0 262C60 236 120 250 190 240S320 252 380 262Z" fill="#162033"/><path d="M820 262C900 242 980 236 1060 244S1160 252 1200 262Z" fill="#162033"/><g fill="#0b1422"><path d="M180 306h110l-14 18H196z"/><path d="M880 322h130l-16 20H896z"/><path d="M430 340h90l-12 16h-66z"/></g><g stroke="#0b1422" stroke-width="2.5"><path d="M235 306V250M235 262l26 30h-26M955 322V262M955 276l30 38h-30M475 340V296"/></g><path d="M0 60C200 120 400 120 600 80S1000 20 1200 80" stroke="#2b1c18" stroke-width="2" fill="none"/><g fill="#ffd88a"><circle cx="100" cy="86" r="5"/><circle cx="240" cy="104" r="5"/><circle cx="390" cy="112" r="5"/><circle cx="540" cy="92" r="5"/><circle cx="690" cy="66" r="5"/><circle cx="850" cy="46" r="5"/><circle cx="1010" cy="50" r="5"/><circle cx="1150" cy="72" r="5"/></g></svg>
+              <img class="ph-bg" src="img/resto-hero.jpg" alt="" width="1200" height="786" loading="lazy" decoding="async">
               <div class="hero-in">
                 <span class="kick">Face au Vieux-Port · depuis 1987</span>
                 <div class="big">La mer, le port, <i>et la cuisine du marché</i></div>
@@ -710,7 +721,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
                 <p>Poissons de petite pêche, légumes du soleil et huile d'olive de la vallée. La carte change chaque semaine, la terrasse regarde le port.</p>
                 <div class="facts"><div><b>40</b>couverts en terrasse</div><div><b>100 %</b>produits du marché</div><div><b>7 j/7</b>en saison</div></div>
               </div>
-              <div class="plate"><svg viewBox="0 0 360 240"><rect width="360" height="240" fill="#55604a"/><circle cx="180" cy="120" r="92" fill="#f7f1e6"/><circle cx="180" cy="120" r="70" fill="none" stroke="#d9c9ae" stroke-width="2"/><path d="M130 124c14-26 40-34 60-22s30 4 42 22c-12 24-46 36-70 26s-28-12-32-26z" fill="#d98b5f"/><circle cx="150" cy="112" r="9" fill="#7a9a5b"/><circle cx="214" cy="140" r="8" fill="#b4553a"/><circle cx="196" cy="104" r="6" fill="#7a9a5b"/><path d="M276 70l14 120M296 66l6 128" stroke="#e8dfce" stroke-width="5" stroke-linecap="round"/><path d="M70 62l10 128" stroke="#e8dfce" stroke-width="5" stroke-linecap="round"/></svg></div>
+              <div class="plate"><img class="ph-t" src="img/resto-plat.jpg" alt="" width="700" height="393" loading="lazy" decoding="async"></div>
             </div>
             <div class="carte">
               <div class="h">La carte</div>
