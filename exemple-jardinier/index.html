@@ -131,7 +131,7 @@ footer a{color:#cfdcd2}
 .barre-appel{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--blanc);border-top:1px solid var(--pierre);padding:.65rem 1rem;display:flex;gap:.6rem}
 .barre-appel a{flex:1;justify-content:center;padding:.8rem 1rem}
 @media(min-width:720px){.barre-appel{display:none}footer{padding-bottom:1.6rem}}
-.ph{display:grid;gap:.75rem;grid-template-columns:1fr 1fr}.ph figure{margin:0;border-radius:12px;overflow:hidden;aspect-ratio:4/5;background:rgba(0,0,0,.06)}.ph figure:first-child{grid-column:1/-1;aspect-ratio:3/2}@media(min-width:800px){.ph{grid-template-columns:1.5fr 1fr 1fr}.ph figure:first-child{grid-column:auto;aspect-ratio:auto;position:relative}.ph figure:first-child img{position:absolute;inset:0}}.ph img{width:100%;height:100%;object-fit:cover;display:block}.ph-cr{font:.8rem system-ui,sans-serif;opacity:.65;margin:.7rem 0 0}</style>
+.ib{position:relative;isolation:isolate;overflow:hidden;color:#fff;min-height:clamp(400px,64vh,600px);display:flex;align-items:flex-end;padding:clamp(3.5rem,9vw,6rem) 0 clamp(2.6rem,6vw,4.5rem)}.ib>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transform:scale(1.06);transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}.ib.vu>img{transform:scale(1)}.ib::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(23,51,42,.25) 0%,rgba(23,51,42,.55) 42%,rgba(23,51,42,.94) 100%),linear-gradient(90deg,rgba(23,51,42,.55),rgba(23,51,42,0) 70%)}.ib .wrap{width:100%}.ib .eb{display:flex;align-items:center;gap:.75rem;font:600 .76rem/1 system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#fff;margin:0 0 1.1rem}.ib .eb::before{content:"";flex:none;width:2.4rem;height:2px;background:var(--olive)}.ib h2.ib-t{color:#fff;font-size:clamp(2rem,5.4vw,3.6rem);line-height:1.05;max-width:17ch;margin:0 0 .9rem;text-wrap:balance}.ib .ib-l{font:1.08rem/1.55 system-ui,sans-serif;color:rgba(255,255,255,.88);max-width:34rem;margin:0}.ib .ib-b{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.6rem;background:var(--olive);color:#fff;text-decoration:none;font:700 1rem system-ui,sans-serif;padding:.95rem 1.6rem;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.25)}.ib .ib-b:hover{filter:brightness(1.08)}.ib .ib-c{position:absolute;right:.9rem;bottom:.55rem;font:.66rem system-ui,sans-serif;color:rgba(255,255,255,.55)}@media(prefers-reduced-motion:reduce){.ib>img{transform:none}}</style>
 </head>
 <body>
 <div class="demo">Maquette d’exemple réalisée par <a href="https://www.atelierwebriviera.fr/">Atelier Web Riviera</a>. Entreprise, téléphone et textes fictifs.</div>
@@ -959,6 +959,7 @@ footer a{color:#cfdcd2}
   </div>
 </section>
 
+<section class="ib" aria-label="Restanques, oliviers, lavandes : un jardin qui vous ressemble."><img src="photos/jar-2.jpg" alt="" loading="lazy" decoding="async"><div class="wrap"><p class="eb">Jardins du Var</p><h2 class="ib-t">Restanques, oliviers, lavandes : un jardin qui vous ressemble.</h2><p class="ib-l">Pensé pour le climat d’ici, sobre en eau, beau toute l’année.</p></div><span class="ib-c">Photo : Pavel Gromov / Unsplash</span></section>
 <section class="cal" id="calendrier">
   <div class="wrap">
     <h2>Votre jardin, mois par mois</h2>
@@ -984,6 +985,7 @@ footer a{color:#cfdcd2}
   </div>
 </section>
 
+<section class="ib" aria-label="Le bon végétal, au bon endroit, à la bonne saison."><img src="photos/jar-7.jpg" alt="" loading="lazy" decoding="async"><div class="wrap"><p class="eb">Plantation</p><h2 class="ib-t">Le bon végétal, au bon endroit, à la bonne saison.</h2></div><span class="ib-c">Photo : Jonathan Kemper / Unsplash</span></section>
 <section class="zone" id="zone">
   <div class="wrap grille">
     <div>
@@ -1009,7 +1011,7 @@ footer a{color:#cfdcd2}
   </div>
 </section>
 
-<section class="photos" id="photos"><div class="wrap"><h2>Au jardin</h2><p class="intro">Restanques, plantations et entretien, au rythme des saisons du Var.</p><div class="ph"><figure><img src="photos/jar-2.jpg" alt="Jardin en terrasses de pierre" width="1000" height="1250" loading="lazy" decoding="async"></figure><figure><img src="photos/jar-7.jpg" alt="Plantation de jeunes plants" width="833" height="1250" loading="lazy" decoding="async"></figure><figure><img src="photos/jar-9.jpg" alt="Jardinier en tenue de travail" width="833" height="1250" loading="lazy" decoding="async"></figure></div><p class="ph-cr">Photos : Pavel Gromov, Jonathan Kemper, Lara John sur Unsplash.</p></div></section>
+<section class="ib" aria-label="Un jardin dont vous n’avez plus à vous soucier."><img src="photos/jar-9.jpg" alt="" loading="lazy" decoding="async"><div class="wrap"><p class="eb">Devis gratuit</p><h2 class="ib-t">Un jardin dont vous n’avez plus à vous soucier.</h2><a class="ib-b" href="#contact">Demander un devis <span aria-hidden="true">→</span></a></div><span class="ib-c">Photo : Lara John / Unsplash</span></section>
 <section class="contact" id="contact">
   <div class="wrap grille">
     <div>
@@ -1067,5 +1069,5 @@ document.getElementById('formulaire').addEventListener('submit',e=>{
   location.href='mailto:contact@exemple.fr?subject='+encodeURIComponent('Demande de devis')+'&body='+body;
 });
 </script>
-</body>
+<script>(()=>{const s=document.querySelectorAll(".ib");if(!("IntersectionObserver"in window)){s.forEach(e=>e.classList.add("vu"));return}const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("vu");o.unobserve(e.target)}}),{threshold:.2});s.forEach(e=>o.observe(e))})();</script></body>
 </html>
