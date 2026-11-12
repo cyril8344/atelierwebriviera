@@ -485,15 +485,6 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
 .ph-t{display:block;width:100%;height:auto;aspect-ratio:200/110;object-fit:cover}
 .sb .plate .ph-t{aspect-ratio:360/240}
 
-/* Démos par métier */
-.metiers { margin-top: 64px; }
-.metiers h3 { font: 500 1.9rem/1.1 var(--serif); }
-.metiers > p { color: var(--muted); margin-top: 8px; }
-.metiers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 24px; }
-.metiers-grid a { display: block; background: var(--sable); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; text-decoration: none; color: var(--ink); transition: border-color .2s; }
-.metiers-grid a:hover { border-color: var(--or); }
-.metiers-grid img { display: block; width: 100%; height: auto; aspect-ratio: 22/15; object-fit: cover; }
-.metiers-grid span { display: block; padding: 10px 12px; font-weight: 500; font-size: 0.93rem; }
 .more { display: none; }
 
 /* Zone d'intervention */
@@ -527,10 +518,6 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
   .demos.js .demo.open .frame { max-height: none; }
   .demos.js .demo.open .frame::after { display: none; }
   .demos.js .more { display: flex; width: 100%; margin-top: 14px; }
-  .metiers { margin-top: 48px; }
-  .metiers-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-  .metiers-grid span { padding: 7px 8px; font-size: 0.8rem; line-height: 1.3; }
-  .metiers h3 { font-size: 1.6rem; }
   .timeline { margin-top: 36px; }
   .timeline li { padding-bottom: 26px; }
   .pills, .faq, .zone-grid { margin-top: 28px; }
@@ -538,11 +525,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
   summary { padding: 18px 4px; }
 }
 @media (min-width: 760px) {
-  .metiers-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
   .zone-grid { grid-template-columns: 1fr 1fr; gap: 56px; }
-}
-@media (min-width: 1000px) {
-  .metiers-grid { grid-template-columns: repeat(6, 1fr); }
 }
 </style>
 </head>
@@ -895,23 +878,6 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
         <p class="demo-cap"><strong>Profession de santé ou libérale.</strong> Un site rassurant : le praticien, les soins, les tarifs et la prise de rendez-vous en ligne.</p>
       </div>
 
-    </div>
-    <div class="metiers">
-      <h3>Voir un exemple pour votre métier</h3>
-      <p>Onze sites complets, à ouvrir sur votre téléphone. Entreprises fictives du Pays de Fayence.</p>
-      <div class="metiers-grid">
-      <a href="/exemple-plombier/"><img src="img/demos/plombier.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Plombier</span></a>
-      <a href="/exemple-elagueur/"><img src="img/demos/elagueur.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Élagueur</span></a>
-      <a href="/exemple-jardinier/"><img src="img/demos/jardinier.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Jardinier paysagiste</span></a>
-      <a href="/exemple-macon/"><img src="img/demos/macon.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Maçon</span></a>
-      <a href="/exemple-couvreur/"><img src="img/demos/couvreur.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Couvreur</span></a>
-      <a href="/exemple-carreleur/"><img src="img/demos/carreleur.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Carreleur</span></a>
-      <a href="/exemple-peintre/"><img src="img/demos/peintre.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Peintre en bâtiment</span></a>
-      <a href="/exemple-menuisier/"><img src="img/demos/menuisier.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Menuisier</span></a>
-      <a href="/exemple-garage/"><img src="img/demos/garage.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Garage</span></a>
-      <a href="/exemple-coiffure/"><img src="img/demos/coiffure.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Coiffeur</span></a>
-      <a href="/exemple-immo/"><img src="img/demos/immo.webp" alt="" width="440" height="300" loading="lazy" decoding="async"><span>Agence immobilière</span></a>
-      </div>
     </div>
   </div>
 </section>
