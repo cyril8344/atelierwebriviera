@@ -61,7 +61,11 @@
         <div><a href="mailto:atelierwebriviera@gmail.com" style="font-size:1.5rem">atelierwebriviera@gmail.com</a><span>Réponse sous 24 h ouvrées</span></div>
       </div>
     </div>
-    <form id="form-contact" novalidate>
+    <form id="form-contact" action="https://api.web3forms.com/submit" method="POST" novalidate>
+      <input type="hidden" name="access_key" value="b890d239-63fc-405f-841f-3293fe32b214">
+      <input type="hidden" name="subject" value="Nouvelle demande de maquette, atelierwebriviera.fr">
+      <input type="hidden" name="from_name" value="Site Atelier Web Riviera">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <label for="f-nom">Votre nom
         <input id="f-nom" name="nom" type="text" autocomplete="name" required>
       </label>
@@ -128,12 +132,12 @@
 </div>
 
 <script>
-/* Formulaire : prépare un e-mail. Pour une vraie réception, branche un service
-   de formulaires (Formspree, Netlify Forms…) à la place de ce bloc. */
+/* Formulaire : envoi via Web3Forms vers atelierwebriviera@gmail.com */
 (function () {
   var form = document.getElementById('form-contact');
   var msg = document.getElementById('form-msg');
   if (!form) return;
+  var btn = form.querySelector('button[type="submit"]');
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var d = new FormData(form);
@@ -141,13 +145,18 @@
       msg.textContent = 'Renseignez votre nom, votre téléphone et votre activité.';
       return;
     }
-    var corps = 'Nom : ' + d.get('nom') + '\nTéléphone : ' + d.get('tel') +
-      '\nActivité et ville : ' + d.get('metier') + '\nFormule : ' + d.get('offre') +
-      '\n\n' + (d.get('msg') || '');
-    var lien = 'mailto:atelierwebriviera@gmail.com?subject=' + encodeURIComponent('Demande de maquette offerte') +
-      '&body=' + encodeURIComponent(corps);
-    msg.textContent = 'Votre application e-mail va s’ouvrir. Sinon, écrivez à atelierwebriviera@gmail.com ou appelez le 06 63 59 07 93.';
-    try { window.location.href = lien; } catch (err) { /* lien affiché ci-dessus */ }
+    btn.disabled = true;
+    msg.textContent = 'Envoi en cours…';
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST', headers: { 'Accept': 'application/json' }, body: d
+    }).then(function (r) { return r.json(); }).then(function (res) {
+      if (res && res.success) {
+        form.reset();
+        msg.textContent = 'Merci ! Votre demande est bien envoyée. Je vous réponds sous 24 h ouvrées.';
+      } else { throw new Error(); }
+    }).catch(function () {
+      msg.textContent = 'L’envoi n’a pas fonctionné. Appelez le 06 63 59 07 93 ou écrivez à atelierwebriviera@gmail.com.';
+    }).then(function () { btn.disabled = false; });
   });
 })();
 </script>
