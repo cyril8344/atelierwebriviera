@@ -636,3 +636,29 @@ header nav a[aria-current="page"] { border-bottom: 2px solid #111; padding-botto
 .tabs-mobile a { flex: 1; text-align: center; font: 500 0.95rem var(--font); letter-spacing: 0; text-transform: none; color: #555; padding: 13px 4px 11px; border-bottom: 2px solid transparent; }
 .tabs-mobile a[aria-current="page"] { color: #111; font-weight: 600; border-bottom: 2px solid #111; }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
+/* Menu burger en haut à gauche, colonne qui s'ouvre */
+header nav[aria-label="Navigation principale"], .tabs-mobile { display: none !important; }
+.bar { justify-content: flex-start; }
+.bar .logo { margin-right: auto; }
+.burger { display: inline-flex; align-items: center; gap: 12px; background: none; border: 0; padding: 10px 6px 10px 0; cursor: pointer; color: #111; font: 500 0.82rem var(--font); letter-spacing: 0.18em; text-transform: uppercase; }
+.burger-ico { display: grid; gap: 6px; width: 26px; }
+.burger-ico i { display: block; height: 1.5px; background: #111; }
+.burger-ico i:nth-child(2) { width: 70%; }
+@media (max-width: 759px) { .burger-txt { display: none; } .burger { padding-right: 2px; } }
+.menu-voile { position: fixed; inset: 0; z-index: 60; background: rgba(0,0,0,.45); opacity: 0; visibility: hidden; transition: opacity .3s, visibility .3s; }
+.menu-pages { position: fixed; top: 0; left: 0; bottom: 0; z-index: 61; width: min(380px, 86vw); background: #fff; padding: 28px 36px; display: flex; flex-direction: column; transform: translateX(-100%); transition: transform .35s ease; visibility: hidden; box-shadow: 20px 0 50px -20px rgba(0,0,0,.4); }
+body.menu-ouvert .menu-voile { opacity: 1; visibility: visible; }
+body.menu-ouvert .menu-pages { transform: none; visibility: visible; }
+body.menu-ouvert { overflow: hidden; }
+.menu-fermer { align-self: flex-start; background: none; border: 0; font: 300 2.4rem/1 var(--font); color: #111; cursor: pointer; padding: 0; margin-left: -2px; }
+.menu-titre { margin: 34px 0 18px; font: 500 0.72rem var(--font); letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
+.menu-pages ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.menu-pages li { border-bottom: 1px solid var(--line); }
+.menu-pages li a { display: block; padding: 18px 0; font: 500 1.9rem/1.1 var(--serif); font-variation-settings: "opsz" 20; text-transform: uppercase; letter-spacing: 0.01em; color: #111; text-decoration: none; }
+.menu-pages li a:hover { color: var(--or-texte); }
+.menu-pages li a[aria-current="page"] { color: var(--or-texte); }
+.menu-bas { margin-top: auto; display: grid; gap: 8px; font-size: 0.92rem; color: var(--muted); }
+.menu-bas a { color: #111; text-decoration: none; }
+.menu-pages nav ul { display: block !important; }
+.menu-pages li a[aria-current="page"] { border-bottom: 0; padding-bottom: 18px; }
