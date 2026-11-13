@@ -626,3 +626,12 @@ nav a[aria-current="page"] { color: var(--ink); border-bottom: 1px solid #111; p
 @media (max-width: 759px) { .page-hero { min-height: 260px; height: 38vh; } }
 .contact.page { padding-top: 72px; }
 .contact.page h1 { color: #fff; font-size: clamp(2rem, 5vw, 3.4rem); text-align: left; }
+
+/* Onglets bien visibles, façon maison : texte normal, noir, plus grand */
+header nav ul { gap: 40px; }
+header nav a { text-transform: none; font: 500 1.02rem var(--font); letter-spacing: 0.01em; color: #111; padding: 6px 0; border-bottom: 2px solid transparent; }
+header nav a:hover { color: #111; border-bottom-color: #c9c9c9; }
+header nav a[aria-current="page"] { border-bottom: 2px solid #111; padding-bottom: 6px; }
+.tabs-mobile { justify-content: space-around; padding: 0; background: #fff; border-top: 1px solid var(--line); }
+.tabs-mobile a { flex: 1; text-align: center; font: 500 0.95rem var(--font); letter-spacing: 0; text-transform: none; color: #555; padding: 13px 4px 11px; border-bottom: 2px solid transparent; }
+.tabs-mobile a[aria-current="page"] { color: #111; font-weight: 600; border-bottom: 2px solid #111; }
