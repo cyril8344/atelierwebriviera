@@ -34,6 +34,7 @@
 
 <header>
   <div class="wrap bar">
+    <button class="burger" type="button" aria-controls="menu-pages" aria-expanded="false"><span class="burger-ico" aria-hidden="true"><i></i><i></i><i></i></span><span class="burger-txt">Menu</span></button>
     <a class="logo" href="/"><img src="img/logo-entete.webp" alt="Atelier Web Riviera, création de sites internet" width="1051" height="240"></a>
     <nav aria-label="Navigation principale">
       <ul>
@@ -45,8 +46,25 @@
     </nav>
     <a class="btn btn-primary" href="tel:+33663590793">Appeler</a>
   </div>
-  <nav class="tabs-mobile" aria-label="Pages"><a href="/">Accueil</a><a href="/l-atelier.html">L'atelier</a><a href="/offres.html" aria-current="page">Offres</a><a href="/contact.html">Contact</a></nav>
 </header>
+<div class="menu-voile" aria-hidden="true"></div>
+<aside id="menu-pages" class="menu-pages" aria-label="Menu" aria-hidden="true">
+  <button class="menu-fermer" type="button" aria-label="Fermer le menu">&times;</button>
+  <p class="menu-titre">Menu</p>
+  <nav aria-label="Pages du site">
+    <ul>
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/l-atelier.html">L'atelier</a></li>
+      <li><a href="/offres.html" aria-current="page">Offres</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="menu-bas">
+    <a href="tel:+33663590793">06 63 59 07 93</a>
+    <a href="mailto:atelierwebriviera@gmail.com">atelierwebriviera@gmail.com</a>
+    <span>Montauroux · Var et Alpes-Maritimes</span>
+  </div>
+</aside>
 
 <main id="haut">
 
@@ -222,5 +240,21 @@
   <a class="btn btn-ghost" href="/contact.html">Devis gratuit</a>
 </div>
 
+<script>
+(function () {
+  var b = document.querySelector('.burger'), m = document.getElementById('menu-pages'), o = document.querySelector('.menu-voile');
+  if (!b || !m) return;
+  function set(open) {
+    document.body.classList.toggle('menu-ouvert', open);
+    b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    m.setAttribute('aria-hidden', open ? 'false' : 'true');
+    if (open) m.querySelector('a').focus(); else b.focus();
+  }
+  b.addEventListener('click', function () { set(!document.body.classList.contains('menu-ouvert')); });
+  m.querySelector('.menu-fermer').addEventListener('click', function () { set(false); });
+  o.addEventListener('click', function () { set(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && document.body.classList.contains('menu-ouvert')) set(false); });
+})();
+</script>
 </body>
 </html>
