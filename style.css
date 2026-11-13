@@ -663,3 +663,9 @@ body.menu-ouvert { overflow: hidden; }
 .menu-pages nav ul { display: block !important; }
 .menu-pages li a[aria-current="page"] { border-bottom: 0; padding-bottom: 18px; }
 body.menu-ouvert .wa { visibility: hidden; }
+
+/* Fiche Google : deux formules */
+.grid2 { display: grid; gap: 18px; margin-top: 36px; }
+@media (min-width: 760px) { .grid2 { grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 56px auto 0; } }
+@media (max-width: 759px) { .grid2 > .pack { padding: 26px 22px; } }
+.grid2 + .note-line { text-align: center; }
