@@ -662,11 +662,4 @@ body.menu-ouvert { overflow: hidden; }
 .menu-bas a { color: #111; text-decoration: none; }
 .menu-pages nav ul { display: block !important; }
 .menu-pages li a[aria-current="page"] { border-bottom: 0; padding-bottom: 18px; }
-/* Menu plus fin (13/11) */
-.menu-pages { width: min(320px, 78vw); padding: 24px 30px; }
-.menu-titre { margin: 26px 0 10px; }
-.menu-pages li a { font-size: 1.15rem; padding: 15px 0; letter-spacing: 0.06em; }
-.menu-pages li a[aria-current="page"] { padding-bottom: 15px; }
-.menu-fermer { font-size: 2rem; }
-.menu-bas { font-size: 0.85rem; gap: 6px; }
 body.menu-ouvert .wa { visibility: hidden; }
