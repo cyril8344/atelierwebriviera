@@ -229,3 +229,9 @@ body { background-image: none; }
 @media (min-width: 800px) { .atouts ul { grid-template-columns: repeat(3, 1fr); gap: 40px; } }
 .atouts li span { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #d8421c, #f07a14); color: #fff; font: 700 1.3rem/1 var(--titre); margin-bottom: 14px; }
 .atouts p { color: var(--doux); margin-top: 8px; }
+.texte p + p { margin-top: 14px; }
+.atouts-liste { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 18px; }
+@media (min-width: 800px) { .atouts-liste { grid-template-columns: repeat(2, 1fr); gap: 22px 40px; } }
+.atouts-liste li { border-left: 4px solid var(--tuile); padding: 4px 0 4px 16px; }
+.atouts-liste b { display: block; font: 700 1.35rem/1.2 var(--titre); text-transform: uppercase; }
+.atouts-liste span { color: var(--doux); }
