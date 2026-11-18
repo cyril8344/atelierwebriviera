@@ -224,3 +224,8 @@ header::after { content: ""; display: block; height: 4px; background: linear-gra
 .chiffres b { text-shadow: none; }
 .sur::before { background: linear-gradient(90deg, #d8421c, #ffb84a); }
 body { background-image: none; }
+.atouts { padding: clamp(40px, 6vw, 72px) 0; background: var(--fond); }
+.atouts ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 28px; }
+@media (min-width: 800px) { .atouts ul { grid-template-columns: repeat(3, 1fr); gap: 40px; } }
+.atouts li span { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #d8421c, #f07a14); color: #fff; font: 700 1.3rem/1 var(--titre); margin-bottom: 14px; }
+.atouts p { color: var(--doux); margin-top: 8px; }
