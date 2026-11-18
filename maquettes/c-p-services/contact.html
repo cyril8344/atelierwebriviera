@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | C.P. Services, climatisation et chauffage à Montauroux</title>
+<meta name="description" content="Contact, horaires et demande de devis. Montauroux, du lundi au samedi.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0e1a26">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+<div class="fictif">MAQUETTE<span class="pc"> · Aperçu de votre futur site, textes et photos à valider avec vous</span></div>
+<header>
+  <div class="wrap">
+    <a class="marque" href="index.html"><svg class="logo" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b6ca8"/><stop offset="1" stop-color="#e2683c"/></linearGradient></defs><rect width="48" height="48" rx="12" fill="url(#g)"/><text x="24" y="31" text-anchor="middle" font-family="Manrope,Arial,sans-serif" font-weight="800" font-size="19" fill="#fff">CP</text></svg><span><b>C.P. Services</b><small>Climatisation · Chauffage</small></span></a>
+    <nav aria-label="Menu principal"><a href="index.html">Accueil</a><a href="services.html">Services</a><a href="realisations.html">Réalisations</a><a href="entreprise.html">L'entreprise</a><a href="contact.html" aria-current=page>Contact</a></nav>
+    <a class="tel-haut" href="tel:+33659999677">06 59 99 66 77</a>
+    <button class="burger" type="button" aria-label="Ouvrir le menu" aria-controls="menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu">
+  <button class="fermer" type="button" aria-label="Fermer le menu">×</button>
+  <nav><a href="index.html">Accueil</a><a href="services.html">Services</a><a href="realisations.html">Réalisations</a><a href="entreprise.html">L'entreprise</a><a href="contact.html" aria-current=page>Contact</a></nav>
+  <div class="bas"><a class="btn btn-plein" href="tel:+33659999677">Appeler 06 59 99 66 77</a></div>
+</div>
+<main>
+<section class="photo hero-page">
+  <img src="photos/lac-village.jpg" alt="" fetchpriority="high" style="object-position:center">
+  <div class="wrap"><p class="sur">Contact</p><h1>Parlons de votre projet.</h1><p class="chapo">Installation, entretien ou dépannage&nbsp;: nous vous rappelons rapidement.</p></div>
+  <span class="illus">Photo d'illustration</span>
+</section>
+<section><div class="wrap deux">
+  <div class="r"><p class="sur">Coordonnées</p><h2>C.P. Services</h2>
+    <ul class="coord">
+      <li><small>Téléphone</small><a href="tel:+33659999677">06 59 99 66 77</a></li>
+      <li><small>E-mail</small>[e-mail à compléter]</li>
+      <li><small>Adresse</small>Avenue des Estérets du Lac, 83440 Montauroux</li>
+      <li><small>Zone d'intervention</small>Pays de Fayence et environs</li>
+    </ul>
+    <table class="horaires"><caption>Horaires</caption><tr><td>Lundi au samedi</td><td>8 h – 18 h 30</td></tr><tr><td>Dimanche</td><td>Fermé</td></tr></table>
+  </div>
+  <form class="r" id="form-contact" action="https://api.web3forms.com/submit" method="POST" novalidate>
+    <input type="hidden" name="access_key" value="">
+    <label>Nom<input name="nom" autocomplete="name" required></label>
+    <label>Téléphone<input name="telephone" type="tel" autocomplete="tel" required></label>
+    <label>Commune<input name="commune" autocomplete="address-level2"></label>
+    <label>Votre besoin<select name="besoin"><option>Installation de climatisation</option><option>Pompe à chaleur / chauffage</option><option>Entretien</option><option>Dépannage</option><option>Autre</option></select></label>
+    <label>Message<textarea name="message"></textarea></label>
+    <button class="btn btn-plein" type="submit">Demander un devis</button>
+    <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+  </form>
+</div></section>
+<script>
+document.getElementById('form-contact').addEventListener('submit', function (ev) {
+  ev.preventDefault();
+  document.getElementById('form-msg').textContent = 'Maquette : le formulaire sera relié à votre boîte mail à la mise en ligne.';
+});
+</script>
+</main>
+<footer class="pied">
+  <div class="wrap">
+    <a class="marque" href="index.html"><svg class="logo" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b6ca8"/><stop offset="1" stop-color="#e2683c"/></linearGradient></defs><rect width="48" height="48" rx="12" fill="url(#g)"/><text x="24" y="31" text-anchor="middle" font-family="Manrope,Arial,sans-serif" font-weight="800" font-size="19" fill="#fff">CP</text></svg><span><b>C.P. Services</b><small>Climatisation · Chauffage</small></span></a>
+    <div class="lignes">
+      <div><h4>Pages</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="services.html">Services</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="entreprise.html">L'entreprise</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+33659999677">06 59 99 66 77</a></li><li>[e-mail à compléter]</li><li>Avenue des Estérets du Lac, 83440 Montauroux</li><li>Du lundi au samedi, 8 h – 18 h 30</li></ul></div>
+      <div><h4>Informations</h4>
+        <details><summary>Mentions légales</summary>
+          <p>Éditeur&nbsp;: C.P. Services, [forme juridique]. SIRET [SIRET]. Avenue des Estérets du Lac, 83440 Montauroux. Hébergeur&nbsp;: [Hébergeur].</p>
+          <p>Les informations envoyées par le formulaire servent uniquement à répondre à votre demande.</p>
+        </details>
+        <p style="margin-top:10px">© 2026 C.P. Services</p>
+      </div>
+    </div>
+    <p class="credit-atelier">Site réalisé par Atelier Web Riviera, Montauroux.</p>
+  </div>
+</footer>
+<div class="barre"><a href="tel:+33659999677">Appeler</a><a href="contact.html">Devis</a></div>
+<script>
+(function () {
+  var m = document.getElementById('menu'), b = document.querySelector('.burger'), f = m.querySelector('.fermer');
+  function ouvrir(o) { m.classList.toggle('ouvert', o); b.setAttribute('aria-expanded', o); document.body.style.overflow = o ? 'hidden' : ''; if (o) f.focus(); }
+  b.addEventListener('click', function () { ouvrir(true); });
+  f.addEventListener('click', function () { ouvrir(false); });
+  document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') ouvrir(false); });
+  var els = document.querySelectorAll('.r');
+  if (!('IntersectionObserver' in window)) { els.forEach(function (x) { x.classList.add('vu'); }); return; }
+  var io = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('vu'); io.unobserve(x.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function (x) { io.observe(x); });
+})();
+</script>
+</body>
+</html>
