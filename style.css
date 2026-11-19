@@ -132,7 +132,7 @@ nav a:hover { color: var(--or-texte); }
 .price { font: 500 3.2rem/1 var(--serif); letter-spacing: -0.01em; font-variant-numeric: lining-nums tabular-nums; }
 .price small { font: 400 0.95rem var(--font); color: var(--muted); letter-spacing: 0; }
 .pack .meta { color: var(--muted); font-size: 0.93rem; margin-top: -8px; }
-.pack ul { list-style: none; margin: 0; padding: 18px 0 0; border-top: 1px solid var(--line); display: grid; gap: 11px; flex: 1; font-size: 0.98rem; }
+.pack ul { list-style: none; margin: 0; padding: 18px 0 0; border-top: 1px solid var(--line); display: grid; gap: 11px; flex: 1; align-content: start; font-size: 0.98rem; }
 .pack li { padding-left: 26px; position: relative; }
 .pack li::before { content: ""; position: absolute; left: 3px; top: 0.5em; width: 10px; height: 5px; border-left: 1.5px solid var(--or); border-bottom: 1.5px solid var(--or); transform: rotate(-45deg); }
 .sub-block { margin-top: 64px; display: grid; gap: 24px; padding: 36px; background: var(--carte); border: 1px solid var(--line); border-radius: 4px; }
