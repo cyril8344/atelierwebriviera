@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Ponce Construction, maçonnerie et carrelage à Grasse</title>
+<meta name="description" content="Contact, horaires et demande de devis gratuit. Grasse, du lundi au samedi.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1f1c18">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+<div class="fictif">Maquette<span class="pc"> · aperçu de votre futur site, textes et photos à valider ensemble</span></div>
+<header><div class="wrap">
+  <button class="burger" type="button" aria-label="Ouvrir le menu" aria-controls="menu" aria-expanded="false"><i><b></b><b></b></i><span>Menu</span></button>
+  <a class="marque" href="index.html"><b>Ponce</b><small>Construction</small></a>
+  <a class="tel-haut" href="tel:+33623699461"><span class="num">06 23 69 94 61</span><span class="mot">Appeler</span></a>
+</div></header>
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu">
+  <button class="fermer" type="button">× Fermer</button>
+  <nav><a href="index.html">Accueil</a><a href="services.html">Savoir-faire</a><a href="realisations.html">Réalisations</a><a href="entreprise.html">L'entreprise</a><a href="contact.html" aria-current=page>Contact</a></nav>
+  <div class="bas"><a href="tel:+33623699461">06 23 69 94 61</a>Du lundi au samedi</div>
+</div>
+<main>
+<section class="photo hero-page"><img src="photos/bord-de-mer.jpg" alt="" fetchpriority="high" style="object-position:center">
+  <div class="wrap"><p class="sur">Contact</p><h1>Parlons de votre projet.</h1><p class="chapo">Rénovation, carrelage, pierre ou piscine&nbsp;: nous vous rappelons rapidement.</p></div><span class="illus">Photo d'illustration</span></section>
+<section><div class="wrap deux"><div class="r"><p class="sur">Coordonnées</p><h2>Ponce Construction</h2>
+  <ul class="coord" style="margin-top:30px"><li><small>Portable</small><a class="gros" href="tel:+33623699461">06 23 69 94 61</a></li><li><small>Bureau</small><a href="tel:+33493706842">04 93 70 68 42</a></li>
+  <li><small>E-mail</small><a href="mailto:ponce.construction06@gmail.com">ponce.construction06@gmail.com</a></li><li><small>Adresse</small>49 avenue Frédéric Mistral, 06130 Grasse</li></ul>
+  <table class="horaires"><caption>Horaires</caption><tr><td>Lundi – vendredi</td><td>8 h – 12 h · 13 h – 17 h</td></tr><tr><td>Samedi</td><td>8 h – 13 h</td></tr><tr><td>Dimanche</td><td>Fermé</td></tr></table></div>
+  <form class="r" id="form-contact" action="https://api.web3forms.com/submit" method="POST" novalidate><input type="hidden" name="access_key" value="">
+    <label>Nom<input name="nom" autocomplete="name" required></label><label>Téléphone<input name="telephone" type="tel" autocomplete="tel" required></label>
+    <label>Commune<input name="commune" autocomplete="address-level2"></label>
+    <label>Votre projet<select name="besoin"><option>Carrelage, marbre</option><option>Pierre, murs</option><option>Maçonnerie, rénovation</option><option>Piscine, mosaïque</option><option>Toiture, façade</option><option>Terrassement</option><option>Autre</option></select></label>
+    <label>Message<textarea name="message"></textarea></label>
+    <button class="btn btn-plein" type="submit">Demander un devis gratuit</button><p class="form-msg" id="form-msg" role="status" aria-live="polite"></p></form>
+</div></section>
+<script>document.getElementById('form-contact').addEventListener('submit',function(ev){ev.preventDefault();document.getElementById('form-msg').textContent='Maquette : le formulaire sera relié à votre boîte mail à la mise en ligne.';});</script>
+</main>
+<footer class="pied"><div class="wrap">
+  <a class="marque" href="index.html"><b>Ponce</b><small>Construction</small></a>
+  <div class="cols">
+    <div><h4>Pages</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="services.html">Savoir-faire</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="entreprise.html">L'entreprise</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li><a href="tel:+33623699461">06 23 69 94 61</a></li><li><a href="tel:+33493706842">04 93 70 68 42</a></li><li><a href="mailto:ponce.construction06@gmail.com">ponce.construction06@gmail.com</a></li><li>49 avenue Frédéric Mistral, 06130 Grasse</li></ul></div>
+    <div><h4>Informations</h4><details><summary>Mentions légales</summary><p>Éditeur&nbsp;: Ponce Construction, SARL. SIRET [à compléter]. 49 avenue Frédéric Mistral, 06130 Grasse. Hébergeur&nbsp;: [à compléter].</p></details><p style="margin-top:8px">© 2026 Ponce Construction</p></div>
+  </div>
+  <p class="credit-atelier">Site réalisé par Atelier Web Riviera, Montauroux.</p>
+</div></footer>
+<div class="barre"><a href="tel:+33623699461">Appeler</a><a href="contact.html">Devis gratuit</a></div>
+<script>
+(function () {
+  var m = document.getElementById('menu'), b = document.querySelector('.burger'), f = m.querySelector('.fermer');
+  function ouvrir(o) { m.classList.toggle('ouvert', o); b.setAttribute('aria-expanded', o); document.body.style.overflow = o ? 'hidden' : ''; if (o) f.focus(); }
+  b.addEventListener('click', function () { ouvrir(true); });
+  f.addEventListener('click', function () { ouvrir(false); });
+  document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') ouvrir(false); });
+  var els = document.querySelectorAll('.r');
+  if (!('IntersectionObserver' in window)) { els.forEach(function (x) { x.classList.add('vu'); }); return; }
+  var io = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('vu'); io.unobserve(x.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function (x) { io.observe(x); });
+})();
+</script>
+</body>
+</html>
