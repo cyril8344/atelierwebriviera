@@ -669,3 +669,20 @@ body.menu-ouvert .wa { visibility: hidden; }
 @media (min-width: 760px) { .grid2 { grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 56px auto 0; } }
 @media (max-width: 759px) { .grid2 > .pack { padding: 26px 22px; } }
 .grid2 + .note-line { text-align: center; }
+
+/* Offres : case suivi mensuel et cartes options (20/11) */
+.addon { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; border: 1px dashed var(--line); cursor: pointer; font-size: 0.93rem; line-height: 1.45; }
+.addon input { width: 20px; height: 20px; margin: 2px 0 0; flex: none; accent-color: var(--or); cursor: pointer; }
+.addon strong { display: block; font-weight: 600; }
+.addon small { display: block; color: var(--muted); font-size: 0.86rem; margin-top: 3px; }
+.pack.featured .addon { border-color: rgba(255,255,255,.3); }
+.pack.featured .addon small { color: #aebfcd; }
+.pack.avec-suivi .addon { border-style: solid; border-color: var(--or); }
+.opts-head { margin-top: 72px; }
+.grid-opts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 28px; }
+.pack.opt { padding: 20px 16px; gap: 10px; }
+.pack.opt h3 { font-size: 1rem; }
+.pack.opt .price { font-size: 1.9rem; }
+.pack.opt .meta { margin-top: 0; font-size: 0.86rem; line-height: 1.45; }
+@media (min-width: 760px) { .grid-opts { grid-template-columns: repeat(3, 1fr); max-width: 900px; margin-inline: auto; gap: 18px; } .pack.opt { padding: 26px 24px; } }
+@media (max-width: 759px) { .grid-opts > .opt:last-child:nth-child(odd) { grid-column: 1 / -1; } }

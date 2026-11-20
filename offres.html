@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&family=Geist:wght@300..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=20261119a">
+<link rel="stylesheet" href="/style.css?v=20261120a">
 </head>
 <body>
 
@@ -73,7 +73,7 @@
   <div class="wrap">
     <p class="eyebrow">Prix annoncés d'avance</p>
     <h1>Offres</h1>
-    <p class="sous">Deux formules, livrées finies et à votre nom, sans abonnement. Ou, en option, un site tenu à jour chaque mois.</p>
+    <p class="sous">Deux formules, livrées finies et à votre nom, sans abonnement. En option, un suivi mensuel pour tenir votre site à jour.</p>
   </div>
 </div>
 
@@ -105,7 +105,7 @@
     <div class="grid2">
       <article class="card pack">
         <h3>Présence</h3>
-        <p class="price">690 €</p>
+        <p class="price">690 € <small class="prix-suivi" hidden>+ 39 €/mois</small></p>
         <p class="meta">En ligne en 5 à 7 jours ouvrés</p>
         <ul>
           <li>Site d'une page, adapté au mobile</li>
@@ -113,13 +113,16 @@
           <li>Fiche Google Business Profile optimisée</li>
           <li>Mentions légales et mise en ligne</li>
         </ul>
-        <p class="meta"><a href="#abonnement">En option : suivi mensuel, + 39 €/mois</a></p>
+        <label class="addon">
+          <input type="checkbox" data-formule="Présence" data-mois="39">
+          <span><strong>Ajouter le suivi mensuel : + 39 €/mois</strong><small>Je mets en ligne vos photos de chantier : jusqu'à 2 photos et 1 actualité par mois. Sans engagement, avec un mois de préavis.</small></span>
+        </label>
         <a class="btn btn-ghost" href="/contact.html">Choisir Présence</a>
       </article>
 
       <article class="card pack featured">
         <h3>Pro</h3>
-        <p class="price">1 390 €</p>
+        <p class="price">1 390 € <small class="prix-suivi" hidden>+ 60 €/mois</small></p>
         <p class="meta">En ligne en 2 semaines</p>
         <ul>
           <li>Jusqu'à 5 pages : accueil, services, réalisations, à propos, contact</li>
@@ -130,7 +133,10 @@
           <li>Fiche Google Essentielle incluse (valeur 190 €)</li>
           <li>1 mise à jour offerte dans les 30 jours après la livraison</li>
         </ul>
-        <p class="meta"><a href="#abonnement">En option : suivi mensuel, + 60 €/mois</a></p>
+        <label class="addon">
+          <input type="checkbox" data-formule="Pro" data-mois="60">
+          <span><strong>Ajouter le suivi mensuel : + 60 €/mois</strong><small>Jusqu'à 8 photos et 1 actualité par mois, 3 pages villes, fiche Google suivie et récap mensuel. Sans engagement, avec un mois de préavis.</small></span>
+        </label>
         <a class="btn btn-primary" href="/contact.html">Choisir Pro</a>
       </article>
     </div>
@@ -147,59 +153,38 @@
         <li>Une modification plus tard ? Elle se fait à l'heure (45 €), sans engagement.</li>
       </ul>
     </div>
-    <div class="sub-block">
-      <div>
-        <p class="eyebrow">Options</p>
-        <h3>À ajouter à votre site, si besoin</h3>
-      </div>
-      <ul>
-        <li>Logo simple : 150 €</li>
-        <li>Retouche de vos photos, jusqu'à 20 : 60 €</li>
-        <li>Page pour une commune de plus : 90 € la page</li>
-        <li>Version anglaise du site : à partir de 290 €</li>
-        <li>Modification après les 30 jours : 45 € de l'heure</li>
-      </ul>
+    <div class="sec-head opts-head">
+      <p class="eyebrow">Options</p>
+      <h2>À ajouter à votre site, si besoin</h2>
+    </div>
+    <div class="grid-opts">
+      <article class="card pack opt">
+        <h3>Logo simple</h3>
+        <p class="price">150 €</p>
+        <p class="meta">Un logo net, à vos couleurs, livré pour le site et vos supports.</p>
+      </article>
+      <article class="card pack opt">
+        <h3>Retouche photos</h3>
+        <p class="price">60 €</p>
+        <p class="meta">Jusqu'à 20 de vos photos recadrées et éclaircies.</p>
+      </article>
+      <article class="card pack opt">
+        <h3>Page commune</h3>
+        <p class="price">90 €</p>
+        <p class="meta">Une page de plus pour être trouvé dans une ville voisine.</p>
+      </article>
+      <article class="card pack opt">
+        <h3>Version anglaise</h3>
+        <p class="price">dès 290 €</p>
+        <p class="meta">Votre site traduit pour la clientèle étrangère.</p>
+      </article>
+      <article class="card pack opt">
+        <h3>Modification</h3>
+        <p class="price">45 €</p>
+        <p class="meta">De l'heure, après les 30 jours de corrections gratuites.</p>
+      </article>
     </div>
     <p class="note-line">Besoin de réservation en ligne, d'un espace client ou d'une boutique ? Devis sur mesure à partir de 4 500 €.</p>
-  </div>
-</section>
-
-<section id="abonnement">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">En option</p>
-      <h2>Ajoutez un suivi mensuel à votre formule</h2>
-      <p class="lead">Vous préférez ne pas vous en occuper ? Vous m'envoyez les photos de vos chantiers, je les mets en ligne. Le prix de création ne change pas, le suivi s'ajoute chaque mois. Prix nets, TVA non applicable (art. 293 B du CGI).</p>
-    </div>
-
-    <div class="grid2">
-      <article class="card pack">
-        <h3>Présence + suivi</h3>
-        <p class="price">690 € <small>+ 39 €/mois</small></p>
-        <p class="meta">Votre page tenue à jour</p>
-        <ul>
-          <li>Tout le contenu de la formule Présence</li>
-          <li>Chaque mois : jusqu'à 2 photos de chantier et 1 actualité ajoutées</li>
-          <li>Petites modifications et nouveaux avis Google</li>
-        </ul>
-        <a class="btn btn-ghost" href="/contact.html">Choisir Présence + suivi</a>
-      </article>
-
-      <article class="card pack featured">
-        <h3>Pro + suivi</h3>
-        <p class="price">1 390 € <small>+ 60 €/mois</small></p>
-        <p class="meta">Pour être appelé dans vos villes</p>
-        <ul>
-          <li>Tout le contenu de la formule Pro</li>
-          <li>Chaque mois : jusqu'à 8 photos et 1 actualité ajoutées</li>
-          <li>3 pages villes pour être trouvé autour de chez vous</li>
-          <li>Fiche Google suivie chaque mois : appels, vues, avis</li>
-          <li>Récap mensuel d'une page : visites du site et recherches Google</li>
-        </ul>
-        <a class="btn btn-primary" href="/contact.html">Choisir Pro + suivi</a>
-      </article>
-    </div>
-    <p class="note-line">Création payée comme la formule (40 % à l'acceptation de la maquette, 60 % à la livraison), puis le suivi en début de mois. Sans engagement : vous arrêtez quand vous voulez, avec un mois de préavis. Le site et le nom de domaine restent à vous, même si vous arrêtez.</p>
   </div>
 </section>
 
@@ -270,7 +255,7 @@
       <details><summary>Pourquoi pas un site Wix ou un site fait par un proche ?</summary><p>Un site seul ne suffit pas : il doit apparaître sur Google, s'afficher vite sur mobile et pousser à appeler. C'est ce que je règle, et vous gardez votre temps pour votre métier.</p></details>
       <details><summary>Qui fournit les textes et les photos ?</summary><p>Vous m'envoyez vos photos et vos infos, je rédige les textes. Si vous n'avez pas de photos, l'option rédaction et photos est à 190 €.</p></details>
       <details><summary>Le site m'appartient-il ?</summary><p>Oui. Le nom de domaine et l'hébergement sont ouverts à votre nom, et le code vous est remis après règlement complet. Je ne garde aucun accès.</p></details>
-      <details><summary>Y a-t-il un abonnement à payer ?</summary><p>Non, pas par défaut : le site est livré fini et vous appartient. Vous ne payez ensuite que votre nom de domaine, environ 10 à 15 € par an, et l'hébergement reste gratuit tant que le site est simple. Si vous préférez que je le tienne à jour pour vous, ajoutez <a href="#abonnement">le suivi mensuel</a> à votre formule : 39 €/mois avec Présence, 60 €/mois avec Pro.</p></details>
+      <details><summary>Y a-t-il un abonnement à payer ?</summary><p>Non, pas par défaut : le site est livré fini et vous appartient. Vous ne payez ensuite que votre nom de domaine, environ 10 à 15 € par an, et l'hébergement reste gratuit tant que le site est simple. Si vous préférez que je le tienne à jour pour vous, ajoutez <a href="#offres">le suivi mensuel</a> à votre formule : 39 €/mois avec Présence, 60 €/mois avec Pro.</p></details>
       <details><summary>Intervenez-vous près de chez moi ?</summary><p>Je suis basé à Montauroux et je travaille dans tout le Var et les Alpes-Maritimes : Fayence, Callian, Draguignan, Saint-Raphaël, Grasse, Cannes, Antibes, Nice et alentours. Rendez-vous sur place possible.</p></details>
       <details><summary>Et si la maquette ne me plaît pas ?</summary><p>Vous ne payez rien et vous gardez la maquette. Aucune obligation.</p></details>
     </div>
@@ -339,6 +324,20 @@
   m.querySelector('.menu-fermer').addEventListener('click', function () { set(false); });
   o.addEventListener('click', function () { set(false); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && document.body.classList.contains('menu-ouvert')) set(false); });
+})();
+</script>
+<script>
+(function () {
+  document.querySelectorAll('.addon input').forEach(function (c) {
+    var card = c.closest('.pack'), prix = card.querySelector('.prix-suivi'), btn = card.querySelector('.btn');
+    function maj() {
+      prix.hidden = !c.checked;
+      card.classList.toggle('avec-suivi', c.checked);
+      btn.href = '/contact.html?offre=' + encodeURIComponent(c.dataset.formule + (c.checked ? ' + suivi' : ''));
+      btn.textContent = 'Choisir ' + c.dataset.formule + (c.checked ? ' + suivi' : '');
+    }
+    c.addEventListener('change', maj); maj();
+  });
 })();
 </script>
 </body>
