@@ -200,3 +200,19 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--ocre)}
 .photo .carte-contact h3{color:var(--encre)}
 .hero::before{background:linear-gradient(180deg,rgba(24,19,14,.45),rgba(24,19,14,.55))}
 .rangee .n{font-size:1.3rem}
+.rangee .voir{display:inline-block;margin-top:16px;font:500 .72rem var(--sans);letter-spacing:.24em;text-transform:uppercase;border-bottom:1px solid var(--or);padding-bottom:5px;color:#fff}
+.sommaire{position:sticky;top:0;z-index:20;background:var(--craie);border-bottom:1px solid var(--filet)}
+.sommaire ul{display:flex;gap:26px;overflow-x:auto;padding:16px 0;scrollbar-width:none}
+.sommaire ul::-webkit-scrollbar{display:none}
+.sommaire a{white-space:nowrap;text-decoration:none;font:500 .74rem var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--encre)}
+.metier{scroll-margin-top:60px}
+.metier .wrap{display:grid;gap:clamp(30px,5vw,80px);align-items:center}
+@media(min-width:900px){.metier .wrap{grid-template-columns:1.1fr 1fr}.metier.inverse .metier-photo{order:2}}
+.metier.inverse{background:var(--craie)}
+.metier-photo{position:relative;overflow:hidden;aspect-ratio:4/5;max-height:640px}
+.metier-photo img{width:100%;height:100%;object-fit:cover}
+.metier-txt .n{font:italic 400 1.4rem var(--serif);color:var(--ocre);display:block;margin-bottom:10px}
+.prest{margin:28px 0 34px;border-top:1px solid var(--filet)}
+.prest li{padding:14px 0;border-bottom:1px solid var(--filet);font:400 1.2rem var(--serif);color:var(--encre);display:flex;gap:14px}
+.prest li::before{content:"—";color:var(--or)}
+.metier .btn-ligne{color:var(--encre)}
